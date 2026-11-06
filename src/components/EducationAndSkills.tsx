@@ -167,10 +167,10 @@ export const EducationAndSkills: React.FC<EducationAndSkillsProps> = ({ lang }) 
                 {cvData.skills.professional.map((qual, qIdx) => (
                   <div key={qIdx} className="border-b last:border-b-0 border-slate-100 dark:border-slate-800/80 pb-2.5 last:pb-0">
                     <div className="text-xs font-bold text-slate-900 dark:text-white">
-                      {qual.name[lang] || qual.name.en}
+                      {(qual.name as Record<string, string>)[lang] || qual.name.en}
                     </div>
                     <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
-                      {qual.desc[lang] || qual.desc.en}
+                      {(qual.desc as Record<string, string>)[lang] || qual.desc.en}
                     </div>
                   </div>
                 ))}
@@ -195,17 +195,17 @@ export const EducationAndSkills: React.FC<EducationAndSkillsProps> = ({ lang }) 
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-bold text-slate-900 dark:text-white">
-                        {l.name[lang] || l.name.en}
+                        {(l.name as Record<string, string>)[lang] || l.name.en}
                       </span>
                       <span className="text-xs font-mono font-bold text-cyan-600 dark:text-cyan-400">
                         {l.level}
                       </span>
                     </div>
                     <div className="text-xs font-semibold text-slate-700 dark:text-slate-300">
-                      {l.badge[lang] || l.badge.en}
+                      {(l.badge as Record<string, string>)[lang] || l.badge.en}
                     </div>
                     <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug">
-                      {l.details[lang] || l.details.en}
+                      {(l.details as Record<string, string>)[lang] || l.details.en}
                     </div>
                   </div>
                 ))}

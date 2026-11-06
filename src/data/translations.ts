@@ -1,4 +1,4 @@
-export type SupportedLang = 'en' | 'tr' | 'de' | 'ru' | 'sv' | 'zh' | 'fr' | 'it';
+export type SupportedLang = 'en' | 'tr' | 'de' | 'ru' | 'sv' | 'zh' | 'fr' | 'it' | 'bg';
 
 export interface LanguageOption {
   code: SupportedLang;
@@ -8,14 +8,15 @@ export interface LanguageOption {
 }
 
 export const languagesList: LanguageOption[] = [
-  { code: 'en', label: 'English', flag: '🇬🇧', short: 'EN' },
-  { code: 'tr', label: 'Türkçe', flag: '🇹🇷', short: 'TR' },
+  { code: 'bg', label: 'Български', flag: '🇧🇬', short: 'BG' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪', short: 'DE' },
+  { code: 'en', label: 'English', flag: '🇬🇧', short: 'EN' },
+  { code: 'fr', label: 'Français', flag: '🇫🇷', short: 'FR' },
+  { code: 'it', label: 'Italiano', flag: '🇮🇹', short: 'IT' },
   { code: 'ru', label: 'Русский', flag: '🇷🇺', short: 'RU' },
   { code: 'sv', label: 'Svenska', flag: '🇸🇪', short: 'SV' },
-  { code: 'zh', label: '中文', flag: '🇨🇳', short: 'ZH' },
-  { code: 'fr', label: 'Français', flag: '🇫🇷', short: 'FR' },
-  { code: 'it', label: 'Italiano', flag: '🇮🇹', short: 'IT' }
+  { code: 'tr', label: 'Turkish', flag: '🇹🇷', short: 'TR' },
+  { code: 'zh', label: '中文', flag: '🇨🇳', short: 'ZH' }
 ];
 
 export const uiText: Record<SupportedLang, {
@@ -1040,6 +1041,119 @@ export const uiText: Record<SupportedLang, {
     footer: {
       allRights: 'Tutti i diritti riservati.',
       backToTop: 'Torna su'
+    }
+  },
+  bg: {
+    nav: {
+      about: 'За мен',
+      dogduino: 'Проект Dogduino',
+      experience: 'Опит',
+      education: 'Образование и умения',
+      certifications: 'Сертификати',
+      references: 'Препоръки',
+      contact: 'Контакти'
+    },
+    hero: {
+      kicker: 'ЕЛЕКТРОИНЖЕНЕРСТВО И ЕЛЕКТРОНИКА',
+      subKicker: 'ОСТИМ ТЕХНИЧЕСКИ УНИВЕРСИТЕТ',
+      summaryLabel: 'ПРОФЕСИОНАЛНО РЕЗЮМЕ',
+      activeEngineering: 'Активни инженерни компетенции',
+      viewDogduino: 'Вижте проект Dogduino',
+      contactMe: 'Свържете се с мен',
+      kpis: {
+        internships: '5 Инженерни стажа',
+        internshipsSub: 'Вграден софтуер, силова електроника, IT & сигурност',
+        quadruped: 'Робот Dogduino',
+        quadrupedSub: 'ESP32 & PCA9685 четирикрак роботизиран механизъм',
+        certs: '7 Сертификата',
+        certsSub: 'TEI Авиационни двигатели, MathWorks & контрол',
+        languages: 'Английски & Турски',
+        languagesSub: 'Професионална техническа комуникация'
+      }
+    },
+    dogduino: {
+      badge: 'АКАДЕМИЧЕН ИНЖЕНЕРЕН ПРОЕКТ',
+      videoTab: 'Видео на походката',
+      galleryTab: 'Фотогалерия (3)',
+      scopeHeading: 'Обхват на проекта и инженерен принос',
+      challengesHeading: 'Решени технически предизвикателства',
+      challengesText: 'Синхронизирането на 12 сервомотора в реално време, предотвратяването на спадове на напрежението чрез изолирани шини и програмирането на естествена кинематична походка с обратна кинематика.',
+      specsHeading: 'Технически спецификации',
+      lightboxOf: 'от',
+      loopCaption: 'Демонстрационен цикъл:'
+    },
+    experience: {
+      kicker: 'ПРОФЕСИОНАЛНА ХРОНОЛОГИЯ',
+      title: 'Инженерен и професионален опит',
+      desc: '5 практически инженерни стажа и роли в R&D лаборатории, разработка на фърмуер, производство на силова електроника и IT инфраструктура.',
+      filterAll: 'Всички роли (5)',
+      filterRd: 'R&D и роботика',
+      filterEmbedded: 'Вградени системи',
+      filterIt: 'IT и автоматизация',
+      filterGrid: 'Електроенергетика'
+    },
+    education: {
+      kicker: 'ОБРАЗОВАНИЕ И МАТРИЦА НА УМЕНИЯТА',
+      title: 'Образование, умения и езици',
+      focusLabel: 'Инженерна специализация',
+      pillar1Title: 'Вградени системи и микроконтролери',
+      pillar1Desc: 'ESP32, ARM/STM32, C/C++ фърмуер, SPI/I2C/UART шини',
+      pillar2Title: 'Силова електроника и задвижвания',
+      pillar2Desc: 'PWM управление на мотори, IEC тестове на натоварване, DC-DC регулация',
+      pillar3Title: 'Авионика и теория на управлението',
+      pillar3Desc: 'TEI Академия за авиационни двигатели, MathWorks Simulink/Контрол',
+      techSkillsTitle: 'Технически умения и софтуер',
+      profQualitiesTitle: 'Професионални качества',
+      languagesTitle: 'Езици'
+    },
+    certs: {
+      kicker: 'КУРСОВЕ И АКРЕДИТАЦИИ',
+      title: 'Курсове и сертификати',
+      desc: 'Официални сертификати от TUSAŞ Engine Industries (TEI), MathWorks, Bilgeiş и Udemy.',
+      countBadge: '7 Верифицирани сертификата',
+      completed: 'Завършен',
+      popupPrompt: 'Задръжте или кликнете за детайли',
+      clickToView: 'Преглед на съдържанието',
+      closePopup: 'Затвори'
+    },
+    references: {
+      kicker: 'ПРОФЕСИОНАЛНИ ПРЕПОРЪКИ',
+      title: 'Препоръки',
+      desc: 'Проверими контакти на академични ръководители и индустриални директори.',
+      refIndex: 'ПРЕПОРЪКА',
+      copyEmail: 'Копирай имейл',
+      directEmail: 'Директен контакт по имейл'
+    },
+    contact: {
+      badge: 'ДИРЕКТЕН КОНТАКТ',
+      title: 'Свържете се с мен',
+      desc: 'Отворена за инженерни възможности във вградени системи, авионика и електроника. Изпратете съобщение чрез формуляра или се свържете директно по имейл и LinkedIn.',
+      emailLabel: 'ИМЕЙЛ АДРЕС',
+      emailAction: 'Изпрати имейл',
+      linkedinLabel: 'ПРОФЕСИОНАЛНА МРЕЖА',
+      linkedinAction: 'LinkedIn профил',
+      responseSpeed: 'Бърз отговор (обикновено в рамките на 24 часа)',
+      formTitle: 'Изпратете съобщение',
+      formSubtitle: 'Попълнете формуляра, за да изпратите директно запитване до Ямур Кахраман.',
+      nameField: 'Вашето име и фамилия *',
+      emailField: 'Вашият имейл *',
+      companyField: 'Компания / Организация',
+      subjectField: 'Тема / Позиция *',
+      messageField: 'Вашето съобщение *',
+      namePlaceholder: 'напр. Иван Иванов',
+      emailPlaceholder: 'ivan@company.bg',
+      companyPlaceholder: 'напр. Авиокосмическа компания',
+      subjectPlaceholder: 'Възможност за инж. по вградени системи / авионика',
+      messagePlaceholder: 'Детайли за позицията, предложение за интервю или проект за сътрудничество...',
+      requiredNote: '* Задължителни полета',
+      submitButton: 'Изпрати съобщение',
+      successTitle: 'Съобщението е готово!',
+      successDesc: 'Имейл клиентът ви се отвори с подготвен проект, адресиран до kahramanyagmur178@gmail.com.',
+      sendAnother: 'Изпрати друго съобщение'
+    },
+    footer: {
+      allRights: 'Всички права запазени.',
+      backToTop: 'Към началото'
     }
   }
 };

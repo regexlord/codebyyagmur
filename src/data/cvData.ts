@@ -1,7 +1,7 @@
 import { SupportedLang } from './translations';
 
-export type LocalizedString = Record<SupportedLang, string>;
-export type LocalizedStringList = Record<SupportedLang, string[]>;
+export type LocalizedString = Partial<Record<SupportedLang, string>> & { en: string };
+export type LocalizedStringList = Partial<Record<SupportedLang, string[]>> & { en: string[] };
 
 export interface WorkExperience {
   company: string;
@@ -68,7 +68,8 @@ export const cvData = {
       sv: "Elektro- och Elektronikteknik | Fokus på inbyggda system, kraftelektronik och avionikteknik",
       zh: "电气与电子工程专业 | 专注于嵌入式系统、电力电子与航空电子技术",
       fr: "Génie Électrique et Électronique | Spécialisation Systèmes Embarqués, Électronique de Puissance et Technologies Avioniques",
-      it: "Ingegneria Elettrica ed Elettronica | Focalizzata su Sistemi Embedded, Elettronica di Potenza e Tecnologie Avioniche"
+      it: "Ingegneria Elettrica ed Elettronica | Focalizzata su Sistemi Embedded, Elettronica di Potenza e Tecnologie Avioniche",
+      bg: "Електроинженерство и електроника | Специализация: Вградени системи, силова електроника и авионика"
     } as LocalizedString,
     shortTitle: {
       en: "Embedded Systems & Avionics Engineer",
@@ -78,7 +79,8 @@ export const cvData = {
       sv: "Ingenjör inom inbyggda system & avionik",
       zh: "嵌入式系统与航空电子工程师",
       fr: "Ingénieur Systèmes Embarqués & Avionique",
-      it: "Ingegnere Sistemi Embedded e Avionica"
+      it: "Ingegnere Sistemi Embedded e Avionica",
+      bg: "Инженер по вградени системи и авионика"
     } as LocalizedString,
     location: "İzmir, Turkey",
     email: "kahramanyagmur178@gmail.com",
@@ -93,7 +95,8 @@ export const cvData = {
       sv: "Analytisk elektro- och elektronikingenjör med inriktning mot inbyggd mjukvara, mikrokontrollers och avionik. Erfarenhet av dynamisk hårdvaru-mjukvaruintegration, automatiserade tester och projektledning.",
       zh: "电气与电子工程专业优秀毕业生，专注于嵌入式底层固件开发、微控制器应用与航空电子技术。熟练掌握动态软硬件集成、自动化测试流水线构建与跨职能工程管理，致力于为实际电子系统交付高可靠工程方案。",
       fr: "Ingénieure diplômée en génie électrique et électronique, spécialisée dans le développement de firmware embarqué, les microcontrôleurs et l'avionique. Expérience en intégration matérielle-logicielle et tests automatisés.",
-      it: "Ingegnere elettrico ed elettronico specializzata nello sviluppo di firmware embedded, microcontrollori e avionica. Esperienza nell'integrazione hardware-software dinamica e nei flussi di collaudo automatici."
+      it: "Ingegnere elettrico ed elettronico specializzata nello sviluppo di firmware embedded, microcontrollori e avionica. Esperienza nell'integrazione hardware-software dinamica e nei flussi di collaudo automatici.",
+      bg: "Аналитичен електроинженер със специализация в разработка на вграден фърмуер, микроконтролери и авиационни технологии. Опит в динамична хардуерно-софтуерна интеграция, автоматизирано тестване и управление на мултидисциплинарни проекти. Отдадена на създаването на надеждни инженерни решения за реални електронни системи."
     } as LocalizedString
   },
 
