@@ -84,7 +84,7 @@ export const cvData = {
     email: "kahramanyagmur178@gmail.com",
     linkedin: "linkedin.com/in/yagmur-kahraman-37a040255",
     linkedinUrl: "https://www.linkedin.com/in/yagmur-kahraman-37a040255",
-    photo: "/assets/aistudio/Profesyonel_Kad_n_Portresi_11bf1af2.png",
+    photo: "assets/aistudio/Profesyonel_Kad_n_Portresi_11bf1af2.png",
     profile: {
       en: "Analytical Electrical and Electronics Engineering graduate specializing in embedded firmware development, microcontrollers, and avionics technology. Experienced in dynamic hardware-software integration, automated testing workflows, and cross-functional project management. Committed to deploying reliable engineering solutions for real-world electronic systems.",
       tr: "Gömülü yazılım (firmware) geliştirme, mikrodenetleyiciler ve aviyonik teknolojileri üzerine uzmanlaşan analitik Elektrik ve Elektronik Mühendisi. Dinamik donanım-yazılım entegrasyonu, otomatik test iş akışları ve çok fonksiyonlu proje yönetiminde deneyimli. Gerçek dünya elektronik sistemleri için yüksek güvenilirlikte mühendislik çözümleri üretmeye kararlı.",
@@ -511,7 +511,7 @@ export const cvData = {
       }
     ],
     video: {
-      src: "/assets/aistudio/dogduino-video_0fa1ed27.mp4",
+      src: "assets/aistudio/dogduino-video_0fa1ed27.mp4",
       caption: {
         en: "Dogduino dynamic walking gait execution demonstration in test bench environment.",
         tr: "Dogduino dinamik yürüme ve adım kontrol algoritmasının test ortamında canlı demonstrasyonu.",
@@ -525,7 +525,7 @@ export const cvData = {
     },
     images: [
       {
-        src: "/assets/aistudio/dogduino-1_e6123476.png",
+        src: "assets/aistudio/dogduino-1_e6123476.png",
         title: {
           en: "Frontal View & Active Face Display",
           tr: "Ön Görünüş & Canlı Karakter Ekranı",
@@ -548,7 +548,7 @@ export const cvData = {
         }
       },
       {
-        src: "/assets/aistudio/dogduino-2_a5659b87.png",
+        src: "assets/aistudio/dogduino-2_a5659b87.png",
         title: {
           en: "Chassis & Mechanical Linkage Geometry",
           tr: "Gövde ve Mekanik Bacak Geometrisi",
@@ -571,7 +571,7 @@ export const cvData = {
         }
       },
       {
-        src: "/assets/aistudio/dogduino-3_d55573d5.png",
+        src: "assets/aistudio/dogduino-3_d55573d5.png",
         title: {
           en: "Electronics Bench Testing & Calibration",
           tr: "Elektronik Test Tezgahı & Kalibrasyon",

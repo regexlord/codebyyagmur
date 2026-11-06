@@ -32,8 +32,20 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Sync Media Assets
+        run: |
+          mkdir -p public/assets/aistudio
+          find . -maxdepth 2 -type f \( -name "*Profesyonel*" -o -name "*dogduino*" \) -not -path "*/public/*" -not -path "*/dist/*" -exec cp -v {} public/assets/aistudio/ \; || true
+
       - name: Build
         run: npm run build
+
+      - name: Ensure Media in Dist
+        run: |
+          mkdir -p dist/assets/aistudio
+          cp -rf public/assets/* dist/assets/ 2>/dev/null || true
+          find . -maxdepth 2 -type f \( -name "*Profesyonel*" -o -name "*dogduino*" \) -not -path "*/dist/*" -exec cp -f {} dist/assets/aistudio/ \; 2>/dev/null || true
+          find . -maxdepth 2 -type f \( -name "*Profesyonel*" -o -name "*dogduino*" \) -not -path "*/dist/*" -exec cp -f {} dist/ \; 2>/dev/null || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

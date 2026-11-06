@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { cvData } from '../data/cvData';
 import { SupportedLang, uiText } from '../data/translations';
+import { getAssetUrl, handleImageFallback } from '../utils/assetHelper';
 import { 
   Bot, 
   Play, 
@@ -145,7 +146,6 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
                 <div className="relative aspect-video bg-black flex items-center justify-center">
                   <video
                     ref={videoRef}
-                    src={cvData.project.video.src}
                     loop
                     muted={isMuted}
                     playsInline
@@ -153,7 +153,12 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
                     onPause={() => setIsPlaying(false)}
                     className="w-full h-full object-contain cursor-pointer"
                     onClick={togglePlay}
-                  />
+                  >
+                    <source src={getAssetUrl('assets/aistudio/dogduino-video_0fa1ed27.mp4')} type="video/mp4" />
+                    <source src="./assets/aistudio/dogduino-video_0fa1ed27.mp4" type="video/mp4" />
+                    <source src="./dogduino-video_0fa1ed27.mp4" type="video/mp4" />
+                    <source src="dogduino-video_0fa1ed27.mp4" type="video/mp4" />
+                  </video>
 
                   {/* Play Button Overlay (when paused) */}
                   {!isPlaying && (
@@ -234,8 +239,9 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
                     className="group relative aspect-[3/4] sm:aspect-square rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 dark:border-slate-800 cursor-pointer shadow-sm hover:shadow-lg transition-all"
                   >
                     <img
-                      src={img.src}
+                      src={getAssetUrl(img.src)}
                       alt={img.title[lang] || img.title.en}
+                      onError={(e) => handleImageFallback(e, `dogduino-${idx + 1}_${idx === 0 ? 'e6123476' : idx === 1 ? 'a5659b87' : 'd55573d5'}.png`)}
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
@@ -279,8 +285,9 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
                   className="group relative aspect-video rounded-xl overflow-hidden border-2 border-slate-200 dark:border-slate-800 hover:border-cyan-500 dark:hover:border-cyan-400 transition-all opacity-85 hover:opacity-100"
                 >
                   <img
-                    src={img.src}
+                    src={getAssetUrl(img.src)}
                     alt={img.title[lang] || img.title.en}
+                    onError={(e) => handleImageFallback(e, `dogduino-${idx + 1}_${idx === 0 ? 'e6123476' : idx === 1 ? 'a5659b87' : 'd55573d5'}.png`)}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
                   />
@@ -389,8 +396,9 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
             {/* Image Viewport */}
             <div className="relative aspect-auto max-h-[65vh] flex items-center justify-center p-4 bg-black">
               <img
-                src={cvData.project.images[lightboxIndex].src}
+                src={getAssetUrl(cvData.project.images[lightboxIndex].src)}
                 alt={cvData.project.images[lightboxIndex].title[lang] || cvData.project.images[lightboxIndex].title.en}
+                onError={(e) => handleImageFallback(e, `dogduino-${lightboxIndex + 1}_${lightboxIndex === 0 ? 'e6123476' : lightboxIndex === 1 ? 'a5659b87' : 'd55573d5'}.png`)}
                 referrerPolicy="no-referrer"
                 className="max-h-[60vh] w-auto object-contain rounded-lg shadow-lg"
               />

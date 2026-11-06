@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { cvData } from '../data/cvData';
 import { SupportedLang, uiText } from '../data/translations';
+import { getAssetUrl, handleImageFallback } from '../utils/assetHelper';
 import { 
   MapPin, 
   Mail, 
@@ -72,8 +73,9 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
                 {/* Clean portrait frame */}
                 <div className="relative w-28 h-36 sm:w-36 sm:h-44 md:w-40 md:h-48 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-slate-200/90 dark:border-slate-700/80 shadow-md">
                   <img
-                    src={cvData.personal.photo}
+                    src={getAssetUrl(cvData.personal.photo)}
                     alt="Yağmur Kahraman"
+                    onError={(e) => handleImageFallback(e, 'Profesyonel_Kad_n_Portresi_11bf1af2.png')}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-top filter contrast-[1.02] brightness-[1.01] transition-transform duration-300 group-hover:scale-105"
                   />
