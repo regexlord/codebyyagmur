@@ -69,7 +69,9 @@ export const cvData = {
       zh: "电气与电子工程专业 | 专注于嵌入式系统",
       fr: "Génie Électrique et Électronique | Spécialisation Systèmes Embarqués",
       it: "Ingegneria Elettrica ed Elettronica | Focalizzata su Sistemi Embedded",
-      bg: "Електроинженерство и електроника | Специализация: Вградени системи"
+      bg: "Електроинженерство и електроника | Специализация: Вградени системи",
+      cs: "Elektrotechnika a elektronika | Zaměření na vestavěné systémy",
+      pl: "Elektrotechnika i Elektronika | Specjalizacja: Systemy Wbudowane"
     } as LocalizedString,
     shortTitle: {
       en: "Embedded Systems Engineer",
@@ -80,7 +82,9 @@ export const cvData = {
       zh: "嵌入式系统工程师",
       fr: "Ingénieur Systèmes Embarqués",
       it: "Ingegnere Sistemi Embedded",
-      bg: "Инженер по вградени системи"
+      bg: "Инженер по вградени системи",
+      cs: "Inženýrka vestavěných systémů",
+      pl: "Inżynier Systemów Wbudowanych"
     } as LocalizedString,
     location: "İzmir, Turkey",
     email: "kahramanyagmur178@gmail.com",
@@ -98,7 +102,9 @@ export const cvData = {
       zh: "电气与电子工程专业优秀毕业生，专注于嵌入式底层固件开发、微控制器应用与航空电子技术。熟练掌握动态软硬件集成、自动化测试流水线构建与跨职能工程管理，致力于为实际电子系统交付高可靠工程方案。",
       fr: "Ingénieure diplômée en génie électrique et électronique, spécialisée dans le développement de firmware embarqué, les microcontrôleurs et l'avionique. Expérience en intégration matérielle-logicielle et tests automatisés.",
       it: "Ingegnere elettrico ed elettronico specializzata nello sviluppo di firmware embedded, microcontrollori e avionica. Esperienza nell'integrazione hardware-software dinamica e nei flussi di collaudo automatici.",
-      bg: "Аналитичен електроинженер със специализация в разработка на вграден фърмуер, микроконтролери и авиационни технологии. Опит в динамична хардуерно-софтуерна интеграция, автоматизирано тестване и управление на мултидисциплинарни проекти. Отдадена на създаването на надеждни инженерни решения за реални електронни системи."
+      bg: "Аналитичен електроинженер със специализация в разработка на вграден фърмуер, микроконтролери и авиационни технологии. Опит в динамична хардуерно-софтуерна интеграция, автоматизирано тестване и управление на мултидисциплинарни проекти. Отдадена на създаването на надеждни инженерни решения за реални електронни системи.",
+      cs: "Analytická absolventka elektrotechniky a elektroniky se specializací na vývoj vestavěného firmwaru, mikrokontroléry a leteckou elektroniku (avioniku). Zkušenosti s dynamickou integrací hardwaru a softwaru, automatizovaným testováním a mezioborovým řízením projektů.",
+      pl: "Analityczna absolwentka elektrotechniki i elektroniki specjalizująca się w rozwoju oprogramowania układowego (firmware), mikrokontrolerach i technologii awioniki. Doświadczona w dynamicznej integracji sprzętu i oprogramowania, zautomatyzowanych procesach testowania oraz zarządzaniu projektami."
     } as LocalizedString
   },
 
@@ -113,7 +119,9 @@ export const cvData = {
         sv: "FoU Projektledningsingenjör Praktikant",
         zh: "研发项目管理工程实习生",
         fr: "Stagiaire Ingénieure Gestion de Projets R&D",
-        it: "Stagista Ingegnere Gestione Progetti R&S"
+        it: "Stagista Ingegnere Gestione Progetti R&S",
+        cs: "Stážistka v oblasti řízení projektů VaV",
+        pl: "Stażystka Inżynier ds. Zarządzania Projektami B+R"
       },
       location: "İzmir, Turkey",
       period: "Sep 2026 – Dec 2026",
@@ -150,6 +158,14 @@ export const cvData = {
         it: [
           "Esecuzione di prove di carico secondo gli standard IEC S1 (servizio continuo) e S3 (servizio intermittente) su motori elettrici, con analisi dei limiti termici e dello stress dinamico.",
           "Gestione della documentazione tecnica e allocazione delle risorse per progetti R&S di ingegneria dei motori elettrici."
+        ],
+        cs: [
+          "Provádění zátěžových testů elektromotorů podle norem IEC S1 (trvalý chod) a S3 (přerušovaný periodický chod), analýza tepelných limitů a dynamického namáhání.",
+          "Správa technické dokumentace a alokace zdrojů pro výzkumné a vývojové projekty elektromotorů, což zvýšilo efektivitu sledování pracovních postupů."
+        ],
+        pl: [
+          "Przeprowadzanie testów obciążeniowych silników elektrycznych zgodnie z normami IEC S1 (praca ciągła) i S3 (praca przerywana okresowa), z analizą limitów termicznych i naprężeń dynamicznych.",
+          "Zarządzanie dokumentacją techniczną i alokacją zasobów dla projektów badawczo-rozwojowych silników elektrycznych, zwiększające efektywność śledzenia prac."
         ]
       }
     },
@@ -163,7 +179,9 @@ export const cvData = {
         sv: "IT-praktikant",
         zh: "信息技术实习生",
         fr: "Stagiaire Technologies de l'Information",
-        it: "Stagista Tecnologie dell'Informazione"
+        it: "Stagista Tecnologie dell'Informazione",
+        cs: "Stážistka v oblasti informačních technologií",
+        pl: "Praktykantka ds. Technologii Informacyjnych"
       },
       location: "Çankaya, Ankara",
       period: "Jul 2025 – Aug 2025",
@@ -200,6 +218,14 @@ export const cvData = {
         it: [
           "Contributo alla progettazione web, al collaudo dell'interfaccia frontend e all'ottimizzazione per un portale governativo istituzionale.",
           "Supporto nello sviluppo di un'applicazione interna ad alta sicurezza, con convalida dei controlli di accesso utente e protocolli di autenticazione."
+        ],
+        cs: [
+          "Podíl na webovém designu, testování frontendového rozhraní a optimalizaci specializovaného vládního webového portálu.",
+          "Spolupráce na vývoji vysoce zabezpečené interní aplikace, ověřování řízení přístupu uživatelů a protokolů autentizace."
+        ],
+        pl: [
+          "Współudział w projektowaniu stron WWW, testowaniu interfejsu frontend i optymalizacji dedykowanego portalu rządowego.",
+          "Wsparcie przy tworzeniu specjalistycznej aplikacji wewnętrznej o wysokim poziomie bezpieczeństwa, weryfikacja kontroli dostępu i protokołów uwierzytelniania."
         ]
       }
     },
@@ -213,7 +239,9 @@ export const cvData = {
         sv: "Praktikant inom inbyggda system & mjukvaruutveckling",
         zh: "嵌入式系统与软件工程实习生",
         fr: "Stagiaire Systèmes Embarqués & Ingénierie Logicielle",
-        it: "Stagista Sistemi Embedded e Ingegneria del Software"
+        it: "Stagista Sistemi Embedded e Ingegneria del Software",
+        cs: "Stážistka vestavěných systémů a softwarového inženýrství",
+        pl: "Praktykantka ds. Systemów Wbudowanych i Inżynierii Oprogramowania"
       },
       location: "Remote",
       period: "Jun 2024",
@@ -242,6 +270,12 @@ export const cvData = {
         ],
         it: [
           "Implementazione di script di acquisizione dati dai sensori in tempo reale e comunicazione con periferiche (SPI/I2C/UART)."
+        ],
+        cs: [
+          "Implementace skriptů pro sběr dat ze senzorů v reálném čase a komunikaci s periferiemi (SPI/I2C/UART)."
+        ],
+        pl: [
+          "Implementacja skryptów do akwizycji danych z czujników w czasie rzeczywistym oraz komunikacji peryferyjnej (SPI/I2C/UART)."
         ]
       }
     },
@@ -255,7 +289,9 @@ export const cvData = {
         sv: "Praktikant inom el- och elnätssystem",
         zh: "电气与电网系统实习生",
         fr: "Stagiaire Systèmes Électriques & Réseaux",
-        it: "Stagista Sistemi Elettrici e di Rete"
+        it: "Stagista Sistemi Elettrici e di Rete",
+        cs: "Stážistka elektrických a distribučních sítí",
+        pl: "Praktykantka ds. Systemów Elektrycznych i Sieciowych"
       },
       location: "Bornova, İzmir",
       period: "Jun 2023 – Jul 2023",
@@ -292,6 +328,14 @@ export const cvData = {
         it: [
           "Attività nel laboratorio di contatori elettrici con calibrazione, collaudo, lettura indici e verifiche di precisione.",
           "Supporto nella riconciliazione delle fatture, validazione dei dati di consumo e conformità alle normative della rete di distribuzione."
+        ],
+        cs: [
+          "Práce v dílně elektroměrů zahrnující kalibraci, testování, odečty stavů a kontroly přesnosti měřidel.",
+          "Asistence při odsouhlasení fakturace, validaci dat o spotřebě energie a ověřování souladu se standardy distribuční sítě."
+        ],
+        pl: [
+          "Praca w warsztacie liczników elektrycznych: kalibracja, testowanie, odczyt indeksów oraz kontrola dokładności pomiarów.",
+          "Wsparcie w uzgadnianiu rozliczeń, walidacji danych o zużyciu energii oraz weryfikacji zgodności ze standardami sieci dystrybucyjnej."
         ]
       }
     }
@@ -308,7 +352,9 @@ export const cvData = {
         sv: "Kandidatexamen i Elektro- och Elektronik (Engelska)",
         zh: "电气与电子工程学士学位 (全英文授课)",
         fr: "Licence / Bachelor en Génie Électrique et Électronique (en anglais)",
-        it: "Laurea Triennale in Ingegneria Elettrica ed Elettronica (Inglese)"
+        it: "Laurea Triennale in Ingegneria Elettrica ed Elettronica (Inglese)",
+        cs: "Bakalářský titul v oboru elektrotechnika a elektronika (v angličtině)",
+        pl: "Studia licencjackie/inżynierskie z Elektrotechniki i Elektroniki (w j. angielskim)"
       },
       location: "Yenimahalle, Ankara",
       period: "Oct 2021 – Jan 2027",
@@ -320,7 +366,9 @@ export const cvData = {
         sv: "Inriktning mot inbyggda system, kraftelektronik och avionik.",
         zh: "主修方向：嵌入式系统架构、电力电子变流技术与航空电子控制系统。",
         fr: "Axé sur les Systèmes Embarqués, l'Électronique de Puissance et les Technologies Avioniques.",
-        it: "Focalizzato su Sistemi Embedded, Elettronica di Potenza e Tecnologie Avioniche."
+        it: "Focalizzato su Sistemi Embedded, Elettronica di Potenza e Tecnologie Avioniche.",
+        cs: "Zaměření na vestavěné systémy, výkonovou elektroniku a letecké technologie (avioniku).",
+        pl: "Specjalizacja w zakresie systemów wbudowanych, energoelektroniki i technologii awionicznych."
       }
     }
   ] as EducationItem[],
@@ -337,7 +385,9 @@ export const cvData = {
       sv: "Prisvärd Fyrbent Utbildningsrobot",
       zh: "低成本教育级仿生四足机器人",
       fr: "Robot Quadrupède Éducatif à Faible Coût",
-      it: "Robot Quadrupede Educativo a Basso Costo"
+      it: "Robot Quadrupede Educativo a Basso Costo",
+      cs: "Nízkonákladový vzdělávací čtyřnohý robot",
+      pl: "Niskokosztowy edukacyjny robot czworonożny"
     },
     summary: {
       en: "Designed and implemented Dogduino, a quadruped robot built around the ESP32 microcontroller and PCA9685 PWM driver for accessible robotics education.",
@@ -347,7 +397,9 @@ export const cvData = {
       sv: "Konstruerade och implementerade Dogduino, en fyrbent robot byggd kring mikrokontrollern ESP32 och PCA9685 PWM-drivrutin för tillgänglig robotikutbildning.",
       zh: "自主设计并研制 Dogduino 仿生四足机器人，基于 ESP32 双核微控制器与 PCA9685 PWM 驱动板，面向普惠型机器人工程教学。",
       fr: "Conception et réalisation de Dogduino, un robot quadrupède basé sur le microcontrôleur ESP32 et le pilote PWM PCA9685.",
-      it: "Progettazione e realizzazione di Dogduino, un robot quadrupede basato su microcontrollore ESP32 e driver PWM PCA9685 per la didattica robotica."
+      it: "Progettazione e realizzazione di Dogduino, un robot quadrupede basato su microcontrollore ESP32 e driver PWM PCA9685 per la didattica robotica.",
+      cs: "Návrh a realizace čtyřnohého robota Dogduino postaveného na mikrokontroléru ESP32 a PWM ovladači PCA9685 pro dostupnou výuku robotiky.",
+      pl: "Zaprojektowanie i wykonanie Dogduino – czworonożnego robota opartego na mikrokontrolerze ESP32 i sterowniku PWM PCA9685 dla dostępnej edukacji robotycznej."
     },
     points: {
       en: [
@@ -397,6 +449,18 @@ export const cvData = {
         "Sviluppo di algoritmi di andatura dinamica mediante cinematica inversa su 8 servomotori.",
         "Integrazione di un'interfaccia Bluetooth personalizzata per il controllo mobile in tempo reale.",
         "Architettura hardware embedded modulare e ottimizzazione energetica a basso consumo."
+      ],
+      cs: [
+        "Navržení a realizace čtyřnohého robota Dogduino založeného na mikrokontroléru ESP32 a PWM ovladači PCA9685 pro dostupnou výuku robotiky.",
+        "Vývoj algoritmů dynamické chůze s využitím inverzní kinematiky napříč 8 servomotory poháněnými končetinami.",
+        "Integrace vlastního rozhraní Bluetooth pro mobilní ovládání v reálném čase (sed, stoj, chůze).",
+        "Zaměření na modulární vestavěnou hardwarovou architekturu a nízkoenergetickou optimalizaci systému."
+      ],
+      pl: [
+        "Zaprojektowanie i wykonanie robota czworonożnego Dogduino opartego na mikrokontrolerze ESP32 i sterowniku PWM PCA9685 dla dostępnej edukacji robotycznej.",
+        "Opracowanie algorytmów dynamicznego sterowania chodem z wykorzystaniem kinematyki odwrotnej dla 8 kończyn napędzanych serwomechanizmami.",
+        "Integracja autorskiego interfejsu Bluetooth do mobilnego sterowania w czasie rzeczywistym (siad, postawa, chód).",
+        "Koncentracja na modułowej architekturze sprzętowej systemów wbudowanych oraz optymalizacji niskiego poboru mocy."
       ]
     },
     specs: [
@@ -404,7 +468,7 @@ export const cvData = {
         label: { 
           en: "Microcontroller", tr: "Mikrodenetleyici", de: "Mikrocontroller", 
           ru: "Микроконтроллер", sv: "Mikrokontroller", zh: "核心微控制器", 
-          fr: "Microcontrôleur", it: "Microcontrollore" 
+          fr: "Microcontrôleur", it: "Microcontrollore", cs: "Mikrokontrolér", pl: "Mikrokontroler"
         }, 
         value: "ESP-32 Dual-Core Tensilica" 
       },
@@ -412,7 +476,7 @@ export const cvData = {
         label: { 
           en: "PWM Controller", tr: "PWM Sürücü", de: "PWM-Treiber", 
           ru: "ШИМ-драйвер", sv: "PWM-kontroller", zh: "PWM 舵机驱动板", 
-          fr: "Pilote PWM", it: "Driver PWM" 
+          fr: "Pilote PWM", it: "Driver PWM", cs: "PWM ovladač", pl: "Sterownik PWM"
         }, 
         value: "PCA9685 16-Channel 12-bit I2C" 
       },
@@ -420,7 +484,7 @@ export const cvData = {
         label: { 
           en: "Actuation", tr: "Eyleyici Sistemi", de: "Aktuatoren", 
           ru: "Сервоприводы", sv: "Aktuatorer", zh: "执行机构", 
-          fr: "Actionneurs", it: "Attuatori" 
+          fr: "Actionneurs", it: "Attuatori", cs: "Pohony", pl: "Układ wykonawczy"
         }, 
         value: "8x Metal-Gear Servos (2-DOF / Leg)" 
       },
@@ -428,7 +492,7 @@ export const cvData = {
         label: { 
           en: "Control Protocol", tr: "Haberleşme", de: "Kommunikationsprotokoll", 
           ru: "Протокол связи", sv: "Styrprotokoll", zh: "通信控制协议", 
-          fr: "Protocole de Commande", it: "Protocollo di Controllo" 
+          fr: "Protocole de Commande", it: "Protocollo di Controllo", cs: "Komunikační protokol", pl: "Protokół sterowania"
         }, 
         value: "Bluetooth BLE & Serial UART" 
       },
@@ -436,7 +500,7 @@ export const cvData = {
         label: { 
           en: "Kinematics", tr: "Kinematik Çözüm", de: "Kinematik-Modell", 
           ru: "Кинематика", sv: "Kinematik", zh: "运动学求解模型", 
-          fr: "Cinématique", it: "Cinematica" 
+          fr: "Cinématique", it: "Cinematica", cs: "Kinematika", pl: "Kinematyka"
         }, 
         value: "Closed-Form Inverse Kinematics" 
       },
@@ -444,7 +508,7 @@ export const cvData = {
         label: { 
           en: "Interactive Display", tr: "Karakter Ekranı", de: "Interaktives Display", 
           ru: "Интерактивный экран", sv: "Interaktiv display", zh: "表情交互屏幕", 
-          fr: "Écran Interactif", it: "Schermo Interattivo" 
+          fr: "Écran Interactif", it: "Schermo Interattivo", cs: "Interaktivní displej", pl: "Wyświetlacz interaktywny"
         }, 
         value: "Front-Mounted Animated LCD Screen" 
       },
@@ -452,7 +516,7 @@ export const cvData = {
         label: { 
           en: "Chassis Fabrication", tr: "Gövde İmalatı", de: "Chassis-Fertigung", 
           ru: "Корпус", sv: "Chassitillverkning", zh: "机身结构制造", 
-          fr: "Châssis", it: "Telaio" 
+          fr: "Châssis", it: "Telaio", cs: "Výroba šasi", pl: "Konstrukcja obudowy"
         }, 
         value: "Custom Modular 3D Printed PETG/PLA" 
       },
@@ -460,7 +524,7 @@ export const cvData = {
         label: { 
           en: "Power Optimization", tr: "Güç Mimarisi", de: "Stromversorgung", 
           ru: "Система питания", sv: "Effektoptimering", zh: "供电拓扑架构", 
-          fr: "Alimentation", it: "Alimentazione" 
+          fr: "Alimentation", it: "Alimentazione", cs: "Napájecí architektura", pl: "Zarządzanie zasilaniem"
         }, 
         value: "Dual-rail isolated regulator circuitry" 
       }
@@ -475,7 +539,9 @@ export const cvData = {
         sv: "Demonstration av dynamisk gångkontroll för Dogduino i testmiljö.",
         zh: "Dogduino 机器狗动态小跑步态与连续步幅控制台架实时运行演示。",
         fr: "Démonstration de la démarche dynamique de Dogduino en environnement de test.",
-        it: "Dimostrazione dell'andatura dinamica di Dogduino sul banco di prova."
+        it: "Dimostrazione dell'andatura dinamica di Dogduino sul banco di prova.",
+        cs: "Ukázka dynamického krokování a řízení chůze robota Dogduino v testovacím prostředí.",
+        pl: "Demonstracja algorytmu dynamicznego chodu robota Dogduino w środowisku testowym."
       }
     },
     images: [
@@ -489,7 +555,9 @@ export const cvData = {
           sv: "Frontvy och aktiv LCD-skärm",
           zh: "正视姿态与动态 LCD 表情屏",
           fr: "Vue frontale et écran LCD dynamique",
-          it: "Vista frontale e display LCD dinamico"
+          it: "Vista frontale e display LCD dinamico",
+          cs: "Čelní pohled a aktivní displej obličeje",
+          pl: "Widok z przodu i aktywny wyświetlacz twarzy"
         },
         description: {
           en: "Front profile highlighting the integrated interactive LCD screen rendering dynamic facial expressions, flanked by 2-DOF articulated front legs.",
@@ -499,7 +567,9 @@ export const cvData = {
           sv: "Frontprofil med integrerad LCD-skärm för dynamiska ansiktsuttryck och 2-DOF ledade framben.",
           zh: "机器狗正面视角：集成微型彩色 LCD 屏幕呈现灵动小狗表情，前肢各配置 2 自由度连杆舵机驱动关节。",
           fr: "Profil avant montrant l'écran LCD interactif avec expressions faciales et pattes avant à 2 DDL.",
-          it: "Profilo anteriore con display LCD interattivo ed espressioni animate, affiancato da zampe anteriori a 2 DOF."
+          it: "Profilo anteriore con display LCD interattivo ed espressioni animate, affiancato da zampe anteriori a 2 DOF.",
+          cs: "Čelní profil zvýrazňující integrovaný interaktivní LCD displej zobrazující dynamickou mimiku, doplněný o přední končetiny se 2 stupni volnosti.",
+          pl: "Widok z przodu ukazujący zintegrowany interaktywny ekran LCD z dynamiczną mimiką oraz przednie kończyny o 2 stopniach swobody."
         }
       },
       {
@@ -512,7 +582,9 @@ export const cvData = {
           sv: "Chassi och mekanisk länkagegeometri",
           zh: "机械躯干与四肢连杆受力构型",
           fr: "Châssis et géométrie des liaisons mécaniques",
-          it: "Telaio e cinematica dei collegamenti meccanici"
+          it: "Telaio e cinematica dei collegamenti meccanici",
+          cs: "Šasi a geometrie mechanických vazeb",
+          pl: "Obudowa i geometria połączeń mechanicznych"
         },
         description: {
           en: "Side view detailing the 4-leg linkage mechanics, dual servo mounting brackets, and rigid lightweight enclosure housing the power and logic boards.",
@@ -522,7 +594,9 @@ export const cvData = {
           sv: "Sidovy som visar mekaniken med 4 länkade ben, servofästen och det lätta chassit för styrkort och batteri.",
           zh: "侧视结构图：清晰呈现 4 组四连杆受力支撑骨架、双舵机独立锁紧卡座及容纳主控板与电芯的超轻量化 3D 打印座舱。",
           fr: "Vue latérale détaillant les tringleries des pattes, les supports de servos et le boîtier abritant l'électronique.",
-          it: "Vista laterale che illustra la cinematica delle zampe, i supporti dei servi e l'alloggiamento leggero per le schede."
+          it: "Vista laterale che illustra la cinematica delle zampe, i supporti dei servi e l'alloggiamento leggero per le schede.",
+          cs: "Boční pohled detailně zobrazující mechaniku 4 končetin, držáky dvojitých servomotorů a lehký pevný kryt s napájecí a logickou deskou.",
+          pl: "Widok z boku prezentujący mechanikę 4 kończyn, podwójne uchwyty serwomechanizmów oraz lekką obudowę mieszczącą układy zasilania i logiki."
         }
       },
       {
@@ -535,7 +609,9 @@ export const cvData = {
           sv: "Elektronikprovbänk & Kalibrering",
           zh: "电子系统台架精密测量与零点标定",
           fr: "Banc de test électronique et étalonnage",
-          it: "Banco di prova elettronico e calibrazione"
+          it: "Banco di prova elettronico e calibrazione",
+          cs: "Testování elektroniky a kalibrace",
+          pl: "Testy stanowiskowe elektroniki i kalibracja"
         },
         description: {
           en: "Hardware bench validation setup showing multi-meter voltage verification, servo zero-angle calibration, and real-time firmware debugging.",
@@ -545,7 +621,9 @@ export const cvData = {
           sv: "Laboratoriemiljö med multimetermätningar, nollpunktskalibrering av servon och realtidsfelsökning av firmware.",
           zh: "台架硬件联调现场：使用数字万用表对各母线纹波实施精测，核定舵机硬件机械绝对零位偏角，进行嵌入式固件在线断点排障。",
           fr: "Validation sur banc d'essai : vérification des tensions au multimètre, étalonnage du zéro des servos et débogage firmware.",
-          it: "Setup di validazione a banco con multimetro, azzeramento degli angoli dei servomotori e debug firmware in tempo reale."
+          it: "Setup di validazione a banco con multimetro, azzeramento degli angoli dei servomotori e debug firmware in tempo reale.",
+          cs: "Laboratorní ověřovací sestava ukazující měření napětí multimetrem, kalibraci nulového úhlu servomotorů a ladění firmwaru v reálném čase.",
+          pl: "Stanowisko walidacji sprzętowej pokazujące pomiary napięcia multimetrem, kalibrację kąta zerowego serw oraz debugowanie firmware w czasie rzeczywistym."
         }
       }
     ]
@@ -566,7 +644,9 @@ export const cvData = {
         zh: "土耳其发动机工业公司 (TEI) 航空动力与燃气涡轮发动机高阶工程项目。深入研讨航空发动机热力学边界、推力矢量控制及全权限数字式发动机控制 (FADEC) 架构。",
         fr: "Formation approfondie sur les turboréacteurs et turbines à gaz par TEI. Aborde la propulsion aéronautique, la thermique et l'architecture FADEC.",
         it: "Programma di formazione avanzato sui motori aeronautici e turbine a gas di TEI. Tratta la termodinamica della propulsione e l'architettura delle centraline FADEC.",
-        bg: "Комплексна програма за обучение по авиационни двигатели и газови турбини, проведена от TEI. Разглежда механиката на реактивната тяга, термичната динамика и архитектурата на електронните блокове за управление (FADEC)."
+        bg: "Комплексна програма за обучение по авиационни двигатели и газови турбини, проведена от TEI. Разглежда механиката на реактивната тяга, термичната динамика и архитектурата на електронните блокове за управление (FADEC).",
+        cs: "Komplexní školicí program v oblasti leteckých pohonů a plynových turbín pořádaný TEI. Zahrnuje mechaniku leteckého pohonu, tepelnou dynamiku a architekturu elektronických řídicích jednotek (FADEC).",
+        pl: "Kompleksowy program szkoleniowy z zakresu lotniczych układów napędowych i turbin gazowych prowadzony przez TEI. Obejmuje mechanikę napędu lotniczego, dynamikę termiczną i architekturę sterowników FADEC."
       }
     },
     {
@@ -583,7 +663,9 @@ export const cvData = {
         zh: "基于 MATLAB 的经典与现代闭环反馈控制系统综合训练。涵盖根轨迹分析、Bode 频域相位裕度校核以及执行机构 PID 控制器的高精度参数辨识与整定。",
         fr: "Formation interactive à la synthèse de boucles d'asservissement, à l'analyse du lieu des racines et au réglage de régulateurs PID avec MATLAB.",
         it: "Formazione interattiva sulla sintesi dei loop di retroazione, analisi del luogo delle radici e taratura di controllori PID in ambiente MATLAB.",
-        bg: "Интерактивно обучение по синтез на контури с обратна връзка, анализ на коренови траектории и настройка на PID регулатори в MATLAB с фокус върху динамичната стабилност."
+        bg: "Интерактивно обучение по синтез на контури с обратна връзка, анализ на коренови траектории и настройка на PID регулатори в MATLAB с фокус върху динамичната стабилност.",
+        cs: "Interaktivní školení zaměřené na syntézu zpětnovazebních smyček, analýzu geometrického místa kořenů a ladění PID regulátorů v prostředí MATLAB.",
+        pl: "Interaktywne szkolenie z zakresu syntezy pętli sprzężenia zwrotnego, analizy linii pierwiastkowych oraz strojenia regulatorów PID w środowisku MATLAB."
       }
     },
     {
@@ -600,7 +682,9 @@ export const cvData = {
         zh: "基于模型的系统工程 (MBSE) 课程。掌握多学科物理系统框图建模、微分方程数值积分仿真，构建硬件在环 (HIL) 快速原型开发验证能力。",
         fr: "Ingénierie système basée sur les modèles, architecture par schéma-blocs et simulation temporelle pour le prototypage rapide Hardware-in-the-Loop (HIL).",
         it: "Ingegneria di sistema model-based con architettura a blocchi e simulazione nel dominio del tempo per prototipazione Hardware-in-the-Loop (HIL).",
-        bg: "Практическа учебна програма по моделно-базирано системно инженерство, обхващаща блокови диаграми, симулации във времевата област и бързо прототипиране Hardware-in-the-Loop (HIL)."
+        bg: "Практическа учебна програма по моделно-базирано системно инженерство, обхващаща блокови диаграми, симулации във времевата област и бързо прототипиране Hardware-in-the-Loop (HIL).",
+        cs: "Praktické modelově orientované systémové inženýrství zahrnující bloková schémata, simulace v časové oblasti a rychlé prototypování Hardware-in-the-Loop (HIL).",
+        pl: "Praktyczny kurs inżynierii systemów opartej na modelach, obejmujący architekturę schematów blokowych, symulacje w dziedzinie czasu i szybkie prototypowanie HIL."
       }
     },
     {
@@ -617,7 +701,9 @@ export const cvData = {
         zh: "应用软件工程认证课程，涵盖基于 Pandas 与 NumPy 的自动化数据处理流水线、科学数组计算及面向对象编程 (OOP) 架构设计。",
         fr: "Programme de génie logiciel appliqué couvrant les pipelines de traitement de données avec Pandas et NumPy ainsi que la programmation orientée objet (POO) en Python.",
         it: "Programma di sviluppo software applicato dedicato a pipeline di elaborazione dati con Pandas e NumPy e programmazione orientata agli oggetti (OOP) in Python.",
-        bg: "Приложна програма по софтуерно инженерство, обхващаща автоматизирани потоци за обработка на данни с Pandas и NumPy, числови масиви и обектно-ориентирано програмиране (OOP) на Python."
+        bg: "Приложна програма по софтуерно инженерство, обхващаща автоматизирани потоци за обработка на данни с Pandas и NumPy, числови масиви и обектно-ориентирано програмиране (OOP) на Python.",
+        cs: "Aplikovaný program softwarového inženýrství pokrývající automatizované zpracování dat v Pandas a NumPy, numerické výpočty a objektově orientované programování (OOP) v Pythonu.",
+        pl: "Praktyczny program inżynierii oprogramowania obejmujący potoki przetwarzania danych w Pandas i NumPy, obliczenia numeryczne oraz programowanie obiektowe (OOP) w Pythonie."
       }
     },
     {
@@ -634,7 +720,9 @@ export const cvData = {
         zh: "面向工程应用的高级 Python 编程认证。精通内存数据结构、模块化算法设计与 Pandas/NumPy 大规模测量数据流批处理管道。",
         fr: "Formation approfondie en Python, structures de données et manipulation analytique avec NumPy et Pandas pour les tests matériels automatisés.",
         it: "Corso approfondito di Python su strutture dati, algoritmi e pipeline con NumPy e Pandas per collaudo hardware automatico e acquisizione dati.",
-        bg: "Разширена учебна програма по Python с фокус върху структури от данни, алгоритмичен дизайн и автоматизирани тестови процедури за хардуер."
+        bg: "Разширена учебна програма по Python с фокус върху структури от данни, алгоритмичен дизайн и автоматизирани тестови процедури за хардуер.",
+        cs: "Pokročilé programování v jazyce Python zaměřené na datové struktury, návrh algoritmů a zpracování dat pomocí NumPy a Pandas pro automatizované testování hardwaru.",
+        pl: "Zaawansowany kurs języka Python poświęcony strukturom danych, algorytmice oraz przetwarzaniu danych z NumPy i Pandas do automatyzacji testów sprzętowych."
       }
     },
     {
@@ -651,7 +739,9 @@ export const cvData = {
         zh: "基于 Excel 的工程财务与项目核算模型。包含研发原型机物料采购成本核销、资金现金流预估及多项目工程工时资源分配表编制。",
         fr: "Modélisation financière sur tableur pour le rapprochement des coûts, les prévisions et la gestion budgétaire des prototypes R&D.",
         it: "Modellazione analitica su fogli di calcolo per riconciliazione costi operativi, previsioni e gestione del budget per prototipi industriali.",
-        bg: "Аналитично моделиране в електронни таблици за проследяване на оперативни разходи, финансово прогнозиране и управление на бюджета за индустриални R&D прототипи."
+        bg: "Аналитично моделиране в електронни таблици за проследяване на оперативни разходи, финансово прогнозиране и управление на бюджета за индустриални R&D прототипи.",
+        cs: "Analytické modelování v tabulkách Excelu zahrnující kontrolu provozních nákladů, finanční prognózy a evidenci zdrojů pro průmyslové prototypy VaV.",
+        pl: "Analityczne modelowanie w programie Excel obejmujące uzgadnianie kosztów operacyjnych, prognozowanie finansowe i planowanie budżetu prototypów B+R."
       }
     },
     {
@@ -668,7 +758,9 @@ export const cvData = {
         zh: "机器学习与深度神经网络基础工程认证。学习监督学习算法分类边界、特征工程与嵌入式低算力终端 (Edge AI) 内存与功耗约束评估。",
         fr: "Méthodologies fondamentales de machine learning et architectures neuronales, avec analyse des contraintes de déploiement en périphérie (Edge AI).",
         it: "Metodologie fondamentali di machine learning e architetture neurali, con valutazione dei vincoli di implementazione su microcontrollori edge.",
-        bg: "Основи на машинното обучение и невронните мрежи, включително обучение с учител, класификация и оценка на ограниченията за вградени микроконтролери (Edge AI)."
+        bg: "Основи на машинното обучение и невронните мрежи, включително обучение с учител, класификация и оценка на ограниченията за вградени микроконтролери (Edge AI).",
+        cs: "Základy strojového učení a neuronových sítí včetně učení s učitelem, klasifikace a posouzení omezení pro nasazení na vestavěných mikrokontrolérech (Edge AI).",
+        pl: "Podstawy uczenia maszynowego i sieci neuronowych, w tym uczenie nadzorowane, klasyfikacja oraz ocena ograniczeń wdrażania na mikrokontrolerach (Edge AI)."
       }
     },
     {
@@ -685,7 +777,9 @@ export const cvData = {
         zh: "企业级资源规划 (ERP) 核心架构训练。系统学习 SAP 物料主数据管理 (MM)、生产工单下发 (PP) 与物料清单 (BOM) 跨部门协同流转。",
         fr: "Principes fondamentaux des progiciels ERP : gestion des stocks, ordres de fabrication et liaison entre nomenclatures (BOM) et processus industriels.",
         it: "Formazione sui flussi ERP focalizzata sulla gestione materiali, ordini di produzione e tracciabilità delle distinte base (BOM).",
-        bg: "Обучение по ERP процеси с фокус върху управление на материалите, производствени поръчки и вериги за доставки, свързващо инженерните спецификации (BOM) с бизнес операциите."
+        bg: "Обучение по ERP процеси с фокус върху управление на материалите, производствени поръчки и вериги за доставки, свързващо инженерните спецификации (BOM) с бизнес операциите.",
+        cs: "Školení podnikových informačních systémů (ERP) zaměřené na správu materiálu, výrobní příkazy a propojení technických kusovníků (BOM) s provozem.",
+        pl: "Szkolenie z zakresu systemów ERP skupione na gospodarce materiałowej, zleceniach produkcyjnych i powiązaniu zestawień materiałowych (BOM) z operacjami firmy."
       }
     }
   ] as CertificationItem[],
@@ -711,7 +805,9 @@ export const cvData = {
           sv: "Analytiskt tänkande",
           zh: "严密分析思维",
           fr: "Pensée analytique",
-          it: "Pensiero analitico"
+          it: "Pensiero analitico",
+          cs: "Analytické myšlení",
+          pl: "Myślenie analityczne"
         },
         desc: {
           en: "Systematic root-cause analysis for electrical transients and firmware edge cases.",
@@ -721,7 +817,9 @@ export const cvData = {
           sv: "Systematisk rotorsaksanalys för elektriska transienter och gränsfall i firmware.",
           zh: "针对电气瞬态与固件极值边缘工况建立系统化根因排查机制。",
           fr: "Analyse méthodique des causes racines des transitoires électriques et cas limites.",
-          it: "Analisi sistematica delle cause alla radice di transitori e casi limite nel firmware."
+          it: "Analisi sistematica delle cause alla radice di transitori e casi limite nel firmware.",
+          cs: "Systematická analýza kořenových příčin elektrických přechodových jevů a hraničních případů firmwaru.",
+          pl: "Systematyczna analiza przyczyn źródłowych stanów nieustalonych i przypadków brzegowych oprogramowania."
         }
       },
       {
@@ -733,7 +831,9 @@ export const cvData = {
           sv: "Problemlösningsförmåga",
           zh: "工程攻坚解题能力",
           fr: "Résolution de problèmes",
-          it: "Risoluzione dei problemi"
+          it: "Risoluzione dei problemi",
+          cs: "Řešení problémů",
+          pl: "Rozwiązywanie problemów"
         },
         desc: {
           en: "Translating complex kinematics and motor load specifications into robust algorithms.",
@@ -743,7 +843,9 @@ export const cvData = {
           sv: "Översätta komplex kinematik och motorbelastningsprofiler till robusta algoritmer.",
           zh: "将高阶空间机构动力学模型与电机重载指标解耦转化为高鲁棒控制算法。",
           fr: "Traduction de cinématiques complexes et de profils de charge en algorithmes robustes.",
-          it: "Conversione di cinematica complessa e specifiche di carico in algoritmi affidabili."
+          it: "Conversione di cinematica complessa e specifiche di carico in algoritmi affidabili.",
+          cs: "Převod složité kinematiky a specifikací zatížení motorů do spolehlivých algoritmů.",
+          pl: "Przekładanie złożonej kinematyki oraz specyfikacji obciążenia silników na niezawodne algorytmy."
         }
       },
       {
@@ -755,7 +857,9 @@ export const cvData = {
           sv: "Vilja att lära",
           zh: "主动求知与技术敏锐度",
           fr: "Désir d'apprendre",
-          it: "Desiderio di apprendere"
+          it: "Desiderio di apprendere",
+          cs: "Ochota učit se",
+          pl: "Chęć do nauki"
         },
         desc: {
           en: "Rapidly mastering emerging avionics protocols, flight systems, and embedded frameworks.",
@@ -765,7 +869,9 @@ export const cvData = {
           sv: "Snabb inlärning av nya avionikprotokoll, styrsystem och inbyggda ramverk.",
           zh: "对前沿航空电子通信标准、飞控机载系统与新锐微处理器框架保持极速掌握力。",
           fr: "Assimilation rapide des nouveaux protocoles avioniques et bibliothèques embarquées.",
-          it: "Rapida acquisizione di protocolli avionici emergenti e framework embedded."
+          it: "Rapida acquisizione di protocolli avionici emergenti e framework embedded.",
+          cs: "Rychlé osvojování nových avionických protokolů, letových systémů a vestavěných frameworků.",
+          pl: "Szybkie opanowywanie nowoczesnych protokołów awioniki, systemów lotniczych i frameworków wbudowanych."
         }
       },
       {
@@ -777,7 +883,9 @@ export const cvData = {
           sv: "Anpassningsförmåga",
           zh: "多维适应力",
           fr: "Adaptabilité",
-          it: "Adattabilità"
+          it: "Adattabilità",
+          cs: "Přizpůsobivost",
+          pl: "Zdolność adaptacji"
         },
         desc: {
           en: "Seamless transitions between hardware prototyping, firmware coding, and R&D compliance.",
@@ -787,7 +895,9 @@ export const cvData = {
           sv: "Smidiga övergångar mellan hårdvaruprototyper, mjukvarukod och FoU-standarder.",
           zh: "在硬件台架搭设焊接、低层 C 固件编写与严谨标准化合规审核之间敏捷自如切换。",
           fr: "Passage fluide entre prototypage matériel, développement firmware et conformité R&D.",
-          it: "Flessibilità tra prototipazione hardware, scrittura di firmware e conformità R&S."
+          it: "Flessibilità tra prototipazione hardware, scrittura di firmware e conformità R&S.",
+          cs: "Plynulé přechody mezi prototypováním hardwaru, programováním firmwaru a normami VaV.",
+          pl: "Płynne przechodzenie między prototypowaniem sprzętu, programowaniem firmware i wymogami B+R."
         }
       },
       {
@@ -799,7 +909,9 @@ export const cvData = {
           sv: "Teknisk dokumentation",
           zh: "规范化技术文档能力",
           fr: "Documentation technique",
-          it: "Documentazione tecnica"
+          it: "Documentazione tecnica",
+          cs: "Technická dokumentace",
+          pl: "Dokumentacja techniczna"
         },
         desc: {
           en: "Structured IEC compliance reports, user guides, schematics, and clean engineering notes.",
@@ -809,7 +921,9 @@ export const cvData = {
           sv: "Strukturerade IEC-efterlevnadsrapporter, användarguider, kretsscheman och ingenjörsanteckningar.",
           zh: "具备编撰严谨 IEC 认证合规测试报告、设备操作手册、原理图与可维护工程日志的规范水准。",
           fr: "Rapports de conformité CEI structurés, schémas fonctionnels et notes d'ingénierie.",
-          it: "Redazione di report di conformità IEC, manuali utente, schemi e note ingegneristiche."
+          it: "Redazione di report di conformità IEC, manuali utente, schemi e note ingegneristiche.",
+          cs: "Strukturované zprávy o shodě IEC, uživatelské příručky, schémata a přehledné technické poznámky.",
+          pl: "Ustrukturyzowane raporty zgodności IEC, instrukcje obsługi, schematy i przejrzyste notatki inżynierskie."
         }
       }
     ]
@@ -819,7 +933,8 @@ export const cvData = {
     {
       name: { 
         en: "English", tr: "İngilizce", de: "Englisch", ru: "Английский", 
-        sv: "Engelska", zh: "英语", fr: "Anglais", it: "Inglese" 
+        sv: "Engelska", zh: "英语", fr: "Anglais", it: "Inglese",
+        cs: "Angličtina", pl: "Angielski"
       },
       level: "B2",
       badge: { 
@@ -830,7 +945,9 @@ export const cvData = {
         sv: "Övre medelnivå / Teknisk kompetens",
         zh: "中高级 / 技术专业工作语言",
         fr: "Intermédiaire supérieur / Compétence technique",
-        it: "Intermedio superiore / Competenza tecnica"
+        it: "Intermedio superiore / Competenza tecnica",
+        cs: "Vyšší středně pokročilá / Technická způsobilost",
+        pl: "Wyższy średniozaawansowany / Biegłość techniczna"
       },
       details: {
         en: "Full technical literacy in English engineering literature, documentation, and international teams.",
@@ -840,13 +957,16 @@ export const cvData = {
         sv: "Fullgod förmåga i engelsk ingenjörslitteratur, dokumentation och internationella team.",
         zh: "能流畅阅读英文航空航天及嵌入式学术文献，自主编写技术白皮书并适应全英文跨国工程协作。",
         fr: "Maîtrise technique complète de la documentation en anglais et des échanges internationaux.",
-        it: "Piena competenza nella letteratura ingegneristica in inglese, documentazione e team internazionali."
+        it: "Piena competenza nella letteratura ingegneristica in inglese, documentazione e team internazionali.",
+        cs: "Plná technická orientace v anglické inženýrské literatuře, dokumentaci a mezinárodních týmech.",
+        pl: "Pełna biegłość techniczna w angielskiej literaturze inżynierskiej, dokumentacji i zespołach międzynarodowych."
       }
     },
     {
       name: { 
         en: "Russian", tr: "Rusça", de: "Russisch", ru: "Русский", 
-        sv: "Ryska", zh: "俄语", fr: "Russe", it: "Russo" 
+        sv: "Ryska", zh: "俄语", fr: "Russe", it: "Russo",
+        cs: "Ruština", pl: "Rosyjski"
       },
       level: "A1",
       badge: { 
@@ -857,7 +977,9 @@ export const cvData = {
         sv: "Nybörjarnivå",
         zh: "基础入门",
         fr: "Niveau élémentaire",
-        it: "Elementare"
+        it: "Elementare",
+        cs: "Základní úroveň",
+        pl: "Poziom podstawowy"
       },
       details: {
         en: "Basic conversational and foundational language understanding.",
@@ -867,7 +989,9 @@ export const cvData = {
         sv: "Grundläggande konversation och språkförståelse.",
         zh: "掌握常用日常短语与基础语法架构认知。",
         fr: "Compréhension élémentaire et conversations simples.",
-        it: "Competenze di conversazione di base e comprensione elementare."
+        it: "Competenze di conversazione di base e comprensione elementare.",
+        cs: "Základní konverzační dovednosti a porozumění základům jazyka.",
+        pl: "Podstawowa znajomość języka w mowie oraz rozumienie podstaw gramatyki."
       }
     }
   ],
@@ -884,7 +1008,9 @@ export const cvData = {
         sv: "Prefekt för institutionen för elektro- och elektronik",
         zh: "电气与电子工程系系主任",
         fr: "Directeur du Département Génie Électrique et Électronique",
-        it: "Direttore del Dipartimento di Ingegneria Elettrica ed Elettronica"
+        it: "Direttore del Dipartimento di Ingegneria Elettrica ed Elettronica",
+        cs: "Vedoucí katedry elektrotechniky a elektroniky",
+        pl: "Kierownik Katedry Elektrotechniki i Elektroniki"
       },
       organization: "Ostim Technical University",
       email: "ismailhakki.altas@ostimteknik.edu.tr"
@@ -899,7 +1025,9 @@ export const cvData = {
         sv: "VD & Grundare",
         zh: "总经理兼创始人",
         fr: "Directeur Général & Fondateur",
-        it: "Direttore Generale & Fondatore"
+        it: "Direttore Generale & Fondatore",
+        cs: "Generální ředitel a zakladatel",
+        pl: "Dyrektor Generalny i Założyciel"
       },
       organization: "PESS Power Electronic Solutions",
       email: "huseyin.kose@ostimteknik.edu.tr"
@@ -914,7 +1042,9 @@ export const cvData = {
         sv: "Tidigare chef för elektroniska system",
         zh: "前电子系统事业部总监",
         fr: "Ancien Responsable des Systèmes Électroniques",
-        it: "Ex Responsabile dei Sistemi Elettronici"
+        it: "Ex Responsabile dei Sistemi Elettronici",
+        cs: "Bývalý manažer elektronických systémů",
+        pl: "Były Kierownik Systemów Elektronicznych"
       },
       organization: "BMC Power",
       email: "senol.gulgonul@ostimteknik.edu.tr"

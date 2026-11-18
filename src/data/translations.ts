@@ -1,4 +1,4 @@
-export type SupportedLang = 'en' | 'tr' | 'de' | 'ru' | 'sv' | 'zh' | 'fr' | 'it' | 'bg';
+export type SupportedLang = 'en' | 'tr' | 'de' | 'ru' | 'sv' | 'zh' | 'fr' | 'it' | 'bg' | 'cs' | 'pl';
 
 export interface LanguageOption {
   code: SupportedLang;
@@ -9,10 +9,12 @@ export interface LanguageOption {
 
 export const languagesList: LanguageOption[] = [
   { code: 'bg', label: 'Български', flag: '🇧🇬', short: 'BG' },
+  { code: 'cs', label: 'Čeština', flag: '🇨🇿', short: 'CS' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪', short: 'DE' },
   { code: 'en', label: 'English', flag: '🇬🇧', short: 'EN' },
   { code: 'fr', label: 'Français', flag: '🇫🇷', short: 'FR' },
   { code: 'it', label: 'Italiano', flag: '🇮🇹', short: 'IT' },
+  { code: 'pl', label: 'Polski', flag: '🇵🇱', short: 'PL' },
   { code: 'ru', label: 'Русский', flag: '🇷🇺', short: 'RU' },
   { code: 'sv', label: 'Svenska', flag: '🇸🇪', short: 'SV' },
   { code: 'tr', label: 'Turkish', flag: '🇹🇷', short: 'TR' },
@@ -1154,6 +1156,232 @@ export const uiText: Record<SupportedLang, {
     footer: {
       allRights: 'Всички права запазени.',
       backToTop: 'Към началото'
+    }
+  },
+  cs: {
+    nav: {
+      about: 'O mně',
+      dogduino: 'Projekt Dogduino',
+      experience: 'Zkušenosti',
+      education: 'Vzdělání a dovednosti',
+      certifications: 'Certifikáty',
+      references: 'Reference',
+      contact: 'Kontakt'
+    },
+    hero: {
+      kicker: 'ELEKTROTECHNIKA A ELEKTRONIKA',
+      subKicker: 'OSTIM TECHNICAL UNIVERSITY',
+      summaryLabel: 'Profesní profil',
+      activeEngineering: 'Aktivní inženýrské zaměření',
+      viewDogduino: 'Zobrazit projekt Dogduino',
+      contactMe: 'Kontaktujte mě',
+      kpis: {
+        internships: 'Odborné stáže',
+        internshipsSub: 'Volt WEG, Presidency IT, Uptechlabs, Gdz',
+        quadruped: 'Čtyřnohý robot Dogduino',
+        quadrupedSub: 'ESP32, PCA9685, Bluetooth & kinematika',
+        certs: 'Akreditované certifikáty',
+        certsSub: 'TEI, MathWorks, Cisco, Bilgeiş, SAP',
+        languages: 'Jazykové znalosti',
+        languagesSub: 'Angličtina (technická) a ruština'
+      }
+    },
+    dogduino: {
+      badge: 'HLAVNÍ PROJEKT ROBOTIKY A VESTAVĚNÝCH SYSTÉMŮ',
+      videoTab: 'Ukázkové video',
+      galleryTab: 'Fotogalerie (3)',
+      scopeHeading: 'Rozsah projektu a funkce',
+      challengesHeading: 'Klíčové inženýrské oblasti',
+      challengesText: 'Navržena dvoukolejnicová izolace napájení pro eliminaci poklesů napětí při souběžném řízení 8 servomotorů. Implementována uzavřená inverzní kinematika pro převod souřadnic končetin x-y-z na PWM signály v reálném čase.',
+      specsHeading: 'Hardwarové a systémové specifikace',
+      lightboxOf: 'z',
+      loopCaption: 'Demonstrace:'
+    },
+    experience: {
+      kicker: 'KARIÉRA A PROFESNÍ ZKUŠENOSTI',
+      title: 'Pracovní zkušenosti',
+      desc: '4 praktické inženýrské stáže zahrnující zátěžové testy motorů dle IEC, vládní webové portály, firmware senzorů v reálném čase a distribuční energetické sítě.',
+      filterAll: 'Všechny role (4)',
+      filterRd: 'Výzkum a vývoj / Volt WEG',
+      filterEmbedded: 'Vestavěné systémy',
+      filterIt: 'IT a zabezpečení webu',
+      filterGrid: 'Elektrotechnika a sítě'
+    },
+    education: {
+      kicker: 'AKADEMICKÉ VZDĚLÁNÍ A MATICE DOVEDNOSTÍ',
+      title: 'Vzdělání, dovednosti a jazyky',
+      focusLabel: 'Inženýrské zaměření',
+      pillar1Title: 'Vestavěné systémy a mikrokontroléry',
+      pillar1Desc: 'ESP32, ARM/STM32, firmware v C/C++, sběrnice SPI/I2C/UART',
+      pillar2Title: 'Výkonová elektronika a pohony',
+      pillar2Desc: 'PWM řízení motorů, zátěžové testy IEC S1/S3, DC-DC regulace',
+      pillar3Title: 'Avionika a řídicí systémy',
+      pillar3Desc: 'TEI Aviation Engines School, MathWorks Simulink/Control Design',
+      techSkillsTitle: 'Technické a softwarové dovednosti',
+      profQualitiesTitle: 'Profesní kvality',
+      languagesTitle: 'Jazyky'
+    },
+    certs: {
+      kicker: 'KURZY A AKREDITACE',
+      title: 'Kurzy a certifikáty',
+      desc: 'Akreditované certifikáty od TUSAŞ Engine Industries (TEI), MathWorks, Cisco Networking Academy, Bilgeiş a Udemy.',
+      countBadge: '8 ověřených certifikátů',
+      completed: 'Dokončeno',
+      popupPrompt: 'Najeďte myší nebo klepněte pro detail',
+      clickToView: 'Zobrazit popis',
+      closePopup: 'Zavřít'
+    },
+    references: {
+      kicker: 'AKADEMICKÉ A PRŮMYSLOVÉ REFERENCE',
+      title: 'Reference',
+      desc: 'Přímo ověřitelné profesní kontakty na vedoucí katedry a manažery v oboru výkonové elektroniky.',
+      refIndex: 'REFERENCE',
+      copyEmail: 'Kopírovat e-mail',
+      directEmail: 'Přímá e-mailová korespondence'
+    },
+    contact: {
+      badge: 'PŘÍMÁ KOMUNIKACE',
+      title: 'Kontaktujte mě',
+      desc: 'K dispozici pro pracovní příležitosti v oblasti vestavěného firmwaru, avionických systémů a robotiky. Ozvěte se přes formulář nebo přímo přes LinkedIn a e-mail.',
+      emailLabel: 'E-MAILOVÁ ADRESA',
+      emailAction: 'Odeslat e-mail',
+      linkedinLabel: 'PROFESNÍ SÍŤ',
+      linkedinAction: 'Navštívit profil LinkedIn',
+      responseSpeed: 'Rychlá odezva (obvykle do 24 hodin)',
+      formTitle: 'Poslat zprávu',
+      formSubtitle: 'Vyplňte níže uvedené údaje pro odeslání přímé poptávky Yağmur Kahraman.',
+      nameField: 'Vaše jméno *',
+      emailField: 'Váš e-mail *',
+      companyField: 'Společnost / Instituce (volitelné)',
+      subjectField: 'Předmět / Pozice *',
+      messageField: 'Vaše zpráva *',
+      namePlaceholder: 'např. Jan Novák',
+      emailPlaceholder: 'jan@spolecnost.cz',
+      companyPlaceholder: 'např. Letecká společnost',
+      subjectPlaceholder: 'Nabídka pozice Embedded Firmware / Avionika',
+      messagePlaceholder: 'Podrobnosti o pozici, návrh termínu pohovoru nebo spolupráce...',
+      requiredNote: '* Povinná pole',
+      submitButton: 'Odeslat zprávu',
+      successTitle: 'Zpráva připravena!',
+      successDesc: 'Váš e-mailový klient se otevřel s připraveným konceptem pro adresu kahramanyagmur178@gmail.com.',
+      sendAnother: 'Odeslat další zprávu'
+    },
+    footer: {
+      allRights: 'Všechna práva vyhrazena.',
+      backToTop: 'Nahoru'
+    }
+  },
+  pl: {
+    nav: {
+      about: 'O mnie',
+      dogduino: 'Projekt Dogduino',
+      experience: 'Doświadczenie',
+      education: 'Edukacja i umiejętności',
+      certifications: 'Certyfikaty',
+      references: 'Referencje',
+      contact: 'Kontakt'
+    },
+    hero: {
+      kicker: 'INŻYNIERIA ELEKTRYCZNA I ELEKTRONIKA',
+      subKicker: 'OSTIM TECHNICAL UNIVERSITY',
+      summaryLabel: 'Profil zawodowy',
+      activeEngineering: 'Aktywne kompetencje inżynierskie',
+      viewDogduino: 'Zobacz projekt Dogduino',
+      contactMe: 'Skontaktuj się',
+      kpis: {
+        internships: 'Staże inżynierskie',
+        internshipsSub: 'Volt WEG, Presidency IT, Uptechlabs, Gdz',
+        quadruped: 'Czworonożny robot Dogduino',
+        quadrupedSub: 'ESP32, PCA9685, Bluetooth & kinematyka',
+        certs: 'Akredytowane certyfikaty',
+        certsSub: 'TEI, MathWorks, Cisco, Bilgeiş, SAP',
+        languages: 'Znajomość języków',
+        languagesSub: 'Angielski (techniczny) i rosyjski'
+      }
+    },
+    dogduino: {
+      badge: 'WYRÓŻNIONY PROJEKT ROBOTYKI I SYSTEMÓW WBUDOWANYCH',
+      videoTab: 'Wideo demonstracyjne',
+      galleryTab: 'Galeria zdjęć (3)',
+      scopeHeading: 'Zakres projektu i funkcje',
+      challengesHeading: 'Kluczowe zagadnienia inżynierskie',
+      challengesText: 'Zaprojektowano dwutorową izolację zasilania eliminującą spadki napięcia podczas jednoczesnego sterowania 8 serwomechanizmami. Zaimplementowano zamkniętą kinematykę odwrotną zamieniającą trajektorie x-y-z na sygnały PWM w czasie rzeczywistym.',
+      specsHeading: 'Specyfikacja sprzętowa i systemowa',
+      lightboxOf: 'z',
+      loopCaption: 'Demonstracja:'
+    },
+    experience: {
+      kicker: 'KARIERA I DOŚWIADCZENIE ZAWODOWE',
+      title: 'Doświadczenie zawodowe',
+      desc: '4 praktyczne staże inżynierskie obejmujące testy obciążeniowe silników wg norm IEC, portale rządowe o wysokim poziomie bezpieczeństwa, firmware czujników oraz sieci elektroenergetyczne.',
+      filterAll: 'Wszystkie role (4)',
+      filterRd: 'B+R / Volt WEG',
+      filterEmbedded: 'Systemy wbudowane',
+      filterIt: 'IT i bezpieczeństwo sieci',
+      filterGrid: 'Elektryka i sieci'
+    },
+    education: {
+      kicker: 'WYKSZTAŁCENIE I MACIERZ UMIEJĘTNOŚCI',
+      title: 'Edukacja, umiejętności i języki',
+      focusLabel: 'Specjalizacja inżynierska',
+      pillar1Title: 'Systemy wbudowane i mikrokontrolery',
+      pillar1Desc: 'ESP32, ARM/STM32, firmware w C/C++, magistrale SPI/I2C/UART',
+      pillar2Title: 'Energoelektronika i napędy',
+      pillar2Desc: 'Sterowanie PWM silników, testy IEC S1/S3, regulacja DC-DC',
+      pillar3Title: 'Awionika i teoria sterowania',
+      pillar3Desc: 'TEI Aviation Engines School, MathWorks Simulink/Control Design',
+      techSkillsTitle: 'Umiejętności techniczne i oprogramowanie',
+      profQualitiesTitle: 'Cechy zawodowe',
+      languagesTitle: 'Języki'
+    },
+    certs: {
+      kicker: 'KURSY I AKREDYTACJE',
+      title: 'Kursy i certyfikaty',
+      desc: 'Akredytowane certyfikaty uzyskane w TUSAŞ Engine Industries (TEI), MathWorks, Cisco Networking Academy, Bilgeiş oraz Udemy.',
+      countBadge: '8 zweryfikowanych certyfikatów',
+      completed: 'Ukończono',
+      popupPrompt: 'Najedź kursorem lub kliknij, aby przeczytać opis',
+      clickToView: 'Zobacz opis',
+      closePopup: 'Zamknij'
+    },
+    references: {
+      kicker: 'REFERENCJE AKADEMICKIE I PRZEMYSŁOWE',
+      title: 'Referencje',
+      desc: 'Bezpośrednio weryfikowalne referencje od kierownictwa wydziału oraz dyrektorów z branży energoelektroniki.',
+      refIndex: 'REFERENCJA',
+      copyEmail: 'Kopiuj e-mail',
+      directEmail: 'Bezpośredni kontakt e-mail'
+    },
+    contact: {
+      badge: 'BEZPOŚREDNI KONTAKT',
+      title: 'Skontaktuj się',
+      desc: 'Otwarta na propozycje pracy w zakresie firmware wbudowanego, systemów awionicznych oraz robotyki. Napisz przez formularz lub skontaktuj się przez LinkedIn i e-mail.',
+      emailLabel: 'ADRES E-MAIL',
+      emailAction: 'Wyślij e-mail',
+      linkedinLabel: 'SIEĆ ZAWODOWA',
+      linkedinAction: 'Odwiedź profil LinkedIn',
+      responseSpeed: 'Szybka odpowiedź (zazwyczaj w ciągu 24 godzin)',
+      formTitle: 'Wyślij wiadomość',
+      formSubtitle: 'Wypełnij poniższe pola, aby wysłać zapytanie bezpośrednio do Yağmur Kahraman.',
+      nameField: 'Twoje imię i nazwisko *',
+      emailField: 'Twój adres e-mail *',
+      companyField: 'Firma / Instytucja (opcjonalnie)',
+      subjectField: 'Temat / Stanowisko *',
+      messageField: 'Twoja wiadomość *',
+      namePlaceholder: 'np. Jan Kowalski',
+      emailPlaceholder: 'jan@firma.pl',
+      companyPlaceholder: 'np. Firma Lotnicza',
+      subjectPlaceholder: 'Oferta pracy Embedded Firmware / Awionika',
+      messagePlaceholder: 'Szczegóły stanowiska, termin rozmowy kwalifikacyjnej lub propozycja współpracy...',
+      requiredNote: '* Pola wymagane',
+      submitButton: 'Wyślij wiadomość',
+      successTitle: 'Wiadomość gotowa!',
+      successDesc: 'Twój program pocztowy został otwarty z gotową wiadomością na adres kahramanyagmur178@gmail.com.',
+      sendAnother: 'Wyślij kolejną wiadomość'
+    },
+    footer: {
+      allRights: 'Wszelkie prawa zastrzeżone.',
+      backToTop: 'Do góry'
     }
   }
 };
