@@ -24,12 +24,20 @@ export const languagesList: LanguageOption[] = [
 export const uiText: Record<SupportedLang, {
   nav: {
     about: string;
+    projects: string;
+    viewAllProjects: string;
     dogduino: string;
     experience: string;
     education: string;
     certifications: string;
     references: string;
     contact: string;
+  };
+  projectsSection: {
+    kicker: string;
+    title: string;
+    desc: string;
+    viewDetails: string;
   };
   hero: {
     kicker: string;
@@ -137,12 +145,20 @@ export const uiText: Record<SupportedLang, {
   en: {
     nav: {
       about: 'About',
+      projects: 'Projects',
+      viewAllProjects: 'View All',
       dogduino: 'Dogduino Project',
       experience: 'Experience',
       education: 'Education & Skills',
       certifications: 'Certifications',
       references: 'References',
       contact: 'Contact'
+    },
+    projectsSection: {
+      kicker: 'ENGINEERING PROJECTS',
+      title: 'Projects',
+      desc: 'Selected embedded systems, robotics, and applied hardware engineering builds.',
+      viewDetails: 'View project details'
     },
     hero: {
       kicker: 'ELECTRICAL & ELECTRONICS ENGINEERING',
@@ -251,12 +267,20 @@ export const uiText: Record<SupportedLang, {
   tr: {
     nav: {
       about: 'Hakkımda',
+      projects: 'Projeler',
+      viewAllProjects: 'Tümünü gör',
       dogduino: 'Dogduino Projesi',
       experience: 'İş Deneyimi',
       education: 'Eğitim & Yetkinlikler',
       certifications: 'Sertifikalar',
       references: 'Referanslar',
       contact: 'İletişim'
+    },
+    projectsSection: {
+      kicker: 'MÜHENDİSLİK PROJELERİ',
+      title: 'Projeler',
+      desc: 'Seçili gömülü sistem, robotik ve uygulamalı donanım mühendisliği çalışmaları.',
+      viewDetails: 'Proje detaylarını incele'
     },
     hero: {
       kicker: 'ELEKTRİK & ELEKTRONİK MÜHENDİSLİĞİ',
@@ -365,12 +389,20 @@ export const uiText: Record<SupportedLang, {
   de: {
     nav: {
       about: 'Über mich',
+      projects: 'Projekte',
+      viewAllProjects: 'Alle ansehen',
       dogduino: 'Dogduino Projekt',
       experience: 'Erfahrung',
       education: 'Ausbildung & Skills',
       certifications: 'Zertifikate',
       references: 'Referenzen',
       contact: 'Kontakt'
+    },
+    projectsSection: {
+      kicker: 'INGENIEURPROJEKTE',
+      title: 'Projekte',
+      desc: 'Ausgewählte Projekte in den Bereichen Embedded Systems, Robotik und Hardwareentwicklung.',
+      viewDetails: 'Projektdetails ansehen'
     },
     hero: {
       kicker: 'ELEKTRO- UND ELEKTRONIKINGENIEURWESEN',
@@ -479,12 +511,20 @@ export const uiText: Record<SupportedLang, {
   ru: {
     nav: {
       about: 'Обо мне',
+      projects: 'Проекты',
+      viewAllProjects: 'Смотреть все',
       dogduino: 'Проект Dogduino',
       experience: 'Опыт работы',
       education: 'Образование и навыки',
       certifications: 'Сертификаты',
       references: 'Рекомендации',
       contact: 'Контакты'
+    },
+    projectsSection: {
+      kicker: 'ИНЖЕНЕРНЫЕ ПРОЕКТЫ',
+      title: 'Проекты',
+      desc: 'Избранные разработки в области встраиваемых систем, робототехники и аппаратного обеспечения.',
+      viewDetails: 'Подробнее о проекте'
     },
     hero: {
       kicker: 'ИНЖЕНЕРИЯ ЭЛЕКТРИКИ И ЭЛЕКТРОНИКИ',
@@ -593,12 +633,20 @@ export const uiText: Record<SupportedLang, {
   sv: {
     nav: {
       about: 'Om mig',
+      projects: 'Projekt',
+      viewAllProjects: 'Visa alla',
       dogduino: 'Dogduino Projekt',
       experience: 'Erfarenhet',
       education: 'Utbildning & Kompetens',
       certifications: 'Certifieringar',
       references: 'Referenser',
       contact: 'Kontakt'
+    },
+    projectsSection: {
+      kicker: 'INGENJÖRSPROJEKT',
+      title: 'Projekt',
+      desc: 'Utvalda projekt inom inbyggda system, robotik och tillämpad hårdvaruutveckling.',
+      viewDetails: 'Visa projektdetaljer'
     },
     hero: {
       kicker: 'ELEKTRO- OCH ELEKTRONIKINGENJÖR',
@@ -707,12 +755,20 @@ export const uiText: Record<SupportedLang, {
   zh: {
     nav: {
       about: '关于我',
+      projects: '项目作品',
+      viewAllProjects: '查看全部',
       dogduino: 'Dogduino 机器狗',
       experience: '工作经历',
       education: '教育与技能',
       certifications: '专业证书',
       references: '专业推荐人',
       contact: '联系方式'
+    },
+    projectsSection: {
+      kicker: '工程项目展示',
+      title: '工程项目',
+      desc: '精选嵌入式系统、机器人控制与硬件工程研发项目。',
+      viewDetails: '查看项目详情'
     },
     hero: {
       kicker: '电气与电子工程专业',
@@ -821,12 +877,20 @@ export const uiText: Record<SupportedLang, {
   fr: {
     nav: {
       about: 'À propos',
+      projects: 'Projets',
+      viewAllProjects: 'Tout voir',
       dogduino: 'Projet Dogduino',
       experience: 'Expérience',
       education: 'Formation & Compétences',
       certifications: 'Certifications',
       references: 'Références',
       contact: 'Contact'
+    },
+    projectsSection: {
+      kicker: 'PROJETS D’INGÉNIERIE',
+      title: 'Projets',
+      desc: 'Sélection de réalisations en systèmes embarqués, robotique et conception matérielle.',
+      viewDetails: 'Voir les détails'
     },
     hero: {
       kicker: 'GÉNIE ÉLECTRIQUE ET ÉLECTRONIQUE',
@@ -935,12 +999,20 @@ export const uiText: Record<SupportedLang, {
   it: {
     nav: {
       about: 'Chi sono',
+      projects: 'Progetti',
+      viewAllProjects: 'Vedi tutti',
       dogduino: 'Progetto Dogduino',
       experience: 'Esperienza',
       education: 'Formazione & Competenze',
       certifications: 'Certificazioni',
       references: 'Referenze',
       contact: 'Contatto'
+    },
+    projectsSection: {
+      kicker: 'PROGETTI DI INGEGNERIA',
+      title: 'Progetti',
+      desc: 'Progetti selezionati nell’ambito dei sistemi embedded, della robotica e dell’hardware.',
+      viewDetails: 'Vedi dettagli progetto'
     },
     hero: {
       kicker: 'INGEGNERIA ELETTRICA ED ELETTRONICA',
@@ -1048,12 +1120,20 @@ export const uiText: Record<SupportedLang, {
   bg: {
     nav: {
       about: 'За мен',
+      projects: 'Проекти',
+      viewAllProjects: 'Виж всички',
       dogduino: 'Проект Dogduino',
       experience: 'Опит',
       education: 'Образование и умения',
       certifications: 'Сертификати',
       references: 'Препоръки',
       contact: 'Контакти'
+    },
+    projectsSection: {
+      kicker: 'ИНЖЕНЕРНИ ПРОЕКТИ',
+      title: 'Проекти',
+      desc: 'Избрани разработки в областта на вградените системи, роботиката и приложния хардуер.',
+      viewDetails: 'Детайли за проекта'
     },
     hero: {
       kicker: 'ЕЛЕКТРОИНЖЕНЕРСТВО И ЕЛЕКТРОНИКА',
@@ -1161,12 +1241,20 @@ export const uiText: Record<SupportedLang, {
   cs: {
     nav: {
       about: 'O mně',
+      projects: 'Projekty',
+      viewAllProjects: 'Zobrazit vše',
       dogduino: 'Projekt Dogduino',
       experience: 'Zkušenosti',
       education: 'Vzdělání a dovednosti',
       certifications: 'Certifikáty',
       references: 'Reference',
       contact: 'Kontakt'
+    },
+    projectsSection: {
+      kicker: 'INŽENÝRSKÉ PROJEKTY',
+      title: 'Projekty',
+      desc: 'Vybrané projekty z oblasti vestavěných systémů, robotiky a aplikovaného hardwarového inženýrství.',
+      viewDetails: 'Zobrazit detail projektu'
     },
     hero: {
       kicker: 'ELEKTROTECHNIKA A ELEKTRONIKA',
@@ -1274,12 +1362,20 @@ export const uiText: Record<SupportedLang, {
   pl: {
     nav: {
       about: 'O mnie',
+      projects: 'Projekty',
+      viewAllProjects: 'Zobacz wszystkie',
       dogduino: 'Projekt Dogduino',
       experience: 'Doświadczenie',
       education: 'Edukacja i umiejętności',
       certifications: 'Certyfikaty',
       references: 'Referencje',
       contact: 'Kontakt'
+    },
+    projectsSection: {
+      kicker: 'PROJEKTY INŻYNIERSKIE',
+      title: 'Projekty',
+      desc: 'Wybrane projekty z zakresu systemów wbudowanych, robotyki i inżynierii sprzętu.',
+      viewDetails: 'Zobacz szczegóły projektu'
     },
     hero: {
       kicker: 'INŻYNIERIA ELEKTRYCZNA I ELEKTRONIKA',

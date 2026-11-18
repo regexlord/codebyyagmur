@@ -1,15 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { SupportedLang, languagesList, uiText } from '../data/translations';
+import { cvData } from '../data/cvData';
 import { 
   Sun, 
   Moon, 
-  Globe, 
   ChevronDown, 
   Menu, 
   X,
   Send,
   Check,
-  Download
+  LayoutGrid,
+  Bot
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -28,8 +29,11 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenContact
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileProjectsOpen, setMobileProjectsOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+  const [projectsDropdownOpen, setProjectsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const projectsDropdownRef = useRef<HTMLDivElement>(null);
 
   const t = uiText[lang] || uiText.en;
   const currentLangObj = languagesList.find((l) => l.code === lang) || languagesList[0];
@@ -39,14 +43,25 @@ export const Navbar: React.FC<NavbarProps> = ({
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setLangDropdownOpen(false);
       }
+      if (projectsDropdownRef.current && !projectsDropdownRef.current.contains(e.target as Node)) {
+        setProjectsDropdownOpen(false);
+      }
+    };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setLangDropdownOpen(false);
+        setProjectsDropdownOpen(false);
+      }
     };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
-  const navLinks = [
-    { href: '#about', label: t.nav.about },
-    { href: '#dogduino', label: t.nav.dogduino },
+  const navLinksAfterProjects = [
     { href: '#experience', label: t.nav.experience },
     { href: '#education', label: t.nav.education },
     { href: '#certifications', label: t.nav.certifications },
@@ -71,7 +86,70 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Zone 2: Single-line text navigation links */}
         <nav className="hidden lg:flex items-center gap-5 xl:gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
-          {navLinks.map((link) => (
+          <a
+            href="#about"
+            className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors whitespace-nowrap shrink-0"
+          >
+            {t.nav.about}
+          </a>
+
+          {/* Projects Dropdown Menu */}
+          <div className="relative" ref={projectsDropdownRef}>
+            <button
+              type="button"
+              onClick={() => setProjectsDropdownOpen((prev) => !prev)}
+              className={`flex items-center gap-1 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors whitespace-nowrap shrink-0 ${
+                projectsDropdownOpen ? 'text-cyan-600 dark:text-cyan-400' : ''
+              }`}
+              aria-expanded={projectsDropdownOpen}
+              aria-haspopup="menu"
+            >
+              <span>{t.nav.projects}</span>
+              <ChevronDown
+                className={`w-3.5 h-3.5 transition-transform duration-150 ${
+                  projectsDropdownOpen ? 'rotate-180' : ''
+                }`}
+              />
+            </button>
+
+            {projectsDropdownOpen && (
+              <div
+                role="menu"
+                className="absolute left-0 mt-2.5 w-60 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl py-1.5 z-50 animate-in fade-in zoom-in-95 duration-100"
+              >
+                <a
+                  href="#projects"
+                  role="menuitem"
+                  onClick={() => setProjectsDropdownOpen(false)}
+                  className="flex items-center gap-2.5 px-3.5 py-2.5 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-cyan-50 dark:hover:bg-cyan-950/60 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors"
+                >
+                  <LayoutGrid className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0" />
+                  <span>{t.nav.viewAllProjects}</span>
+                </a>
+
+                <div className="my-1 border-t border-slate-100 dark:border-slate-800" />
+
+                <a
+                  href="#dogduino"
+                  role="menuitem"
+                  onClick={() => setProjectsDropdownOpen(false)}
+                  className="flex items-start gap-2.5 px-3.5 py-2.5 text-xs text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                >
+                  <Bot className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 mt-0.5" />
+                  <div className="min-w-0">
+                    <div className="font-semibold text-slate-900 dark:text-white">
+                      {cvData.project.title}
+                    </div>
+                    <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate">
+                      {cvData.project.type[lang] || cvData.project.type.en}
+                    </div>
+                  </div>
+                </a>
+              </div>
+            )}
+          </div>
+
+          {navLinksAfterProjects.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -85,7 +163,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Zone 3: Actions (Language Selector, Theme Toggle, Contact CTA) */}
         <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
           
-          {/* Multilingual Selector Dropdown (8 Languages) */}
+          {/* Multilingual Selector Dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
@@ -137,8 +215,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-slate-600" />}
           </button>
 
-
-
           {/* Contact Action */}
           <button
             onClick={onOpenContact}
@@ -162,7 +238,59 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 pt-3 pb-5 space-y-2">
-          {navLinks.map((link) => (
+          <a
+            href="#about"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+          >
+            {t.nav.about}
+          </a>
+
+          {/* Mobile Projects Expandable Submenu */}
+          <div className="space-y-1">
+            <button
+              type="button"
+              onClick={() => setMobileProjectsOpen((prev) => !prev)}
+              className="w-full flex items-center justify-between px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+              aria-expanded={mobileProjectsOpen}
+            >
+              <span>{t.nav.projects}</span>
+              <ChevronDown
+                className={`w-4 h-4 text-slate-400 transition-transform duration-150 ${
+                  mobileProjectsOpen ? 'rotate-180' : ''
+                }`}
+              />
+            </button>
+
+            {mobileProjectsOpen && (
+              <div className="pl-4 space-y-1 border-l border-slate-200 dark:border-slate-800 ml-3">
+                <a
+                  href="#projects"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobileProjectsOpen(false);
+                  }}
+                  className="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-semibold text-cyan-700 dark:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+                >
+                  <LayoutGrid className="w-3.5 h-3.5" />
+                  <span>{t.nav.viewAllProjects}</span>
+                </a>
+                <a
+                  href="#dogduino"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobileProjectsOpen(false);
+                  }}
+                  className="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                >
+                  <Bot className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400" />
+                  <span>{cvData.project.title}</span>
+                </a>
+              </div>
+            )}
+          </div>
+
+          {navLinksAfterProjects.map((link) => (
             <a
               key={link.href}
               href={link.href}

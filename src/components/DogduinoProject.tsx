@@ -16,7 +16,9 @@ import {
   ChevronLeft, 
   ChevronRight, 
   X,
-  Gauge
+  Gauge,
+  ArrowRight,
+  FolderGit2
 } from 'lucide-react';
 
 interface DogduinoProjectProps {
@@ -79,14 +81,78 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
   };
 
   const projectType = cvData.project.type[lang] || cvData.project.type.en;
+  const projectSummary = cvData.project.summary[lang] || cvData.project.summary.en;
   const projectPoints = cvData.project.points[lang] || cvData.project.points.en;
 
   return (
-    <section id="dogduino" className="py-16 md:py-24 bg-slate-100/70 dark:bg-[#0c1322]/70 backdrop-blur-sm border-y border-slate-200/80 dark:border-slate-800/80 relative">
+    <section id="projects" className="scroll-mt-16 py-16 md:py-24 bg-slate-100/70 dark:bg-[#0c1322]/70 backdrop-blur-sm border-y border-slate-200/80 dark:border-slate-800/80 relative">
       {/* Background ambient accent */}
       <div className="absolute top-1/3 left-10 w-96 h-96 bg-cyan-500/10 dark:bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        
+
+        {/* Projects Section Header & Overview */}
+        <div className="mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-mono font-medium text-cyan-600 dark:text-cyan-400 mb-2">
+                <FolderGit2 className="w-4 h-4" />
+                <span>{t.projectsSection.kicker}</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                {t.projectsSection.title}
+              </h2>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl">
+                {t.projectsSection.desc}
+              </p>
+            </div>
+          </div>
+
+          {/* Project Index Card(s) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <a
+              href="#dogduino"
+              className="group p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-cyan-500 dark:hover:border-cyan-400 transition-all flex flex-col justify-between gap-4"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 rounded-xl overflow-hidden bg-slate-900 border border-slate-200 dark:border-slate-800 shrink-0">
+                  <img
+                    src={getAssetUrl(cvData.project.images[0].src)}
+                    alt={cvData.project.title}
+                    onError={(e) => handleImageFallback(e, 'dogduino-1_e6123476.png')}
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-[11px] font-mono text-cyan-600 dark:text-cyan-400 font-semibold">
+                    {cvData.project.period}
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                    {cvData.project.title}
+                  </h3>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+                    {projectType}
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
+                {projectSummary}
+              </p>
+
+              <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold text-cyan-700 dark:text-cyan-400">
+                <span className="font-mono text-[11px] text-slate-500 dark:text-slate-400">ESP32 · PCA9685 · BLE</span>
+                <span className="inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                  <span>{t.projectsSection.viewDetails}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {/* Dogduino Featured Project Detailed Showcase */}
+        <div id="dogduino" className="scroll-mt-20 pt-10 border-t border-slate-200/80 dark:border-slate-800/80">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <div>
@@ -96,9 +162,9 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
               <span aria-hidden="true">·</span>
               <span>{cvData.project.institution}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
               {cvData.project.title}: {projectType}
-            </h2>
+            </h3>
             <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 mt-2 font-mono">
               <span>{cvData.project.institution}</span>
               <span aria-hidden="true">·</span>
@@ -360,6 +426,7 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
               </div>
             ))}
           </div>
+        </div>
         </div>
 
       </div>

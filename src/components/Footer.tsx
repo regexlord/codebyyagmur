@@ -40,10 +40,10 @@ export const Footer: React.FC<FooterProps> = ({ lang, onOpenContact }) => {
               {t.nav.about}
             </a>
             <a
-              href="#dogduino"
+              href="#projects"
               className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
             >
-              {t.nav.dogduino}
+              {t.nav.projects}
             </a>
             <a
               href="#experience"
