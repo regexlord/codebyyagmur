@@ -61,31 +61,33 @@ export const cvData = {
   personal: {
     name: "YAĞMUR KAHRAMAN",
     title: {
-      en: "Electrical & Electronics Engineering | Focused on Embedded Systems, Power Electronics & Avionics Technologies",
-      tr: "Elektrik & Elektronik Mühendisliği | Gömülü Sistemler, Güç Elektroniği ve Aviyonik Teknolojileri Odaklı",
-      de: "Elektro- und Elektroniktechnik | Schwerpunkt Eingebettete Systeme, Leistungselektronik & Avionik-Technologien",
-      ru: "Инженерия электрики и электроники | Специализация: Встраиваемые системы, силовая электроника и технологии авионики",
-      sv: "Elektro- och Elektronikteknik | Fokus på inbyggda system, kraftelektronik och avionikteknik",
-      zh: "电气与电子工程专业 | 专注于嵌入式系统、电力电子与航空电子技术",
-      fr: "Génie Électrique et Électronique | Spécialisation Systèmes Embarqués, Électronique de Puissance et Technologies Avioniques",
-      it: "Ingegneria Elettrica ed Elettronica | Focalizzata su Sistemi Embedded, Elettronica di Potenza e Tecnologie Avioniche",
-      bg: "Електроинженерство и електроника | Специализация: Вградени системи, силова електроника и авионика"
+      en: "Electrical & Electronics Engineering | Focused On Embedded Systems",
+      tr: "Elektrik & Elektronik Mühendisliği | Gömülü Sistemler Odaklı",
+      de: "Elektro- und Elektroniktechnik | Schwerpunkt Eingebettete Systeme",
+      ru: "Инженерия электрики и электроники | Специализация: Встраиваемые системы",
+      sv: "Elektro- och Elektronikteknik | Fokus på inbyggda system",
+      zh: "电气与电子工程专业 | 专注于嵌入式系统",
+      fr: "Génie Électrique et Électronique | Spécialisation Systèmes Embarqués",
+      it: "Ingegneria Elettrica ed Elettronica | Focalizzata su Sistemi Embedded",
+      bg: "Електроинженерство и електроника | Специализация: Вградени системи"
     } as LocalizedString,
     shortTitle: {
-      en: "Embedded Systems & Avionics Engineer",
-      tr: "Gömülü Sistemler & Aviyonik Mühendisi",
-      de: "Ingenieurin für Eingebettete Systeme & Avionik",
-      ru: "Инженер встраиваемых систем и авионики",
-      sv: "Ingenjör inom inbyggda system & avionik",
-      zh: "嵌入式系统与航空电子工程师",
-      fr: "Ingénieur Systèmes Embarqués & Avionique",
-      it: "Ingegnere Sistemi Embedded e Avionica",
-      bg: "Инженер по вградени системи и авионика"
+      en: "Embedded Systems Engineer",
+      tr: "Gömülü Sistemler Mühendisi",
+      de: "Ingenieurin für Eingebettete Systeme",
+      ru: "Инженер встраиваемых систем",
+      sv: "Ingenjör inom inbyggda system",
+      zh: "嵌入式系统工程师",
+      fr: "Ingénieur Systèmes Embarqués",
+      it: "Ingegnere Sistemi Embedded",
+      bg: "Инженер по вградени системи"
     } as LocalizedString,
     location: "İzmir, Turkey",
     email: "kahramanyagmur178@gmail.com",
-    linkedin: "linkedin.com/in/yagmur-kahraman-37a040255",
-    linkedinUrl: "https://www.linkedin.com/in/yagmur-kahraman-37a040255",
+    linkedin: "linkedin.com/in/yagmur-kahraman",
+    linkedinUrl: "https://www.linkedin.com/in/yagmur-kahraman/",
+    website: "regexlord.github.io/codebyyagmur",
+    websiteUrl: "https://regexlord.github.io/codebyyagmur/",
     photo: "assets/aistudio/Profesyonel_Kad_n_Portresi_11bf1af2.png",
     profile: {
       en: "Analytical Electrical and Electronics Engineering graduate specializing in embedded firmware development, microcontrollers, and avionics technology. Experienced in dynamic hardware-software integration, automated testing workflows, and cross-functional project management. Committed to deploying reliable engineering solutions for real-world electronic systems.",
@@ -168,7 +170,7 @@ export const cvData = {
       category: "it",
       points: {
         en: [
-          "Contributed to the web design, frontend interface testing, optimization for an institution-specific government web portal.",
+          "Contributed to the web design, frontend interface testing, and optimization for an institution-specific government web portal.",
           "Assisted in developing a specialized high-security internal application, validating user access controls and system authentication protocols."
         ],
         tr: [
@@ -214,7 +216,7 @@ export const cvData = {
         it: "Stagista Sistemi Embedded e Ingegneria del Software"
       },
       location: "Remote",
-      period: "Jun 2024 – Jun 2024",
+      period: "Jun 2024",
       category: "embedded",
       points: {
         en: [
@@ -240,56 +242,6 @@ export const cvData = {
         ],
         it: [
           "Implementazione di script di acquisizione dati dai sensori in tempo reale e comunicazione con periferiche (SPI/I2C/UART)."
-        ]
-      }
-    },
-    {
-      company: "Cisco Networking Academy",
-      role: {
-        en: "Python & Software Development Trainee",
-        tr: "Python & Yazılım Geliştirme Stajyeri",
-        de: "Praktikantin Python & Softwareentwicklung",
-        ru: "Стажер по Python и разработке ПО",
-        sv: "Praktikant inom Python & mjukvaruutveckling",
-        zh: "Python 与软件开发实习生",
-        fr: "Stagiaire Python & Développement Logiciel",
-        it: "Stagista Python e Sviluppo Software"
-      },
-      location: "İzmir, Turkey",
-      period: "Jan 2024 – Feb 2024",
-      category: "it",
-      points: {
-        en: [
-          "Engineered automated data processing pipelines using Python libraries (Pandas, NumPy) to accelerate analytical workflows.",
-          "Built algorithm prototypes focusing on data manipulation and object-oriented program design."
-        ],
-        tr: [
-          "Analitik iş akışlarını hızlandırmak için Python kütüphaneleri (Pandas, NumPy) kullanarak otomatik veri işleme hatları geliştirdi.",
-          "Veri manipülasyonu ve nesne yönelimli programlama (OOP) tasarımına odaklanan algoritma prototipleri oluşturdu."
-        ],
-        de: [
-          "Entwicklung automatisierter Datenverarbeitungspipelines mit Python-Bibliotheken (Pandas, NumPy) zur Beschleunigung analytischer Arbeitsabläufe.",
-          "Entwicklung von Algorithmen-Prototypen mit Fokus auf Datenmanipulation und objektorientiertem Programmentwurf."
-        ],
-        ru: [
-          "Создание автоматизированных конвейеров обработки данных с использованием библиотек Python (Pandas, NumPy) для ускорения аналитики.",
-          "Разработка прототипов алгоритмов с акцентом на обработку данных и объектно-ориентированное программирование."
-        ],
-        sv: [
-          "Utvecklade automatiserade databehandlingspipeliner med Python-bibliotek (Pandas, NumPy) för snabbare analysflöden.",
-          "Byggde algoritmprototyper med fokus på datamanipulering och objektorienterad programdesign."
-        ],
-        zh: [
-          "基于 Python 核心科学计算库 (Pandas, NumPy) 构建自动化高并发数据预处理流水线，大幅提升分析效率。",
-          "基于面向对象程序设计原则 (OOP) 构思并实现多项核心算法原型，保障数据操作高效与稳定。"
-        ],
-        fr: [
-          "Conception de pipelines de traitement automatisé des données à l'aide de Pandas et NumPy pour accélérer les flux analytiques.",
-          "Création de prototypes d'algorithmes axés sur la manipulation de données et la conception orientée objet."
-        ],
-        it: [
-          "Progettazione di pipeline di elaborazione automatica dei dati con librerie Python (Pandas, NumPy) per velocizzare i flussi di lavoro analitici.",
-          "Creazione di prototipi algoritmici incentrati sulla manipolazione dei dati e programmazione orientata agli oggetti (OOP)."
         ]
       }
     },
@@ -603,7 +555,7 @@ export const cvData = {
     {
       title: "TEI Aviation Engines School",
       issuer: "TUSAŞ Engine Industries",
-      date: "Mar 2025",
+      date: "May 2025",
       category: "Avionics & Aerospace",
       description: {
         en: "Comprehensive aerospace powertrain and gas turbine training program conducted by TEI. Explores aircraft propulsion mechanics, thermal boundary dynamics, and engine electronic control unit (FADEC) architecture.",
@@ -613,7 +565,8 @@ export const cvData = {
         sv: "Omfattande utbildningsprogram inom flygmotorer och gasturbiner från TEI. Behandlar framdrivningsmekanik, termodynamik och elektroniska motorstyrsystem (FADEC).",
         zh: "土耳其发动机工业公司 (TEI) 航空动力与燃气涡轮发动机高阶工程项目。深入研讨航空发动机热力学边界、推力矢量控制及全权限数字式发动机控制 (FADEC) 架构。",
         fr: "Formation approfondie sur les turboréacteurs et turbines à gaz par TEI. Aborde la propulsion aéronautique, la thermique et l'architecture FADEC.",
-        it: "Programma di formazione avanzato sui motori aeronautici e turbine a gas di TEI. Tratta la termodinamica della propulsione e l'architettura delle centraline FADEC."
+        it: "Programma di formazione avanzato sui motori aeronautici e turbine a gas di TEI. Tratta la termodinamica della propulsione e l'architettura delle centraline FADEC.",
+        bg: "Комплексна програма за обучение по авиационни двигатели и газови турбини, проведена от TEI. Разглежда механиката на реактивната тяга, термичната динамика и архитектурата на електронните блокове за управление (FADEC)."
       }
     },
     {
@@ -629,7 +582,8 @@ export const cvData = {
         sv: "Interaktiv utbildning i syntes av återkopplade reglersystem, rotortanalys och PID-trimning med MATLAB för dynamisk stabilitetsverifiering.",
         zh: "基于 MATLAB 的经典与现代闭环反馈控制系统综合训练。涵盖根轨迹分析、Bode 频域相位裕度校核以及执行机构 PID 控制器的高精度参数辨识与整定。",
         fr: "Formation interactive à la synthèse de boucles d'asservissement, à l'analyse du lieu des racines et au réglage de régulateurs PID avec MATLAB.",
-        it: "Formazione interattiva sulla sintesi dei loop di retroazione, analisi del luogo delle radici e taratura di controllori PID in ambiente MATLAB."
+        it: "Formazione interattiva sulla sintesi dei loop di retroazione, analisi del luogo delle radici e taratura di controllori PID in ambiente MATLAB.",
+        bg: "Интерактивно обучение по синтез на контури с обратна връзка, анализ на коренови траектории и настройка на PID регулатори в MATLAB с фокус върху динамичната стабилност."
       }
     },
     {
@@ -645,7 +599,25 @@ export const cvData = {
         sv: "Modellbaserad systemteknik med blockscheman och tidsdomänsimulering för hårdvarunära HIL-prototypframtagning.",
         zh: "基于模型的系统工程 (MBSE) 课程。掌握多学科物理系统框图建模、微分方程数值积分仿真，构建硬件在环 (HIL) 快速原型开发验证能力。",
         fr: "Ingénierie système basée sur les modèles, architecture par schéma-blocs et simulation temporelle pour le prototypage rapide Hardware-in-the-Loop (HIL).",
-        it: "Ingegneria di sistema model-based con architettura a blocchi e simulazione nel dominio del tempo per prototipazione Hardware-in-the-Loop (HIL)."
+        it: "Ingegneria di sistema model-based con architettura a blocchi e simulazione nel dominio del tempo per prototipazione Hardware-in-the-Loop (HIL).",
+        bg: "Практическа учебна програма по моделно-базирано системно инженерство, обхващаща блокови диаграми, симулации във времевата област и бързо прототипиране Hardware-in-the-Loop (HIL)."
+      }
+    },
+    {
+      title: "Python & Software Development (Pandas, NumPy, OOP)",
+      issuer: "Cisco Networking Academy",
+      date: "Feb 2024",
+      category: "Software Development",
+      description: {
+        en: "Applied software engineering program covering automated data processing pipelines with Pandas and NumPy, numerical array computation, and object-oriented programming (OOP) architecture. Focused on building modular, reusable analytical tools and structured Python algorithms.",
+        tr: "Pandas ve NumPy ile otomatik veri işleme hatları, sayısal dizi hesaplamaları ve nesne yönelimli programlama (OOP) mimarisini kapsayan uygulamalı yazılım geliştirme programı. Modüler analitik araçlar ve yapılandırılmış Python algoritmaları oluşturmaya odaklanır.",
+        de: "Praxisorientiertes Software-Engineering-Programm mit Fokus auf automatisierte Datenverarbeitungspipelines mit Pandas und NumPy sowie objektorientierte Programmierung (OOP) in Python.",
+        ru: "Практический курс программной инженерии: конвейеры обработки данных с Pandas и NumPy, вычисления с массивами и объектно-ориентированное программирование (ООП) на Python.",
+        sv: "Tillämpat programutvecklingsprogram med fokus på automatiserade databehandlingsflöden i Pandas och NumPy samt objektorienterad programmering (OOP) i Python.",
+        zh: "应用软件工程认证课程，涵盖基于 Pandas 与 NumPy 的自动化数据处理流水线、科学数组计算及面向对象编程 (OOP) 架构设计。",
+        fr: "Programme de génie logiciel appliqué couvrant les pipelines de traitement de données avec Pandas et NumPy ainsi que la programmation orientée objet (POO) en Python.",
+        it: "Programma di sviluppo software applicato dedicato a pipeline di elaborazione dati con Pandas e NumPy e programmazione orientata agli oggetti (OOP) in Python.",
+        bg: "Приложна програма по софтуерно инженерство, обхващаща автоматизирани потоци за обработка на данни с Pandas и NumPy, числови масиви и обектно-ориентирано програмиране (OOP) на Python."
       }
     },
     {
@@ -661,23 +633,8 @@ export const cvData = {
         sv: "Fördjupad Python-utveckling med datastrukturer, algoritmer och pipelines i NumPy/Pandas för automatiserade testrutiner.",
         zh: "面向工程应用的高级 Python 编程认证。精通内存数据结构、模块化算法设计与 Pandas/NumPy 大规模测量数据流批处理管道。",
         fr: "Formation approfondie en Python, structures de données et manipulation analytique avec NumPy et Pandas pour les tests matériels automatisés.",
-        it: "Corso approfondito di Python su strutture dati, algoritmi e pipeline con NumPy e Pandas per collaudo hardware automatico e acquisizione dati."
-      }
-    },
-    {
-      title: "Artificial Intelligence for Everyone 1 & 2",
-      issuer: "Bilgeiş",
-      date: "Jun 2023",
-      category: "Artificial Intelligence",
-      description: {
-        en: "Foundational machine learning and deep learning methodologies covering supervised learning, classification boundaries, and neural architectures. Evaluates edge deployment constraints on embedded microcontrollers.",
-        tr: "Gözetimli öğrenme, sınıflandırma sınırları ve sinir ağı mimarilerini kapsayan temel yapay zekâ metodolojileri. Gömülü mikrodenetleyiciler üzerindeki uç birim (edge AI) kısıtlarını değerlendirir.",
-        de: "Grundlagen des maschinellen Lernens und neuronaler Netze sowie deren praktische Machbarkeit und Optimierung für Edge-Mikrocontroller.",
-        ru: "Методологии машинного обучения и нейросетевых архитектур с оценкой ограничений развертывания на периферийных микроконтроллерах (Edge AI).",
-        sv: "Grundläggande maskininlärning och neurala nätverk samt begränsningar vid implementering på strömsnåla mikrokontrollers (Edge AI).",
-        zh: "机器学习与深度神经网络基础工程认证。学习监督学习算法分类边界、特征工程与嵌入式低算力终端 (Edge AI) 内存与功耗约束评估。",
-        fr: "Méthodologies fondamentales de machine learning et architectures neuronales, avec analyse des contraintes de déploiement en périphérie (Edge AI).",
-        it: "Metodologie fondamentali di machine learning e architetture neurali, con valutazione dei vincoli di implementazione su microcontrollori edge."
+        it: "Corso approfondito di Python su strutture dati, algoritmi e pipeline con NumPy e Pandas per collaudo hardware automatico e acquisizione dati.",
+        bg: "Разширена учебна програма по Python с фокус върху структури от данни, алгоритмичен дизайн и автоматизирани тестови процедури за хардуер."
       }
     },
     {
@@ -693,7 +650,25 @@ export const cvData = {
         sv: "Kalkylbladsmodellering för kostnadsavstämning, finansiella prognoser och budgetstyrning för industriella FoU-prototyper.",
         zh: "基于 Excel 的工程财务与项目核算模型。包含研发原型机物料采购成本核销、资金现金流预估及多项目工程工时资源分配表编制。",
         fr: "Modélisation financière sur tableur pour le rapprochement des coûts, les prévisions et la gestion budgétaire des prototypes R&D.",
-        it: "Modellazione analitica su fogli di calcolo per riconciliazione costi operativi, previsioni e gestione del budget per prototipi industriali."
+        it: "Modellazione analitica su fogli di calcolo per riconciliazione costi operativi, previsioni e gestione del budget per prototipi industriali.",
+        bg: "Аналитично моделиране в електронни таблици за проследяване на оперативни разходи, финансово прогнозиране и управление на бюджета за индустриални R&D прототипи."
+      }
+    },
+    {
+      title: "Artificial Intelligence for Everyone 1 & 2",
+      issuer: "Bilgeiş",
+      date: "Jun 2023",
+      category: "Artificial Intelligence",
+      description: {
+        en: "Foundational machine learning and deep learning methodologies covering supervised learning, classification boundaries, and neural architectures. Evaluates edge deployment constraints on embedded microcontrollers.",
+        tr: "Gözetimli öğrenme, sınıflandırma sınırları ve sinir ağı mimarilerini kapsayan temel yapay zekâ metodolojileri. Gömülü mikrodenetleyiciler üzerindeki uç birim (edge AI) kısıtlarını değerlendirir.",
+        de: "Grundlagen des maschinellen Lernens und neuronaler Netze sowie deren praktische Machbarkeit und Optimierung für Edge-Mikrocontroller.",
+        ru: "Методологии машинного обучения и нейросетевых архитектур с оценкой ограничений развертывания на периферийных микроконтроллерах (Edge AI).",
+        sv: "Grundläggande maskininlärning och neurala nätverk samt begränsningar vid implementering på strömsnåla mikrokontrollers (Edge AI).",
+        zh: "机器学习与深度神经网络基础工程认证。学习监督学习算法分类边界、特征工程与嵌入式低算力终端 (Edge AI) 内存与功耗约束评估。",
+        fr: "Méthodologies fondamentales de machine learning et architectures neuronales, avec analyse des contraintes de déploiement en périphérie (Edge AI).",
+        it: "Metodologie fondamentali di machine learning e architetture neurali, con valutazione dei vincoli di implementazione su microcontrollori edge.",
+        bg: "Основи на машинното обучение и невронните мрежи, включително обучение с учител, класификация и оценка на ограниченията за вградени микроконтролери (Edge AI)."
       }
     },
     {
@@ -709,7 +684,8 @@ export const cvData = {
         sv: "Utbildning i affärssystem (ERP) med fokus på materialstyrning, produktionsordrar och koppling av tekniska stycklistor (BOM) till verksamheten.",
         zh: "企业级资源规划 (ERP) 核心架构训练。系统学习 SAP 物料主数据管理 (MM)、生产工单下发 (PP) 与物料清单 (BOM) 跨部门协同流转。",
         fr: "Principes fondamentaux des progiciels ERP : gestion des stocks, ordres de fabrication et liaison entre nomenclatures (BOM) et processus industriels.",
-        it: "Formazione sui flussi ERP focalizzata sulla gestione materiali, ordini di produzione e tracciabilità delle distinte base (BOM)."
+        it: "Formazione sui flussi ERP focalizzata sulla gestione materiali, ordini di produzione e tracciabilità delle distinte base (BOM).",
+        bg: "Обучение по ERP процеси с фокус върху управление на материалите, производствени поръчки и вериги за доставки, свързващо инженерните спецификации (BOM) с бизнес операциите."
       }
     }
   ] as CertificationItem[],

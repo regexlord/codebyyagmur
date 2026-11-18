@@ -151,11 +151,11 @@ export const uiText: Record<SupportedLang, {
       contactMe: 'Get in Touch',
       kpis: {
         internships: 'Professional Internships',
-        internshipsSub: 'Volt WEG, Presidency IT, Cisco, Gdz, Uptech',
+        internshipsSub: 'Volt WEG, Presidency IT, Uptechlabs, Gdz',
         quadruped: 'Dogduino Quadruped Robot',
         quadrupedSub: 'ESP32, PCA9685, Bluetooth & Kinematics',
         certs: 'Accredited Certifications',
-        certsSub: 'TEI Aviation, MathWorks, Bilgeiş, SAP',
+        certsSub: 'TEI, MathWorks, Cisco, Bilgeiş, SAP',
         languages: 'Language Proficiency',
         languagesSub: 'English (Technical) & Russian'
       }
@@ -175,10 +175,10 @@ export const uiText: Record<SupportedLang, {
       kicker: 'CAREER & PROFESSIONAL EXPERIENCE',
       title: 'Work Experience',
       desc: 'Applied engineering background spanning electric motor IEC load tests, high-security government portals, real-time sensor firmware, and electrical distribution grid verification.',
-      filterAll: 'All Roles (5)',
+      filterAll: 'All Roles (4)',
       filterRd: 'R&D / Volt WEG',
       filterEmbedded: 'Embedded Systems',
-      filterIt: 'IT & Python Dev',
+      filterIt: 'IT & Web Security',
       filterGrid: 'Electrical & Grid'
     },
     education: {
@@ -198,8 +198,8 @@ export const uiText: Record<SupportedLang, {
     certs: {
       kicker: 'COURSES & ACCREDITATIONS',
       title: 'Courses & Certifications',
-      desc: 'Accredited training credentials from TUSAŞ Engine Industries (TEI), MathWorks, Bilgeiş, and Udemy.',
-      countBadge: '7 Verified Credentials',
+      desc: 'Accredited training credentials from TUSAŞ Engine Industries (TEI), MathWorks, Cisco Networking Academy, Bilgeiş, and Udemy.',
+      countBadge: '8 Verified Credentials',
       completed: 'Completed',
       popupPrompt: 'Hover or tap card to read details',
       clickToView: 'View description',
@@ -265,11 +265,11 @@ export const uiText: Record<SupportedLang, {
       contactMe: 'Bana Ulaşın',
       kpis: {
         internships: 'Profesyonel Staj & Deneyim',
-        internshipsSub: 'Volt WEG, İletişim Bşk., Cisco, Gdz, Uptech',
+        internshipsSub: 'Volt WEG, İletişim Bşk., Uptechlabs, Gdz',
         quadruped: 'Dogduino Dört Bacaklı Robot',
         quadrupedSub: 'ESP32, PCA9685, Bluetooth & Kinematik',
         certs: 'Akredite Sertifika & Eğitim',
-        certsSub: 'TEI Havacılık, MathWorks, Bilgeiş, SAP',
+        certsSub: 'TEI, MathWorks, Cisco, Bilgeiş, SAP',
         languages: 'Yabancı Dil Yetkinliği',
         languagesSub: 'İngilizce (Teknik) & Rusça'
       }
@@ -289,10 +289,10 @@ export const uiText: Record<SupportedLang, {
       kicker: 'KARİYER & PROFESYONEL DENEYİM',
       title: 'İş Deneyimi & Stajlar',
       desc: 'Ar-Ge elektrik motoru testlerinden kamu bilgi teknolojilerine, gerçek zamanlı gömülü çevre birimlerinden elektrik dağıtım şebekesine uzanan uygulamalı mühendislik geçmişi.',
-      filterAll: 'Tüm Deneyimler (5)',
+      filterAll: 'Tüm Deneyimler (4)',
       filterRd: 'Ar-Ge / Volt WEG',
       filterEmbedded: 'Gömülü Sistemler',
-      filterIt: 'Bilişim & Python',
+      filterIt: 'Bilgi Teknolojileri',
       filterGrid: 'Elektrik & Şebeke'
     },
     education: {
@@ -312,8 +312,8 @@ export const uiText: Record<SupportedLang, {
     certs: {
       kicker: 'SERTİFİKALAR & AKREDİTASYONLAR',
       title: 'Kurslar & Sertifikalar',
-      desc: 'TUSAŞ Motor Sanayii (TEI), MathWorks, Bilgeiş ve Udemy onaylı teknik uzmanlık belgeleri.',
-      countBadge: '7 Doğrulanmış Sertifika',
+      desc: 'TUSAŞ Motor Sanayii (TEI), MathWorks, Cisco Networking Academy, Bilgeiş ve Udemy onaylı teknik uzmanlık belgeleri.',
+      countBadge: '8 Doğrulanmış Sertifika',
       completed: 'Tamamlandı',
       popupPrompt: 'Açıklama için kartın üzerine gelin veya tıklayın',
       clickToView: 'Açıklamayı incele',
@@ -379,11 +379,11 @@ export const uiText: Record<SupportedLang, {
       contactMe: 'Kontakt aufnehmen',
       kpis: {
         internships: 'Praktika & Erfahrungen',
-        internshipsSub: 'Volt WEG, Präsidentschaft IT, Cisco, Gdz, Uptech',
+        internshipsSub: 'Volt WEG, Präsidentschaft IT, Uptechlabs, Gdz',
         quadruped: 'Dogduino Laufroboter',
         quadrupedSub: 'ESP32, PCA9685, Bluetooth & Kinematik',
         certs: 'Akkreditierte Zertifikate',
-        certsSub: 'TEI Luftfahrt, MathWorks, Bilgeiş, SAP',
+        certsSub: 'TEI, MathWorks, Cisco, Bilgeiş, SAP',
         languages: 'Sprachkenntnisse',
         languagesSub: 'Englisch (Technisch) & Russisch'
       }
@@ -403,10 +403,10 @@ export const uiText: Record<SupportedLang, {
       kicker: 'BERUFLICHE LAUFBAHN',
       title: 'Berufserfahrung',
       desc: 'Praxiserfahrung von IEC-Elektromotorentests über Hochsicherheits-Webportale bis hin zu Echtzeit-Sensortreibern und Energieverteilnetzen.',
-      filterAll: 'Alle (5)',
+      filterAll: 'Alle (4)',
       filterRd: 'F&E / Volt WEG',
       filterEmbedded: 'Embedded Systems',
-      filterIt: 'IT & Python',
+      filterIt: 'IT & Websicherheit',
       filterGrid: 'Elektrik & Netz'
     },
     education: {
@@ -426,8 +426,8 @@ export const uiText: Record<SupportedLang, {
     certs: {
       kicker: 'KURSE & ZERTIFIZIERUNGEN',
       title: 'Zertifikate & Abschlüsse',
-      desc: 'Akkreditierte Weiterbildungen von TUSAŞ Engine Industries (TEI), MathWorks, Bilgeiş und Udemy.',
-      countBadge: '7 Zertifikate',
+      desc: 'Akkreditierte Weiterbildungen von TUSAŞ Engine Industries (TEI), MathWorks, Cisco Networking Academy, Bilgeiş und Udemy.',
+      countBadge: '8 Zertifikate',
       completed: 'Abgeschlossen',
       popupPrompt: 'Mit der Maus über die Karte fahren für Details',
       clickToView: 'Beschreibung ansehen',
@@ -493,11 +493,11 @@ export const uiText: Record<SupportedLang, {
       contactMe: 'Связаться со мной',
       kpis: {
         internships: 'Стажировки и опыт',
-        internshipsSub: 'Volt WEG, Администрация Президента, Cisco, Gdz, Uptech',
+        internshipsSub: 'Volt WEG, Администрация Президента, Uptechlabs, Gdz',
         quadruped: 'Робот-четвероног Dogduino',
         quadrupedSub: 'ESP32, PCA9685, Bluetooth и кинематика',
         certs: 'Сертифицированные курсы',
-        certsSub: 'TEI Aviation, MathWorks, Bilgeiş, SAP',
+        certsSub: 'TEI, MathWorks, Cisco, Bilgeiş, SAP',
         languages: 'Знание языков',
         languagesSub: 'Английский (технический) и русский'
       }
@@ -517,10 +517,10 @@ export const uiText: Record<SupportedLang, {
       kicker: 'ПРОФЕССИОНАЛЬНЫЙ ОПЫТ',
       title: 'Опыт работы и стажировки',
       desc: 'Практический опыт: от нагрузочных тестов электродвигателей по стандарту IEC до государственных порталов, сенсорных драйверов и распределительных электросетей.',
-      filterAll: 'Все (5)',
+      filterAll: 'Все (4)',
       filterRd: 'НИОКР / Volt WEG',
       filterEmbedded: 'Встраиваемые системы',
-      filterIt: 'ИТ и Python',
+      filterIt: 'ИТ и безопасность',
       filterGrid: 'Электросети'
     },
     education: {
@@ -540,8 +540,8 @@ export const uiText: Record<SupportedLang, {
     certs: {
       kicker: 'СЕРТИФИКАЦИИ И КУРСЫ',
       title: 'Курсы и сертификаты',
-      desc: 'Сертифицированные программы от TUSAŞ Engine Industries (TEI), MathWorks, Bilgeiş и Udemy.',
-      countBadge: '7 сертификатов',
+      desc: 'Сертифицированные программы от TUSAŞ Engine Industries (TEI), MathWorks, Cisco Networking Academy, Bilgeiş и Udemy.',
+      countBadge: '8 сертификатов',
       completed: 'Завершено',
       popupPrompt: 'Наведите курсор или нажмите на карточку для описания',
       clickToView: 'Подробнее о курсе',
@@ -607,11 +607,11 @@ export const uiText: Record<SupportedLang, {
       contactMe: 'Kontakta mig',
       kpis: {
         internships: 'Praktikplatser & Erfarenhet',
-        internshipsSub: 'Volt WEG, Regeringskansli IT, Cisco, Gdz, Uptech',
+        internshipsSub: 'Volt WEG, Regeringskansli IT, Uptechlabs, Gdz',
         quadruped: 'Dogduino Fyrbent Robot',
         quadrupedSub: 'ESP32, PCA9685, Bluetooth & Kinematik',
         certs: 'Ackrediterade certifikat',
-        certsSub: 'TEI Aviation, MathWorks, Bilgeiş, SAP',
+        certsSub: 'TEI, MathWorks, Cisco, Bilgeiş, SAP',
         languages: 'Språkkunskaper',
         languagesSub: 'Engelska (Teknisk) & Ryska'
       }
@@ -631,10 +631,10 @@ export const uiText: Record<SupportedLang, {
       kicker: 'YRKESERFARENHET',
       title: 'Arbetslivserfarenhet',
       desc: 'Praktisk ingenjörsbakgrund från IEC-testning av elmotorer och säkerhetsportaler till sensordrivrutiner och eldistributionsnät.',
-      filterAll: 'Alla (5)',
+      filterAll: 'Alla (4)',
       filterRd: 'FoU / Volt WEG',
       filterEmbedded: 'Inbyggda system',
-      filterIt: 'IT & Python',
+      filterIt: 'IT & Webbsäkerhet',
       filterGrid: 'Elnät'
     },
     education: {
@@ -654,8 +654,8 @@ export const uiText: Record<SupportedLang, {
     certs: {
       kicker: 'KURSER & CERTIFIERINGAR',
       title: 'Kurser & Certifikat',
-      desc: 'Ackrediterade certifikat från TUSAŞ Engine Industries (TEI), MathWorks, Bilgeiş och Udemy.',
-      countBadge: '7 Verifierade Certifikat',
+      desc: 'Ackrediterade certifikat från TUSAŞ Engine Industries (TEI), MathWorks, Cisco Networking Academy, Bilgeiş och Udemy.',
+      countBadge: '8 Verifierade Certifikat',
       completed: 'Slutförd',
       popupPrompt: 'Håll muspekaren över kortet för beskrivning',
       clickToView: 'Visa kursbeskrivning',
@@ -721,11 +721,11 @@ export const uiText: Record<SupportedLang, {
       contactMe: '与我联系',
       kpis: {
         internships: '专业实习与实践',
-        internshipsSub: 'Volt WEG, 总统府信息署, Cisco, Gdz, Uptech',
+        internshipsSub: 'Volt WEG, 总统府信息署, Uptechlabs, Gdz',
         quadruped: 'Dogduino 四足机器人',
         quadrupedSub: 'ESP32, PCA9685, 蓝牙与逆运动学',
         certs: '官方专业认证',
-        certsSub: 'TEI 航空动力, MathWorks, Bilgeiş, SAP',
+        certsSub: 'TEI, MathWorks, Cisco, Bilgeiş, SAP',
         languages: '语言能力',
         languagesSub: '英语 (专业技术级) 与 俄语'
       }
@@ -745,10 +745,10 @@ export const uiText: Record<SupportedLang, {
       kicker: '职业与工程经历',
       title: '工作与实习经历',
       desc: '工程实践涵盖电机 IEC 负载测试、高安全级别政府门户系统、实时传感器总线驱动以及国家电网计量检定。',
-      filterAll: '全部经历 (5)',
+      filterAll: '全部经历 (4)',
       filterRd: '研发 / Volt WEG',
       filterEmbedded: '嵌入式系统',
-      filterIt: 'IT 与 Python 开发',
+      filterIt: 'IT 与系统安全',
       filterGrid: '电力与电网'
     },
     education: {
@@ -768,8 +768,8 @@ export const uiText: Record<SupportedLang, {
     certs: {
       kicker: '专业培训与认证',
       title: '课程与证书',
-      desc: '获得来自土耳其发动机工业公司 (TEI)、MathWorks、Bilgeiş 和 Udemy 的官方技术资质。',
-      countBadge: '7 项权威认证',
+      desc: '获得来自土耳其发动机工业公司 (TEI)、MathWorks、Cisco Networking Academy、Bilgeiş 和 Udemy 的官方技术资质。',
+      countBadge: '8 项权威认证',
       completed: '已获得',
       popupPrompt: '鼠标悬停或点击卡片查看详细内容',
       clickToView: '查看课程简介',
@@ -835,11 +835,11 @@ export const uiText: Record<SupportedLang, {
       contactMe: 'Me contacter',
       kpis: {
         internships: 'Stages & Expérience',
-        internshipsSub: 'Volt WEG, Présidence IT, Cisco, Gdz, Uptech',
+        internshipsSub: 'Volt WEG, Présidence IT, Uptechlabs, Gdz',
         quadruped: 'Robot Quadrupède Dogduino',
         quadrupedSub: 'ESP32, PCA9685, Bluetooth & Cinématique',
         certs: 'Certifications Accréditées',
-        certsSub: 'TEI Aviation, MathWorks, Bilgeiş, SAP',
+        certsSub: 'TEI, MathWorks, Cisco, Bilgeiş, SAP',
         languages: 'Langues',
         languagesSub: 'Anglais (Technique) & Russe'
       }
@@ -859,10 +859,10 @@ export const uiText: Record<SupportedLang, {
       kicker: 'PARCOURS PROFESSIONNEL',
       title: 'Expérience Professionnelle',
       desc: 'Expérience pratique allant des essais de charge IEC de moteurs électriques aux applications sécurisées et réseaux de distribution électrique.',
-      filterAll: 'Tous les rôles (5)',
+      filterAll: 'Tous les rôles (4)',
       filterRd: 'R&D / Volt WEG',
       filterEmbedded: 'Systèmes Embarqués',
-      filterIt: 'IT & Python',
+      filterIt: 'IT & Sécurité Web',
       filterGrid: 'Électrique & Réseaux'
     },
     education: {
@@ -882,8 +882,8 @@ export const uiText: Record<SupportedLang, {
     certs: {
       kicker: 'FORMATIONS & ACCRÉDITATIONS',
       title: 'Cours & Certifications',
-      desc: 'Certificats délivrés par TUSAŞ Engine Industries (TEI), MathWorks, Bilgeiş et Udemy.',
-      countBadge: '7 Certifications Validées',
+      desc: 'Certificats délivrés par TUSAŞ Engine Industries (TEI), MathWorks, Cisco Networking Academy, Bilgeiş et Udemy.',
+      countBadge: '8 Certifications Validées',
       completed: 'Obtenu',
       popupPrompt: 'Survolez ou appuyez pour afficher la description',
       clickToView: 'Voir la description',
@@ -949,11 +949,11 @@ export const uiText: Record<SupportedLang, {
       contactMe: 'Contattami',
       kpis: {
         internships: 'Tirocini & Esperienze',
-        internshipsSub: 'Volt WEG, Presidenza IT, Cisco, Gdz, Uptech',
+        internshipsSub: 'Volt WEG, Presidenza IT, Uptechlabs, Gdz',
         quadruped: 'Robot Quadrupede Dogduino',
         quadrupedSub: 'ESP32, PCA9685, Bluetooth & Cinematica',
         certs: 'Certificazioni Accreditate',
-        certsSub: 'TEI Aviazione, MathWorks, Bilgeiş, SAP',
+        certsSub: 'TEI, MathWorks, Cisco, Bilgeiş, SAP',
         languages: 'Competenze Linguistiche',
         languagesSub: 'Inglese (Tecnico) & Russo'
       }
@@ -973,10 +973,10 @@ export const uiText: Record<SupportedLang, {
       kicker: 'PERCORSO PROFESSIONALE',
       title: 'Esperienza Lavorativa',
       desc: 'Esperienza pratica dai test di carico IEC per motori elettrici a portali ad alta sicurezza, driver sensori in tempo reale e reti di distribuzione.',
-      filterAll: 'Tutte le esperienze (5)',
+      filterAll: 'Tutte le esperienze (4)',
       filterRd: 'R&S / Volt WEG',
       filterEmbedded: 'Sistemi Embedded',
-      filterIt: 'IT & Python',
+      filterIt: 'IT & Sicurezza Web',
       filterGrid: 'Elettrico & Rete'
     },
     education: {
@@ -996,8 +996,8 @@ export const uiText: Record<SupportedLang, {
     certs: {
       kicker: 'CORSI & ACCREDITAMENTI',
       title: 'Corsi & Certificazioni',
-      desc: 'Certificazioni ufficiali rilasciate da TUSAŞ Engine Industries (TEI), MathWorks, Bilgeiş e Udemy.',
-      countBadge: '7 Certificazioni Verificate',
+      desc: 'Certificazioni ufficiali rilasciate da TUSAŞ Engine Industries (TEI), MathWorks, Cisco Networking Academy, Bilgeiş e Udemy.',
+      countBadge: '8 Certificazioni Verificate',
       completed: 'Completato',
       popupPrompt: 'Passa il cursore o tocca per visualizzare la descrizione',
       clickToView: 'Visualizza descrizione',
@@ -1061,13 +1061,13 @@ export const uiText: Record<SupportedLang, {
       viewDogduino: 'Вижте проект Dogduino',
       contactMe: 'Свържете се с мен',
       kpis: {
-        internships: '5 Инженерни стажа',
-        internshipsSub: 'Вграден софтуер, силова електроника, IT & сигурност',
+        internships: '4 Инженерни стажа',
+        internshipsSub: 'Volt WEG, Президентство IT, Uptechlabs, Gdz',
         quadruped: 'Робот Dogduino',
         quadrupedSub: 'ESP32 & PCA9685 четирикрак роботизиран механизъм',
-        certs: '7 Сертификата',
-        certsSub: 'TEI Авиационни двигатели, MathWorks & контрол',
-        languages: 'Английски & Турски',
+        certs: '8 Сертификата',
+        certsSub: 'TEI, MathWorks, Cisco, Bilgeiş, SAP',
+        languages: 'Английски & Руски',
         languagesSub: 'Професионална техническа комуникация'
       }
     },
@@ -1085,8 +1085,8 @@ export const uiText: Record<SupportedLang, {
     experience: {
       kicker: 'ПРОФЕСИОНАЛНА ХРОНОЛОГИЯ',
       title: 'Инженерен и професионален опит',
-      desc: '5 практически инженерни стажа и роли в R&D лаборатории, разработка на фърмуер, производство на силова електроника и IT инфраструктура.',
-      filterAll: 'Всички роли (5)',
+      desc: '4 практически инженерни стажа и роли в R&D лаборатории, разработка на фърмуер, силова електроника и IT инфраструктура.',
+      filterAll: 'Всички роли (4)',
       filterRd: 'R&D и роботика',
       filterEmbedded: 'Вградени системи',
       filterIt: 'IT и автоматизация',
@@ -1109,8 +1109,8 @@ export const uiText: Record<SupportedLang, {
     certs: {
       kicker: 'КУРСОВЕ И АКРЕДИТАЦИИ',
       title: 'Курсове и сертификати',
-      desc: 'Официални сертификати от TUSAŞ Engine Industries (TEI), MathWorks, Bilgeiş и Udemy.',
-      countBadge: '7 Верифицирани сертификата',
+      desc: 'Официални сертификати от TUSAŞ Engine Industries (TEI), MathWorks, Cisco Networking Academy, Bilgeiş и Udemy.',
+      countBadge: '8 Верифицирани сертификата',
       completed: 'Завършен',
       popupPrompt: 'Задръжте или кликнете за детайли',
       clickToView: 'Преглед на съдържанието',

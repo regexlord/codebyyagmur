@@ -11,7 +11,8 @@ import {
   ArrowRight, 
   Copy, 
   Check, 
-  Send 
+  Send,
+  Globe
 } from 'lucide-react';
 
 interface HeroProps {
@@ -95,8 +96,8 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
             </p>
           </div>
 
-          {/* Direct Personal Contact Metadata Strip (Email, LinkedIn, Location) */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {/* Direct Personal Contact Metadata Strip (Location, Email, LinkedIn, Portfolio) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {/* Location */}
             <div className="flex items-center gap-2.5 text-xs text-slate-600 dark:text-slate-400 p-3 rounded-xl bg-slate-100/70 dark:bg-slate-900/50 border border-slate-200/60 dark:border-slate-800/60">
               <MapPin className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0" />
@@ -143,6 +144,27 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
                 {copiedItem === 'linkedin' ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
               </button>
             </div>
+
+            {/* Portfolio / GitHub Pages URL */}
+            <div className="group flex items-center justify-between text-xs text-slate-600 dark:text-slate-400 p-3 rounded-xl bg-slate-100/70 dark:bg-slate-900/50 border border-slate-200/60 dark:border-slate-800/60 hover:border-cyan-500 dark:hover:border-cyan-400 transition-colors">
+              <a
+                href={cvData.personal.websiteUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 truncate text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400"
+                title={cvData.personal.websiteUrl}
+              >
+                <Globe className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0" />
+                <span className="truncate font-mono text-[11px] font-medium">{cvData.personal.website}</span>
+              </a>
+              <button
+                onClick={() => copyToClipboard(cvData.personal.websiteUrl, 'website')}
+                className="p-1 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors shrink-0 ml-1"
+                title="Copy Portfolio URL"
+              >
+                {copiedItem === 'website' ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
+              </button>
+            </div>
           </div>
 
           {/* Action Buttons */}
@@ -170,7 +192,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
         <div className="mt-14 pt-8 border-t border-slate-200/80 dark:border-slate-800/80 grid grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="space-y-1">
             <div className="text-2xl sm:text-3xl font-extrabold font-mono text-slate-900 dark:text-white tabular-nums">
-              5
+              4
             </div>
             <div className="text-xs font-semibold text-slate-700 dark:text-slate-200">
               {t.hero.kpis.internships}
@@ -194,7 +216,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
 
           <div className="space-y-1">
             <div className="text-2xl sm:text-3xl font-extrabold font-mono text-slate-900 dark:text-white tabular-nums">
-              7
+              8
             </div>
             <div className="text-xs font-semibold text-slate-700 dark:text-slate-200">
               {t.hero.kpis.certs}
