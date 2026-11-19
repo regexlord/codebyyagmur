@@ -12,7 +12,8 @@ import {
   LayoutGrid,
   Bot,
   Award,
-  FileCheck2
+  FileCheck2,
+  Building2
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -21,6 +22,7 @@ interface NavbarProps {
   isDark: boolean;
   setIsDark: (d: boolean) => void;
   onOpenContact: () => void;
+  onSelectExperience?: (index: number | null) => void;
   onSelectCertification?: (index: number) => void;
 }
 
@@ -30,16 +32,20 @@ export const Navbar: React.FC<NavbarProps> = ({
   isDark,
   setIsDark,
   onOpenContact,
+  onSelectExperience,
   onSelectCertification
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileProjectsOpen, setMobileProjectsOpen] = useState(false);
+  const [mobileExperienceOpen, setMobileExperienceOpen] = useState(false);
   const [mobileCertsOpen, setMobileCertsOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [projectsDropdownOpen, setProjectsDropdownOpen] = useState(false);
+  const [experienceDropdownOpen, setExperienceDropdownOpen] = useState(false);
   const [certsDropdownOpen, setCertsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const projectsDropdownRef = useRef<HTMLDivElement>(null);
+  const experienceDropdownRef = useRef<HTMLDivElement>(null);
   const certsDropdownRef = useRef<HTMLDivElement>(null);
 
   const t = uiText[lang] || uiText.en;
@@ -53,6 +59,9 @@ export const Navbar: React.FC<NavbarProps> = ({
       if (projectsDropdownRef.current && !projectsDropdownRef.current.contains(e.target as Node)) {
         setProjectsDropdownOpen(false);
       }
+      if (experienceDropdownRef.current && !experienceDropdownRef.current.contains(e.target as Node)) {
+        setExperienceDropdownOpen(false);
+      }
       if (certsDropdownRef.current && !certsDropdownRef.current.contains(e.target as Node)) {
         setCertsDropdownOpen(false);
       }
@@ -61,6 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       if (e.key === 'Escape') {
         setLangDropdownOpen(false);
         setProjectsDropdownOpen(false);
+        setExperienceDropdownOpen(false);
         setCertsDropdownOpen(false);
       }
     };
@@ -71,11 +81,6 @@ export const Navbar: React.FC<NavbarProps> = ({
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
-
-  const navLinksMiddle = [
-    { href: '#experience', label: t.nav.experience },
-    { href: '#education', label: t.nav.education }
-  ];
 
   const navLinksEnd = [
     { href: '#references', label: t.nav.references },
@@ -112,6 +117,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               type="button"
               onClick={() => {
                 setProjectsDropdownOpen((prev) => !prev);
+                setExperienceDropdownOpen(false);
                 setCertsDropdownOpen(false);
                 setLangDropdownOpen(false);
               }}
@@ -166,15 +172,85 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
           </div>
 
-          {navLinksMiddle.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors whitespace-nowrap shrink-0"
+          {/* Experience Dropdown Menu */}
+          <div className="relative" ref={experienceDropdownRef}>
+            <button
+              type="button"
+              onClick={() => {
+                setExperienceDropdownOpen((prev) => !prev);
+                setProjectsDropdownOpen(false);
+                setCertsDropdownOpen(false);
+                setLangDropdownOpen(false);
+              }}
+              className={`flex items-center gap-1 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors whitespace-nowrap shrink-0 ${
+                experienceDropdownOpen ? 'text-cyan-600 dark:text-cyan-400' : ''
+              }`}
+              aria-expanded={experienceDropdownOpen}
+              aria-haspopup="menu"
             >
-              {link.label}
-            </a>
-          ))}
+              <span>{t.nav.experience}</span>
+              <ChevronDown
+                className={`w-3.5 h-3.5 transition-transform duration-150 ${
+                  experienceDropdownOpen ? 'rotate-180' : ''
+                }`}
+              />
+            </button>
+
+            {experienceDropdownOpen && (
+              <div
+                role="menu"
+                className="absolute left-0 mt-2.5 w-80 max-h-[75vh] overflow-y-auto rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl py-1.5 z-50 animate-in fade-in zoom-in-95 duration-100"
+              >
+                <a
+                  href="#experience"
+                  role="menuitem"
+                  onClick={() => {
+                    setExperienceDropdownOpen(false);
+                    onSelectExperience?.(null);
+                  }}
+                  className="flex items-center gap-2.5 px-3.5 py-2.5 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-cyan-50 dark:hover:bg-cyan-950/60 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors"
+                >
+                  <LayoutGrid className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0" />
+                  <span>{t.nav.viewAllExperience}</span>
+                </a>
+
+                <div className="my-1 border-t border-slate-100 dark:border-slate-800" />
+
+                {cvData.experiences.map((exp, idx) => {
+                  const roleTitle = exp.role[lang] || exp.role.en;
+                  return (
+                    <button
+                      key={`${exp.company}-${exp.period}`}
+                      type="button"
+                      role="menuitem"
+                      onClick={() => {
+                        setExperienceDropdownOpen(false);
+                        onSelectExperience?.(idx);
+                      }}
+                      className="w-full text-left flex items-start gap-2.5 px-3.5 py-2 text-xs text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                    >
+                      <Building2 className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 mt-0.5" />
+                      <div className="min-w-0">
+                        <div className="font-semibold text-slate-900 dark:text-white leading-snug">
+                          {exp.company}
+                        </div>
+                        <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate">
+                          {roleTitle} · {exp.period}
+                        </div>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
+          <a
+            href="#education"
+            className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors whitespace-nowrap shrink-0"
+          >
+            {t.nav.education}
+          </a>
 
           {/* Certifications Dropdown Menu */}
           <div className="relative" ref={certsDropdownRef}>
@@ -183,6 +259,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => {
                 setCertsDropdownOpen((prev) => !prev);
                 setProjectsDropdownOpen(false);
+                setExperienceDropdownOpen(false);
                 setLangDropdownOpen(false);
               }}
               className={`flex items-center gap-1 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors whitespace-nowrap shrink-0 ${
@@ -269,6 +346,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => {
                 setLangDropdownOpen((prev) => !prev);
                 setProjectsDropdownOpen(false);
+                setExperienceDropdownOpen(false);
                 setCertsDropdownOpen(false);
               }}
               className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-slate-200 dark:border-slate-800 whitespace-nowrap shrink-0"
@@ -394,16 +472,69 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
           </div>
 
-          {navLinksMiddle.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+          {/* Mobile Experience Expandable Submenu */}
+          <div className="space-y-1">
+            <button
+              type="button"
+              onClick={() => setMobileExperienceOpen((prev) => !prev)}
+              className="w-full flex items-center justify-between px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+              aria-expanded={mobileExperienceOpen}
             >
-              {link.label}
-            </a>
-          ))}
+              <span>{t.nav.experience}</span>
+              <ChevronDown
+                className={`w-4 h-4 text-slate-400 transition-transform duration-150 ${
+                  mobileExperienceOpen ? 'rotate-180' : ''
+                }`}
+              />
+            </button>
+
+            {mobileExperienceOpen && (
+              <div className="pl-4 space-y-1 border-l border-slate-200 dark:border-slate-800 ml-3 max-h-72 overflow-y-auto">
+                <a
+                  href="#experience"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobileExperienceOpen(false);
+                    onSelectExperience?.(null);
+                  }}
+                  className="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-semibold text-cyan-700 dark:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+                >
+                  <LayoutGrid className="w-3.5 h-3.5 shrink-0" />
+                  <span>{t.nav.viewAllExperience}</span>
+                </a>
+                {cvData.experiences.map((exp, idx) => (
+                  <button
+                    key={`${exp.company}-${exp.period}`}
+                    type="button"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobileExperienceOpen(false);
+                      onSelectExperience?.(idx);
+                    }}
+                    className="w-full text-left flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                  >
+                    <Building2 className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400 shrink-0" />
+                    <div className="min-w-0">
+                      <div className="truncate font-semibold text-slate-900 dark:text-white">
+                        {exp.company}
+                      </div>
+                      <div className="text-[10px] text-slate-500 dark:text-slate-400 truncate">
+                        {exp.role[lang] || exp.role.en}
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <a
+            href="#education"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+          >
+            {t.nav.education}
+          </a>
 
           {/* Mobile Certifications Expandable Submenu */}
           <div className="space-y-1">

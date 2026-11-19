@@ -29,6 +29,7 @@ export default function App() {
   
   const [contactModalOpen, setContactModalOpen] = useState(false);
   const [certSelection, setCertSelection] = useState<{ index: number; nonce: number } | null>(null);
+  const [expSelection, setExpSelection] = useState<{ index: number | null; nonce: number } | null>(null);
 
   useEffect(() => {
     if (isDark) {
@@ -55,6 +56,16 @@ export default function App() {
     }
   };
 
+  const handleSelectExperience = (index: number | null) => {
+    setExpSelection({ index, nonce: Date.now() });
+    if (index === null) {
+      const el = document.getElementById('experience');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-[#070b14] text-slate-900 dark:text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-white transition-colors duration-200 relative bg-tech-grid">
       
@@ -75,6 +86,7 @@ export default function App() {
         isDark={isDark}
         setIsDark={setIsDark}
         onOpenContact={handleOpenContact}
+        onSelectExperience={handleSelectExperience}
         onSelectCertification={handleSelectCertification}
       />
 
@@ -89,8 +101,8 @@ export default function App() {
         {/* Featured Project: Dogduino with Photos and Video */}
         <DogduinoProject lang={lang} />
 
-        {/* Full Work Experience (All 5 roles from CV) */}
-        <Experience lang={lang} />
+        {/* Full Work Experience (All roles from CV) */}
+        <Experience lang={lang} navSelection={expSelection} />
 
         {/* Education, Technical Skills, Professional Qualities & Languages */}
         <EducationAndSkills lang={lang} />

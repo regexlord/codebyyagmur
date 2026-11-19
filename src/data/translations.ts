@@ -28,6 +28,7 @@ export const uiText: Record<SupportedLang, {
     viewAllProjects: string;
     dogduino: string;
     experience: string;
+    viewAllExperience: string;
     education: string;
     certifications: string;
     viewAllCertifications: string;
@@ -156,6 +157,7 @@ export const uiText: Record<SupportedLang, {
       viewAllProjects: 'View All',
       dogduino: 'Dogduino Project',
       experience: 'Experience',
+      viewAllExperience: 'View All',
       education: 'Education & Skills',
       certifications: 'Certifications',
       viewAllCertifications: 'View All',
@@ -285,6 +287,7 @@ export const uiText: Record<SupportedLang, {
       viewAllProjects: 'Tümünü gör',
       dogduino: 'Dogduino Projesi',
       experience: 'İş Deneyimi',
+      viewAllExperience: 'Tümünü gör',
       education: 'Eğitim & Yetkinlikler',
       certifications: 'Sertifikalar',
       viewAllCertifications: 'Tümünü gör',
@@ -414,6 +417,7 @@ export const uiText: Record<SupportedLang, {
       viewAllProjects: 'Alle ansehen',
       dogduino: 'Dogduino Projekt',
       experience: 'Erfahrung',
+      viewAllExperience: 'Alle ansehen',
       education: 'Ausbildung & Skills',
       certifications: 'Zertifikate',
       viewAllCertifications: 'Alle ansehen',
@@ -543,6 +547,7 @@ export const uiText: Record<SupportedLang, {
       viewAllProjects: 'Смотреть все',
       dogduino: 'Проект Dogduino',
       experience: 'Опыт работы',
+      viewAllExperience: 'Смотреть все',
       education: 'Образование и навыки',
       certifications: 'Сертификаты',
       viewAllCertifications: 'Смотреть все',
@@ -672,6 +677,7 @@ export const uiText: Record<SupportedLang, {
       viewAllProjects: 'Visa alla',
       dogduino: 'Dogduino Projekt',
       experience: 'Erfarenhet',
+      viewAllExperience: 'Visa alla',
       education: 'Utbildning & Kompetens',
       certifications: 'Certifieringar',
       viewAllCertifications: 'Visa alla',
@@ -801,6 +807,7 @@ export const uiText: Record<SupportedLang, {
       viewAllProjects: '查看全部',
       dogduino: 'Dogduino 机器狗',
       experience: '工作经历',
+      viewAllExperience: '查看全部',
       education: '教育与技能',
       certifications: '专业证书',
       viewAllCertifications: '查看全部',
@@ -930,6 +937,7 @@ export const uiText: Record<SupportedLang, {
       viewAllProjects: 'Tout voir',
       dogduino: 'Projet Dogduino',
       experience: 'Expérience',
+      viewAllExperience: 'Tout voir',
       education: 'Formation & Compétences',
       certifications: 'Certifications',
       viewAllCertifications: 'Tout voir',
@@ -1059,6 +1067,7 @@ export const uiText: Record<SupportedLang, {
       viewAllProjects: 'Vedi tutti',
       dogduino: 'Progetto Dogduino',
       experience: 'Esperienza',
+      viewAllExperience: 'Vedi tutti',
       education: 'Formazione & Competenze',
       certifications: 'Certificazioni',
       viewAllCertifications: 'Vedi tutti',
@@ -1187,6 +1196,7 @@ export const uiText: Record<SupportedLang, {
       viewAllProjects: 'Виж всички',
       dogduino: 'Проект Dogduino',
       experience: 'Опит',
+      viewAllExperience: 'Виж всички',
       education: 'Образование и умения',
       certifications: 'Сертификати',
       viewAllCertifications: 'Виж всички',
@@ -1315,6 +1325,7 @@ export const uiText: Record<SupportedLang, {
       viewAllProjects: 'Zobrazit vše',
       dogduino: 'Projekt Dogduino',
       experience: 'Zkušenosti',
+      viewAllExperience: 'Zobrazit vše',
       education: 'Vzdělání a dovednosti',
       certifications: 'Certifikáty',
       viewAllCertifications: 'Zobrazit vše',
@@ -1443,6 +1454,7 @@ export const uiText: Record<SupportedLang, {
       viewAllProjects: 'Zobacz wszystkie',
       dogduino: 'Projekt Dogduino',
       experience: 'Doświadczenie',
+      viewAllExperience: 'Zobacz wszystkie',
       education: 'Edukacja i umiejętności',
       certifications: 'Certyfikaty',
       viewAllCertifications: 'Zobacz wszystkie',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { cvData } from '../data/cvData';
 import { SupportedLang, uiText } from '../data/translations';
 import { 
@@ -11,12 +11,43 @@ import {
 
 interface ExperienceProps {
   lang: SupportedLang;
+  navSelection?: { index: number | null; nonce: number } | null;
 }
 
-export const Experience: React.FC<ExperienceProps> = ({ lang }) => {
+export const Experience: React.FC<ExperienceProps> = ({ lang, navSelection }) => {
   const [filter, setFilter] = useState<string>('all');
+  const [highlightedIdx, setHighlightedIdx] = useState<number | null>(null);
 
   const t = uiText[lang] || uiText.en;
+
+  useEffect(() => {
+    if (!navSelection) return;
+    setFilter('all');
+
+    if (navSelection.index === null) {
+      setHighlightedIdx(null);
+      return;
+    }
+
+    const targetIndex = navSelection.index;
+    setHighlightedIdx(targetIndex);
+
+    const scrollTimer = setTimeout(() => {
+      const el = document.getElementById(`exp-${targetIndex}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 60);
+
+    const clearTimer = setTimeout(() => {
+      setHighlightedIdx((prev) => (prev === targetIndex ? null : prev));
+    }, 2400);
+
+    return () => {
+      clearTimeout(scrollTimer);
+      clearTimeout(clearTimer);
+    };
+  }, [navSelection]);
 
   const filterCategories = [
     { id: 'all', label: t.experience.filterAll },
@@ -26,10 +57,12 @@ export const Experience: React.FC<ExperienceProps> = ({ lang }) => {
     { id: 'electrical', label: t.experience.filterGrid }
   ];
 
-  const filteredExperiences = cvData.experiences.filter((item) => {
-    if (filter === 'all') return true;
-    return item.category === filter;
-  });
+  const filteredExperiences = cvData.experiences
+    .map((item, originalIndex) => ({ item, originalIndex }))
+    .filter(({ item }) => {
+      if (filter === 'all') return true;
+      return item.category === filter;
+    });
 
   return (
     <section id="experience" className="py-16 md:py-24">
@@ -70,14 +103,20 @@ export const Experience: React.FC<ExperienceProps> = ({ lang }) => {
 
         {/* Timeline List of Experiences */}
         <div className="space-y-6">
-          {filteredExperiences.map((item, index) => {
+          {filteredExperiences.map(({ item, originalIndex }) => {
             const roleTitle = item.role[lang] || item.role.en;
             const points = item.points[lang] || item.points.en;
+            const isHighlighted = highlightedIdx === originalIndex;
 
             return (
               <div
-                key={index}
-                className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900/90 backdrop-blur-sm border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden"
+                key={originalIndex}
+                id={`exp-${originalIndex}`}
+                className={`p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900/90 backdrop-blur-sm border transition-all duration-300 relative overflow-hidden ${
+                  isHighlighted
+                    ? 'border-cyan-500 dark:border-cyan-400 shadow-lg ring-2 ring-cyan-500/25 dark:ring-cyan-400/25'
+                    : 'border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md'
+                }`}
               >
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-4">
                   <div>
