@@ -688,7 +688,7 @@ export const cvData = {
       cs: "Na dálku",
       pl: "Zdalnie"
     },
-    period: "Nov 1 – Nov 19",
+    period: "Oct 2026 – Nov 2026",
     techLine: "Python, PySide6, NumPy & Matplotlib",
     githubUrl: "https://github.com/regexlord/AquaTrace",
     type: {
