@@ -70,6 +70,17 @@ export const uiText: Record<SupportedLang, {
     lightboxOf: string;
     loopCaption: string;
   };
+  aquaTrace: {
+    badge: string;
+    scopeHeading: string;
+    challengesHeading: string;
+    challengesText: string;
+    specsHeading: string;
+    sourceCodeButton: string;
+    galleryLabel: string;
+    clickToEnlarge: string;
+    lightboxOf: string;
+  };
   experience: {
     kicker: string;
     title: string;
@@ -167,7 +178,7 @@ export const uiText: Record<SupportedLang, {
     projectsSection: {
       kicker: 'ENGINEERING PROJECTS',
       title: 'Projects',
-      desc: 'Selected embedded systems, robotics, and applied hardware engineering builds.',
+      desc: 'Selected embedded systems, robotics, signal processing, and engineering software builds.',
       viewDetails: 'View project details'
     },
     hero: {
@@ -198,6 +209,17 @@ export const uiText: Record<SupportedLang, {
       specsHeading: 'Hardware & System Specifications',
       lightboxOf: 'of',
       loopCaption: 'Demonstration:'
+    },
+    aquaTrace: {
+      badge: 'FEATURED SOFTWARE & SIGNAL PROCESSING PROJECT',
+      scopeHeading: 'Project Scope & Features',
+      challengesHeading: 'Engineering Focus Highlights',
+      challengesText: 'Explored underwater acoustic propagation and active sonar signal processing through numerical simulation. Implemented complex-baseband LFM waveform generation, echo-delay modeling, and FFT-based matched filtering for target range estimation. Integrated the models into an interactive desktop interface for parameter-driven engineering analysis.',
+      specsHeading: 'Software & System Specifications',
+      sourceCodeButton: 'Go to Source Code',
+      galleryLabel: 'Application Screenshots (6)',
+      clickToEnlarge: 'Click to enlarge',
+      lightboxOf: 'of'
     },
     experience: {
       kicker: 'CAREER & PROFESSIONAL EXPERIENCE',
@@ -297,7 +319,7 @@ export const uiText: Record<SupportedLang, {
     projectsSection: {
       kicker: 'MÜHENDİSLİK PROJELERİ',
       title: 'Projeler',
-      desc: 'Seçili gömülü sistem, robotik ve uygulamalı donanım mühendisliği çalışmaları.',
+      desc: 'Seçili gömülü sistem, robotik, sinyal işleme ve mühendislik yazılımı projeleri.',
       viewDetails: 'Proje detaylarını incele'
     },
     hero: {
@@ -328,6 +350,17 @@ export const uiText: Record<SupportedLang, {
       specsHeading: 'Donanım & Mimari Spesifikasyonları',
       lightboxOf: '/',
       loopCaption: 'Demonstrasyon:'
+    },
+    aquaTrace: {
+      badge: 'ÖNE ÇIKAN YAZILIM & SİNYAL İŞLEME PROJESİ',
+      scopeHeading: 'Proje Kapsamı & Özellikler',
+      challengesHeading: 'Mühendislik Odak Noktaları',
+      challengesText: 'Sayısal simülasyon yoluyla sualtı akustik yayılımı ve aktif sonar sinyal işleme incelendi. Hedef mesafe kestirimi için karmaşık temel bant LFM dalga formu üretimi, yankı gecikmesi modellemesi ve FFT tabanlı eşleşmiş filtreleme uygulandı. Parametre odaklı mühendislik analizi için modeller etkileşimli bir masaüstü arayüzüne entegre edildi.',
+      specsHeading: 'Yazılım & Sistem Spesifikasyonları',
+      sourceCodeButton: 'Kaynak Koduna Git',
+      galleryLabel: 'Uygulama Ekran Görüntüleri (6)',
+      clickToEnlarge: 'Büyütmek için tıklayın',
+      lightboxOf: '/'
     },
     experience: {
       kicker: 'KARİYER & PROFESYONEL DENEYİM',
@@ -427,7 +460,7 @@ export const uiText: Record<SupportedLang, {
     projectsSection: {
       kicker: 'INGENIEURPROJEKTE',
       title: 'Projekte',
-      desc: 'Ausgewählte Projekte in den Bereichen Embedded Systems, Robotik und Hardwareentwicklung.',
+      desc: 'Ausgewählte Projekte in den Bereichen Embedded Systems, Robotik, Signalverarbeitung und Ingenieursoftware.',
       viewDetails: 'Projektdetails ansehen'
     },
     hero: {
@@ -458,6 +491,17 @@ export const uiText: Record<SupportedLang, {
       specsHeading: 'Hardware- & Systemspezifikationen',
       lightboxOf: 'von',
       loopCaption: 'Demonstration:'
+    },
+    aquaTrace: {
+      badge: 'AUSGEWÄHLTES SOFTWARE- & SIGNALVERARBEITUNGSPROJEKT',
+      scopeHeading: 'Projektumfang & Funktionen',
+      challengesHeading: 'Technische Schwerpunkte',
+      challengesText: 'Untersuchung von Unterwasser-Schallausbreitung und Aktivsonar-Signalverarbeitung mittels numerischer Simulation. Implementierung komplexer Basisband-LFM-Signalerzeugung, Echo-Verzögerungsmodellierung und FFT-basierter Matched-Filterung zur Zielentfernungsschätzung sowie Integration in eine interaktive Desktop-Oberfläche.',
+      specsHeading: 'Software- & Systemspezifikationen',
+      sourceCodeButton: 'Zum Quellcode',
+      galleryLabel: 'Anwendungs-Screenshots (6)',
+      clickToEnlarge: 'Zum Vergrößern klicken',
+      lightboxOf: 'von'
     },
     experience: {
       kicker: 'BERUFLICHE LAUFBAHN',
@@ -557,7 +601,7 @@ export const uiText: Record<SupportedLang, {
     projectsSection: {
       kicker: 'ИНЖЕНЕРНЫЕ ПРОЕКТЫ',
       title: 'Проекты',
-      desc: 'Избранные разработки в области встраиваемых систем, робототехники и аппаратного обеспечения.',
+      desc: 'Избранные разработки в области встраиваемых систем, робототехники, обработки сигналов и инженерного ПО.',
       viewDetails: 'Подробнее о проекте'
     },
     hero: {
@@ -588,6 +632,17 @@ export const uiText: Record<SupportedLang, {
       specsHeading: 'Спецификации оборудования и архитектуры',
       lightboxOf: 'из',
       loopCaption: 'Демонстрация:'
+    },
+    aquaTrace: {
+      badge: 'ИЗБРАННЫЙ ПРОЕКТ ПО И ЦОС (ПО И ОБРАБОТКА СИГНАЛОВ)',
+      scopeHeading: 'Масштаб проекта и возможности',
+      challengesHeading: 'Ключевые инженерные решения',
+      challengesText: 'Исследованы подводное распространение акустических волн и обработка сигналов активного сонара с помощью численного моделирования. Реализованы генерация комплексных ЛЧМ-импульсов, моделирование задержки эха и БПФ-согласованная фильтрация для оценки дальности в интерактивном настольном приложении.',
+      specsHeading: 'Спецификации ПО и системы',
+      sourceCodeButton: 'Перейти к исходному коду',
+      galleryLabel: 'Скриншоты приложения (6)',
+      clickToEnlarge: 'Нажмите, чтобы увеличить',
+      lightboxOf: 'из'
     },
     experience: {
       kicker: 'ПРОФЕССИОНАЛЬНЫЙ ОПЫТ',
@@ -687,7 +742,7 @@ export const uiText: Record<SupportedLang, {
     projectsSection: {
       kicker: 'INGENJÖRSPROJEKT',
       title: 'Projekt',
-      desc: 'Utvalda projekt inom inbyggda system, robotik och tillämpad hårdvaruutveckling.',
+      desc: 'Utvalda projekt inom inbyggda system, robotik, signalbehandling och teknisk mjukvara.',
       viewDetails: 'Visa projektdetaljer'
     },
     hero: {
@@ -718,6 +773,17 @@ export const uiText: Record<SupportedLang, {
       specsHeading: 'Hårdvaru- & Systemsatsning',
       lightboxOf: 'av',
       loopCaption: 'Demonstration:'
+    },
+    aquaTrace: {
+      badge: 'UTVALT MJUKVARU- & SIGNALBEHANDLINGSPROJEKT',
+      scopeHeading: 'Projektomfattning & Funktioner',
+      challengesHeading: 'Tekniska Fokusområden',
+      challengesText: 'Utforskat undervattensakustik och aktiv sonarsignalbehandling genom numerisk simulering. Implementerade komplex basbands-LFM-vågformsgenerering, ekofördröjningsmodellering och FFT-baserad matchad filtrering för avståndsuppskattning i ett interaktivt skrivbordsgränssnitt.',
+      specsHeading: 'Mjukvaru- & Systemspecifikationer',
+      sourceCodeButton: 'Gå till källkod',
+      galleryLabel: 'Skärmdumpar från appen (6)',
+      clickToEnlarge: 'Klicka för att förstora',
+      lightboxOf: 'av'
     },
     experience: {
       kicker: 'YRKESERFARENHET',
@@ -817,7 +883,7 @@ export const uiText: Record<SupportedLang, {
     projectsSection: {
       kicker: '工程项目展示',
       title: '工程项目',
-      desc: '精选嵌入式系统、机器人控制与硬件工程研发项目。',
+      desc: '精选嵌入式系统、机器人控制、信号处理与工程仿真软件项目。',
       viewDetails: '查看项目详情'
     },
     hero: {
@@ -848,6 +914,17 @@ export const uiText: Record<SupportedLang, {
       specsHeading: '硬件与系统参数规范',
       lightboxOf: '/',
       loopCaption: '实机步态演示：'
+    },
+    aquaTrace: {
+      badge: '精选软件与信号处理工程项目',
+      scopeHeading: '项目范围与核心特性',
+      challengesHeading: '工程研发聚焦亮点',
+      challengesText: '通过数值仿真深入探索水下声学传播特性与主动声纳信号处理。实现了复基带线性调频 (LFM) 波形生成、回波时延建模及基于 FFT 的匹配滤波目标测距算法，并将全部计算模型集成于参数驱动的交互式桌面分析软件中。',
+      specsHeading: '软件与系统技术规格',
+      sourceCodeButton: '查看源代码',
+      galleryLabel: '应用程序界面截图 (6)',
+      clickToEnlarge: '点击放大查看',
+      lightboxOf: '/'
     },
     experience: {
       kicker: '职业与工程经历',
@@ -947,7 +1024,7 @@ export const uiText: Record<SupportedLang, {
     projectsSection: {
       kicker: 'PROJETS D’INGÉNIERIE',
       title: 'Projets',
-      desc: 'Sélection de réalisations en systèmes embarqués, robotique et conception matérielle.',
+      desc: 'Sélection de réalisations en systèmes embarqués, robotique, traitement du signal et logiciels d’ingénierie.',
       viewDetails: 'Voir les détails'
     },
     hero: {
@@ -978,6 +1055,17 @@ export const uiText: Record<SupportedLang, {
       specsHeading: 'Spécifications Matérielles et Système',
       lightboxOf: 'sur',
       loopCaption: 'Démonstration :'
+    },
+    aquaTrace: {
+      badge: 'PROJET PHARE LOGICIEL & TRAITEMENT DU SIGNAL',
+      scopeHeading: 'Portée du projet & Fonctionnalités',
+      challengesHeading: 'Points forts d’ingénierie',
+      challengesText: 'Exploration de la propagation acoustique sous-marine et du traitement de signal sonar actif par simulation numérique. Génération de formes d’onde LFM en bande de base complexe, modélisation du retard d’écho et filtrage adapté par FFT intégrés dans une interface de bureau interactive.',
+      specsHeading: 'Spécifications logicielles & système',
+      sourceCodeButton: 'Voir le code source',
+      galleryLabel: 'Captures d’écran de l’application (6)',
+      clickToEnlarge: 'Cliquer pour agrandir',
+      lightboxOf: 'sur'
     },
     experience: {
       kicker: 'PARCOURS PROFESSIONNEL',
@@ -1077,7 +1165,7 @@ export const uiText: Record<SupportedLang, {
     projectsSection: {
       kicker: 'PROGETTI DI INGEGNERIA',
       title: 'Progetti',
-      desc: 'Progetti selezionati nell’ambito dei sistemi embedded, della robotica e dell’hardware.',
+      desc: 'Progetti selezionati nell’ambito dei sistemi embedded, robotica, elaborazione dei segnali e software ingegneristico.',
       viewDetails: 'Vedi dettagli progetto'
     },
     hero: {
@@ -1108,6 +1196,17 @@ export const uiText: Record<SupportedLang, {
       specsHeading: 'Specifiche Hardware e di Sistema',
       lightboxOf: 'di',
       loopCaption: 'Dimostrazione:'
+    },
+    aquaTrace: {
+      badge: 'PROGETTO IN EVIDENZA SOFTWARE & SIGNAL PROCESSING',
+      scopeHeading: 'Ambito del progetto e funzionalità',
+      challengesHeading: 'Aspetti ingegneristici chiave',
+      challengesText: 'Analisi della propagazione acustica subacquea e dell’elaborazione di segnali sonar attivi tramite simulazione numerica. Generazione di forme d’onda LFM in banda base complessa, modellazione del ritardo d’eco e filtraggio adattato FFT integrati in un’interfaccia desktop interattiva.',
+      specsHeading: 'Specifiche software e di sistema',
+      sourceCodeButton: 'Vai al codice sorgente',
+      galleryLabel: 'Schermate dell’applicazione (6)',
+      clickToEnlarge: 'Clicca per ingrandire',
+      lightboxOf: 'di'
     },
     experience: {
       kicker: 'PERCORSO PROFESSIONALE',
@@ -1206,7 +1305,7 @@ export const uiText: Record<SupportedLang, {
     projectsSection: {
       kicker: 'ИНЖЕНЕРНИ ПРОЕКТИ',
       title: 'Проекти',
-      desc: 'Избрани разработки в областта на вградените системи, роботиката и приложния хардуер.',
+      desc: 'Избрани разработки в областта на вградените системи, роботиката, обработката на сигнали и инженерния софтуер.',
       viewDetails: 'Детайли за проекта'
     },
     hero: {
@@ -1237,6 +1336,17 @@ export const uiText: Record<SupportedLang, {
       specsHeading: 'Технически спецификации',
       lightboxOf: 'от',
       loopCaption: 'Демонстрационен цикъл:'
+    },
+    aquaTrace: {
+      badge: 'ИЗБРАН ПРОЕКТ ЗА СОФТУЕР И ОБРАБОТКА НА СИГНАЛИ',
+      scopeHeading: 'Обхват на проекта и функционалности',
+      challengesHeading: 'Инженерни акценти',
+      challengesText: 'Изследване на подводното акустично разпространение и обработката на сигнали за активен сонар чрез числена симулация. Реализирано е генериране на комплексни LFM сигнали, моделиране на ехо закъснение и FFT-базирано съгласувано филтриране за оценка на разстоянието в интерактивно настолно приложение.',
+      specsHeading: 'Софтуерни и системни спецификации',
+      sourceCodeButton: 'Към изходния код',
+      galleryLabel: 'Екранни снимки на приложението (6)',
+      clickToEnlarge: 'Кликнете за уголемяване',
+      lightboxOf: 'от'
     },
     experience: {
       kicker: 'ПРОФЕСИОНАЛНА ХРОНОЛОГИЯ',
@@ -1335,7 +1445,7 @@ export const uiText: Record<SupportedLang, {
     projectsSection: {
       kicker: 'INŽENÝRSKÉ PROJEKTY',
       title: 'Projekty',
-      desc: 'Vybrané projekty z oblasti vestavěných systémů, robotiky a aplikovaného hardwarového inženýrství.',
+      desc: 'Vybrané projekty z oblasti vestavěných systémů, robotiky, zpracování signálů a inženýrského softwaru.',
       viewDetails: 'Zobrazit detail projektu'
     },
     hero: {
@@ -1366,6 +1476,17 @@ export const uiText: Record<SupportedLang, {
       specsHeading: 'Hardwarové a systémové specifikace',
       lightboxOf: 'z',
       loopCaption: 'Demonstrace:'
+    },
+    aquaTrace: {
+      badge: 'VYBRANÝ SOFTWAROVÝ PROJEKT A ZPRACOVÁNÍ SIGNÁLU',
+      scopeHeading: 'Rozsah projektu a funkce',
+      challengesHeading: 'Hlavní technická zaměření',
+      challengesText: 'Průzkum šíření podvodního zvuku a zpracování signálů aktivního sonaru pomocí numerické simulace. Implementace generování komplexních LFM vln v základním pásmu, modelování zpoždění ozvěny a párového filtrování FFT pro odhad vzdálenosti cíle v interaktivním desktopovém rozhraní.',
+      specsHeading: 'Softwarové a systémové specifikace',
+      sourceCodeButton: 'Přejít ke zdrojovému kódu',
+      galleryLabel: 'Snímky obrazovky aplikace (6)',
+      clickToEnlarge: 'Kliknutím zvětšíte',
+      lightboxOf: 'z'
     },
     experience: {
       kicker: 'KARIÉRA A PROFESNÍ ZKUŠENOSTI',
@@ -1464,7 +1585,7 @@ export const uiText: Record<SupportedLang, {
     projectsSection: {
       kicker: 'PROJEKTY INŻYNIERSKIE',
       title: 'Projekty',
-      desc: 'Wybrane projekty z zakresu systemów wbudowanych, robotyki i inżynierii sprzętu.',
+      desc: 'Wybrane projekty z zakresu systemów wbudowanych, robotyki, przetwarzania sygnałów i oprogramowania inżynierskiego.',
       viewDetails: 'Zobacz szczegóły projektu'
     },
     hero: {
@@ -1495,6 +1616,17 @@ export const uiText: Record<SupportedLang, {
       specsHeading: 'Specyfikacja sprzętowa i systemowa',
       lightboxOf: 'z',
       loopCaption: 'Demonstracja:'
+    },
+    aquaTrace: {
+      badge: 'WYRÓŻNIONY PROJEKT PROGRAMISTYCZNY I PRZETWARZANIA SYGNAŁÓW',
+      scopeHeading: 'Zakres projektu i funkcje',
+      challengesHeading: 'Kluczowe zagadnienia inżynierskie',
+      challengesText: 'Badanie propagacji akustycznej pod wodą oraz przetwarzania sygnałów sonaru aktywnego poprzez symulację numeryczną. Zaimplementowano generowanie zespolonych sygnałów LFM w paśmie podstawowym, modelowanie opóźnienia echa i filtrowanie dopasowane FFT do estymacji odległości celu w interaktywnej aplikacji desktopowej.',
+      specsHeading: 'Specyfikacja oprogramowania i systemu',
+      sourceCodeButton: 'Przejdź do kodu źródłowego',
+      galleryLabel: 'Zrzuty ekranu aplikacji (6)',
+      clickToEnlarge: 'Kliknij, aby powiększyć',
+      lightboxOf: 'z'
     },
     experience: {
       kicker: 'KARIERA I DOŚWIADCZENIE ZAWODOWE',

@@ -8,7 +8,6 @@ import {
   Linkedin, 
   ExternalLink, 
   Cpu, 
-  ArrowRight, 
   Copy, 
   Check, 
   Send,
@@ -167,16 +166,8 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
             </div>
           </div>
 
-          {/* Action Buttons */}
+          {/* Action Button */}
           <div className="flex flex-wrap items-center gap-3 pt-1">
-            <a
-              href="#dogduino"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 dark:bg-cyan-500 dark:hover:bg-cyan-400 dark:text-slate-950 rounded-xl transition-all shadow-sm hover:translate-y-[-1px]"
-            >
-              <span>{t.hero.viewDogduino}</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-
             <button
               onClick={onOpenContact}
               className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 rounded-xl transition-all shadow-sm"

@@ -18,7 +18,11 @@ import {
   X,
   Gauge,
   ArrowRight,
-  FolderGit2
+  FolderGit2,
+  Waves,
+  ExternalLink,
+  Code2,
+  Monitor
 } from 'lucide-react';
 
 interface DogduinoProjectProps {
@@ -32,6 +36,8 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
   const [playbackRate, setPlaybackRate] = useState(1);
   const [activeMediaTab, setActiveMediaTab] = useState<'video' | 'gallery'>('video');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [activeAquaShot, setActiveAquaShot] = useState<number>(0);
+  const [aquaLightboxIndex, setAquaLightboxIndex] = useState<number | null>(null);
 
   const t = uiText[lang] || uiText.en;
 
@@ -80,9 +86,29 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
     }
   };
 
+  const nextAquaLightbox = () => {
+    if (aquaLightboxIndex !== null) {
+      setAquaLightboxIndex((aquaLightboxIndex + 1) % cvData.aquaTrace.images.length);
+    }
+  };
+
+  const prevAquaLightbox = () => {
+    if (aquaLightboxIndex !== null) {
+      setAquaLightboxIndex(
+        (aquaLightboxIndex - 1 + cvData.aquaTrace.images.length) % cvData.aquaTrace.images.length
+      );
+    }
+  };
+
   const projectType = cvData.project.type[lang] || cvData.project.type.en;
   const projectSummary = cvData.project.summary[lang] || cvData.project.summary.en;
   const projectPoints = cvData.project.points[lang] || cvData.project.points.en;
+
+  const aquaType = cvData.aquaTrace.type[lang] || cvData.aquaTrace.type.en;
+  const aquaCardSummary = cvData.aquaTrace.cardSummary[lang] || cvData.aquaTrace.cardSummary.en;
+  const aquaPoints = cvData.aquaTrace.points[lang] || cvData.aquaTrace.points.en;
+  const aquaRemote = cvData.aquaTrace.remoteLabel[lang] || cvData.aquaTrace.remoteLabel.en;
+  const aquaInstitution = cvData.aquaTrace.institution[lang] || cvData.aquaTrace.institution.en;
 
   return (
     <section id="projects" className="scroll-mt-16 py-16 md:py-24 bg-slate-100/70 dark:bg-[#0c1322]/70 backdrop-blur-sm border-y border-slate-200/80 dark:border-slate-800/80 relative">
@@ -107,8 +133,8 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
             </div>
           </div>
 
-          {/* Project Index Card(s) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Project Index Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <a
               href="#dogduino"
               className="group p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-cyan-500 dark:hover:border-cyan-400 transition-all flex flex-col justify-between gap-4"
@@ -136,12 +162,52 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
                 </div>
               </div>
 
-              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
+              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-3">
                 {projectSummary}
               </p>
 
               <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold text-cyan-700 dark:text-cyan-400">
                 <span className="font-mono text-[11px] text-slate-500 dark:text-slate-400">ESP32 · PCA9685 · BLE</span>
+                <span className="inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                  <span>{t.projectsSection.viewDetails}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="#aquatrace"
+              className="group p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-cyan-500 dark:hover:border-cyan-400 transition-all flex flex-col justify-between gap-4"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 rounded-xl overflow-hidden bg-slate-950 border border-slate-200 dark:border-slate-800 shrink-0">
+                  <img
+                    src={getAssetUrl(cvData.aquaTrace.images[0].src)}
+                    alt={cvData.aquaTrace.title}
+                    onError={(e) => handleImageFallback(e, cvData.aquaTrace.images[0].fallbackName)}
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-[11px] font-mono text-cyan-600 dark:text-cyan-400 font-semibold">
+                    {cvData.aquaTrace.period}
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                    {cvData.aquaTrace.title}
+                  </h3>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+                    {aquaType}
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-3">
+                {aquaCardSummary}
+              </p>
+
+              <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold text-cyan-700 dark:text-cyan-400">
+                <span className="font-mono text-[11px] text-slate-500 dark:text-slate-400">Python · PySide6 · NumPy · Matplotlib</span>
                 <span className="inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
                   <span>{t.projectsSection.viewDetails}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -429,9 +495,210 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
         </div>
         </div>
 
+        {/* AquaTrace Featured Project Detailed Showcase */}
+        <div id="aquatrace" className="scroll-mt-20 mt-16 pt-12 border-t border-slate-200/80 dark:border-slate-800/80">
+          {/* Section Header */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+            <div>
+              <div className="flex flex-wrap items-center gap-2 text-xs font-mono font-medium text-cyan-600 dark:text-cyan-400 mb-2">
+                <Waves className="w-4 h-4 shrink-0" />
+                <span>{t.aquaTrace.badge}</span>
+                <span aria-hidden="true">·</span>
+                <span>{aquaInstitution}</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                {cvData.aquaTrace.title}: {aquaType}
+              </h3>
+              <div className="flex flex-wrap items-center gap-2.5 text-xs text-slate-500 dark:text-slate-400 mt-2 font-mono">
+                <span>{cvData.aquaTrace.location}</span>
+                <span aria-hidden="true">·</span>
+                <span>{aquaRemote}</span>
+                <span aria-hidden="true">·</span>
+                <span>{cvData.aquaTrace.period}</span>
+                <span aria-hidden="true">·</span>
+                <span>{cvData.aquaTrace.techLine}</span>
+              </div>
+            </div>
+
+            {/* Source Code GitHub Button */}
+            <a
+              href={cvData.aquaTrace.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 dark:bg-cyan-500 dark:hover:bg-cyan-400 dark:text-slate-950 rounded-xl transition-all shadow-sm hover:-translate-y-0.5 self-start md:self-auto shrink-0"
+            >
+              <Code2 className="w-4 h-4 text-cyan-400 dark:text-slate-950" />
+              <span>{t.aquaTrace.sourceCodeButton}</span>
+              <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+            </a>
+          </div>
+
+          {/* Media Showcase & Details Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+            {/* Left: Interactive Desktop UI Screenshot Showcase */}
+            <div className="lg:col-span-7">
+              <div className="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-xl relative group">
+                <div
+                  onClick={() => setAquaLightboxIndex(activeAquaShot)}
+                  className="relative aspect-video bg-slate-950 flex items-center justify-center cursor-pointer overflow-hidden"
+                >
+                  <img
+                    src={getAssetUrl(cvData.aquaTrace.images[activeAquaShot].src)}
+                    alt={
+                      cvData.aquaTrace.images[activeAquaShot].title[lang] ||
+                      cvData.aquaTrace.images[activeAquaShot].title.en
+                    }
+                    onError={(e) =>
+                      handleImageFallback(e, cvData.aquaTrace.images[activeAquaShot].fallbackName)
+                    }
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.015]"
+                  />
+
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setAquaLightboxIndex(activeAquaShot);
+                    }}
+                    className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/90 hover:bg-cyan-500 text-white hover:text-slate-950 text-[11px] font-semibold border border-slate-700/80 shadow-lg transition-all"
+                  >
+                    <ZoomIn className="w-3.5 h-3.5" />
+                    <span>{t.aquaTrace.clickToEnlarge}</span>
+                  </button>
+                </div>
+
+                {/* Active Screenshot Caption Bar */}
+                <div className="p-4 bg-slate-900/95 border-t border-slate-800 space-y-1">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2 text-xs font-bold text-white">
+                      <Monitor className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                      <span>
+                        {cvData.aquaTrace.images[activeAquaShot].title[lang] ||
+                          cvData.aquaTrace.images[activeAquaShot].title.en}
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-mono text-slate-400 shrink-0">
+                      0{activeAquaShot + 1} / 0{cvData.aquaTrace.images.length}
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-400 leading-relaxed">
+                    {cvData.aquaTrace.images[activeAquaShot].description[lang] ||
+                      cvData.aquaTrace.images[activeAquaShot].description.en}
+                  </p>
+                </div>
+              </div>
+
+              {/* 6-Screenshot Thumbnail Strip */}
+              <div className="mt-4">
+                <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-2">
+                  {t.aquaTrace.galleryLabel}
+                </div>
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+                  {cvData.aquaTrace.images.map((img, idx) => (
+                    <button
+                      key={img.src}
+                      type="button"
+                      onClick={() => setActiveAquaShot(idx)}
+                      onDoubleClick={() => setAquaLightboxIndex(idx)}
+                      className={`group relative aspect-video rounded-xl overflow-hidden border-2 transition-all ${
+                        activeAquaShot === idx
+                          ? 'border-cyan-500 shadow-md ring-2 ring-cyan-500/30 opacity-100'
+                          : 'border-slate-200 dark:border-slate-800 opacity-75 hover:opacity-100 hover:border-cyan-400'
+                      }`}
+                      title={img.title[lang] || img.title.en}
+                    >
+                      <img
+                        src={getAssetUrl(img.src)}
+                        alt={img.title[lang] || img.title.en}
+                        onError={(e) => handleImageFallback(e, img.fallbackName)}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute bottom-1 right-1 text-[9px] font-mono text-white bg-black/75 px-1 rounded">
+                        0{idx + 1}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Project Scope & Features + Engineering Focus Highlights */}
+            <div className="lg:col-span-5 space-y-5">
+              <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+                <h4 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                  <Waves className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+                  <span>{t.aquaTrace.scopeHeading}</span>
+                </h4>
+
+                <ul className="space-y-3">
+                  {aquaPoints.map((point, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start gap-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed"
+                    >
+                      <span className="w-5 h-5 rounded-full bg-cyan-100 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-400 flex items-center justify-center shrink-0 mt-0.5 font-mono text-[11px] font-bold">
+                        {idx + 1}
+                      </span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Engineering Focus Highlights Callout */}
+              <div className="p-4 rounded-xl bg-cyan-50/60 dark:bg-cyan-950/20 border border-cyan-200/70 dark:border-cyan-900/50 space-y-2">
+                <div className="text-xs font-bold text-cyan-900 dark:text-cyan-300 flex items-center gap-2">
+                  <Activity className="w-3.5 h-3.5" />
+                  <span>{t.aquaTrace.challengesHeading}</span>
+                </div>
+                <p className="text-xs text-cyan-950/80 dark:text-cyan-200/80 leading-relaxed">
+                  {t.aquaTrace.challengesText}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Software & System Specifications Bento Matrix */}
+          <div className="mt-8">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <h4 className="text-sm font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-2">
+                <Gauge className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+                <span>{t.aquaTrace.specsHeading}</span>
+              </h4>
+              <a
+                href={cvData.aquaTrace.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-600 dark:text-cyan-400 hover:underline"
+              >
+                <span>github.com/regexlord/AquaTrace</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {cvData.aquaTrace.specs.map((spec, idx) => (
+                <div
+                  key={idx}
+                  className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-1"
+                >
+                  <div className="text-[11px] font-medium text-slate-500 dark:text-slate-400">
+                    {spec.label[lang] || spec.label.en}
+                  </div>
+                  <div className="text-xs sm:text-sm font-semibold font-mono text-slate-900 dark:text-white">
+                    {spec.value}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      {/* Lightbox Modal for Photos */}
+      {/* Lightbox Modal for Dogduino Photos */}
       {lightboxIndex !== null && (
         <div 
           className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
@@ -489,6 +756,76 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
             {/* Description Footer */}
             <div className="p-4 bg-slate-900 border-t border-slate-800 text-xs text-slate-300 leading-relaxed">
               {cvData.project.images[lightboxIndex].description[lang] || cvData.project.images[lightboxIndex].description.en}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Lightbox Modal for AquaTrace Screenshots */}
+      {aquaLightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
+          onClick={() => setAquaLightboxIndex(null)}
+        >
+          <div
+            className="relative max-w-5xl w-full bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="p-4 flex items-center justify-between border-b border-slate-800 text-white">
+              <div>
+                <h4 className="text-sm font-bold">
+                  {cvData.aquaTrace.images[aquaLightboxIndex].title[lang] ||
+                    cvData.aquaTrace.images[aquaLightboxIndex].title.en}
+                </h4>
+                <div className="text-xs text-slate-400 font-mono">
+                  {aquaLightboxIndex + 1} {t.aquaTrace.lightboxOf} {cvData.aquaTrace.images.length} · AquaTrace
+                </div>
+              </div>
+              <button
+                onClick={() => setAquaLightboxIndex(null)}
+                className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors"
+                aria-label="Close"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Image Viewport */}
+            <div className="relative aspect-auto max-h-[70vh] flex items-center justify-center p-4 bg-black">
+              <img
+                src={getAssetUrl(cvData.aquaTrace.images[aquaLightboxIndex].src)}
+                alt={
+                  cvData.aquaTrace.images[aquaLightboxIndex].title[lang] ||
+                  cvData.aquaTrace.images[aquaLightboxIndex].title.en
+                }
+                onError={(e) =>
+                  handleImageFallback(e, cvData.aquaTrace.images[aquaLightboxIndex].fallbackName)
+                }
+                referrerPolicy="no-referrer"
+                className="max-h-[65vh] w-auto object-contain rounded-lg shadow-lg"
+              />
+
+              <button
+                onClick={prevAquaLightbox}
+                className="absolute left-6 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white transition-all shadow-md"
+                aria-label="Previous"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={nextAquaLightbox}
+                className="absolute right-6 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white transition-all shadow-md"
+                aria-label="Next"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Description Footer */}
+            <div className="p-4 bg-slate-900 border-t border-slate-800 text-xs text-slate-300 leading-relaxed">
+              {cvData.aquaTrace.images[aquaLightboxIndex].description[lang] ||
+                cvData.aquaTrace.images[aquaLightboxIndex].description.en}
             </div>
           </div>
         </div>

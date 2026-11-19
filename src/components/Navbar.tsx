@@ -13,7 +13,8 @@ import {
   Bot,
   Award,
   FileCheck2,
-  Building2
+  Building2,
+  Waves
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -165,6 +166,23 @@ export const Navbar: React.FC<NavbarProps> = ({
                     </div>
                     <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate">
                       {cvData.project.type[lang] || cvData.project.type.en}
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="#aquatrace"
+                  role="menuitem"
+                  onClick={() => setProjectsDropdownOpen(false)}
+                  className="flex items-start gap-2.5 px-3.5 py-2.5 text-xs text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                >
+                  <Waves className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 mt-0.5" />
+                  <div className="min-w-0">
+                    <div className="font-semibold text-slate-900 dark:text-white">
+                      {cvData.aquaTrace.title}
+                    </div>
+                    <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate">
+                      {cvData.aquaTrace.type[lang] || cvData.aquaTrace.type.en}
                     </div>
                   </div>
                 </a>
@@ -465,8 +483,19 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }}
                   className="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
                 >
-                  <Bot className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400" />
+                  <Bot className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400 shrink-0" />
                   <span>{cvData.project.title}</span>
+                </a>
+                <a
+                  href="#aquatrace"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobileProjectsOpen(false);
+                  }}
+                  className="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                >
+                  <Waves className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400 shrink-0" />
+                  <span>{cvData.aquaTrace.title}</span>
                 </a>
               </div>
             )}

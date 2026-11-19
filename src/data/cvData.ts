@@ -64,6 +64,29 @@ export interface ProjectData {
   }[];
 }
 
+export interface AquaTraceData {
+  title: string;
+  institution: LocalizedString;
+  location: string;
+  remoteLabel: LocalizedString;
+  period: string;
+  techLine: string;
+  githubUrl: string;
+  type: LocalizedString;
+  cardSummary: LocalizedString;
+  points: LocalizedStringList;
+  specs: {
+    label: LocalizedString;
+    value: string;
+  }[];
+  images: {
+    src: string;
+    fallbackName: string;
+    title: LocalizedString;
+    description: LocalizedString;
+  }[];
+}
+
 export const cvData = {
   personal: {
     name: "YAĞMUR KAHRAMAN",
@@ -635,6 +658,393 @@ export const cvData = {
       }
     ]
   } as ProjectData,
+
+  aquaTrace: {
+    title: "AquaTrace",
+    institution: {
+      en: "INDEPENDENT DEVELOPMENT",
+      tr: "BAĞIMSIZ GELİŞTİRME",
+      de: "UNABHÄNGIGE ENTWICKLUNG",
+      ru: "НЕЗАВИСИМАЯ РАЗРАБОТКА",
+      sv: "OBEROENDE UTVECKLING",
+      zh: "独立研发项目",
+      fr: "DÉVELOPPEMENT INDÉPENDANT",
+      it: "SVILUPPO INDIPENDENTE",
+      bg: "НЕЗАВИСИМА РАЗРАБОТКА",
+      cs: "NEZÁVISLÝ VÝVOJ",
+      pl: "NIEZALEŻNY ROZWÓJ"
+    },
+    location: "İzmir, Turkey",
+    remoteLabel: {
+      en: "Remote",
+      tr: "Uzaktan",
+      de: "Remote",
+      ru: "Удалённо",
+      sv: "Distans",
+      zh: "远程开发",
+      fr: "À distance",
+      it: "Da remoto",
+      bg: "Дистанционно",
+      cs: "Na dálku",
+      pl: "Zdalnie"
+    },
+    period: "Nov 1 – Nov 19",
+    techLine: "Python, PySide6, NumPy & Matplotlib",
+    githubUrl: "https://github.com/regexlord/AquaTrace",
+    type: {
+      en: "Underwater Acoustic Propagation & Active Sonar Simulator",
+      tr: "Sualtı Akustik Yayılım ve Aktif Sonar Simülatörü",
+      de: "Unterwasser-Akustikausbreitungs- & Aktivsonar-Simulator",
+      ru: "Симулятор распространения звука под водой и активного сонара",
+      sv: "Simulator för undervattensakustik och aktiv sonar",
+      zh: "水下声学传播与主动声纳桌面仿真器",
+      fr: "Simulateur de propagation acoustique sous-marine et sonar actif",
+      it: "Simulatore di propagazione acustica subacquea e sonar attivo",
+      bg: "Симулатор на подводно акустично разпространение и активен сонар",
+      cs: "Simulátor šíření podvodního zvuku a aktivního sonaru",
+      pl: "Symulator propagacji akustycznej pod wodą i sonaru aktywnego"
+    },
+    cardSummary: {
+      en: "Developed a Python-based desktop application for underwater acoustic propagation and active sonar simulation, featuring interactive ray tracing, LFM signal processing, and target range estimation...",
+      tr: "Etkileşimli ışın izleme, LFM sinyal işleme ve hedef mesafe kestirimi sunan, sualtı akustik yayılım ve aktif sonar simülasyonu için Python tabanlı bir masaüstü uygulaması geliştirildi...",
+      de: "Python-basierte Desktop-Anwendung zur Simulation von Unterwasser-Schallausbreitung und Aktivsonar mit interaktivem Raytracing, LFM-Signalverarbeitung und Zielentfernungsschätzung...",
+      ru: "Разработано настольное приложение на Python для моделирования подводного распространения звука и активного сонара с трассировкой лучей, ЛЧМ-обработкой и оценкой дальности...",
+      sv: "Utvecklade en Python-baserad skrivbordsapplikation för undervattensakustik och aktiv sonarsimulering med interaktiv strålspårning, LFM-signalbehandling och avståndsberäkning...",
+      zh: "基于 Python 研发的水下声学传播与主动声纳仿真桌面应用，集成交互式声线追踪、LFM 信号处理与目标测距功能...",
+      fr: "Application de bureau Python pour la simulation acoustique sous-marine et de sonar actif, incluant lancer de rayons interactif, traitement LFM et estimation de distance...",
+      it: "Applicazione desktop in Python per la simulazione della propagazione acustica subacquea e sonar attivo con ray tracing interattivo, elaborazione LFM e stima della distanza...",
+      bg: "Разработено е настолно приложение на Python за симулация на подводно акустично разпространение и активен сонар с проследяване на лъчи, LFM обработка и оценка на разстоянието...",
+      cs: "Vyvinuta desktopová aplikace v Pythonu pro simulaci podvodního šíření zvuku a aktivního sonaru s interaktivním sledováním paprsků, zpracováním LFM a odhadem vzdálenosti...",
+      pl: "Opracowano aplikację desktopową w języku Python do symulacji propagacji akustycznej pod wodą i sonaru aktywnego ze śledzeniem promieni, przetwarzaniem LFM i estymacją odległości..."
+    },
+    points: {
+      en: [
+        "Developed an interactive desktop application for simulating underwater acoustic propagation and active sonar signal processing using Python.",
+        "Implemented acoustic ray tracing, sound speed profile visualization, and simplified transmission loss calculations with configurable environmental parameters.",
+        "Developed an active sonar module using complex-baseband Linear Frequency Modulated (LFM) signals, simulated target echoes, and additive white Gaussian noise.",
+        "Applied FFT-based matched filtering to detect simulated target echoes and estimate target distance from acoustic round-trip delay.",
+        "Designed a bilingual graphical interface with interactive scientific plots, scenario management, and a packaged Windows desktop release."
+      ],
+      tr: [
+        "Python kullanarak sualtı akustik yayılımını ve aktif sonar sinyal işlemeyi simüle eden etkileşimli bir masaüstü uygulaması geliştirildi.",
+        "Yapılandırılabilir çevresel parametrelerle akustik ışın izleme (ray tracing), ses hızı profili görselleştirmesi ve basitleştirilmiş iletim kaybı (TL) hesaplamaları uygulandı.",
+        "Karmaşık temel bant Lineer Frekans Modülasyonlu (LFM) sinyaller, simüle edilmiş hedef yankıları ve toplamsal beyaz Gauss gürültüsü (AWGN) kullanan aktif sonar modülü geliştirildi.",
+        "Simüle edilmiş hedef yankılarını tespit etmek ve akustik gidiş-dönüş gecikmesinden hedef mesafesini kestirmek için FFT tabanlı eşleşmiş filtreleme (matched filtering) uygulandı.",
+        "Etkileşimli bilimsel grafikler, senaryo yönetimi ve paketlenmiş Windows masaüstü sürümü içeren iki dilli bir grafik kullanıcı arayüzü tasarlandı."
+      ],
+      de: [
+        "Entwicklung einer interaktiven Desktop-Anwendung in Python zur Simulation der Unterwasser-Schallausbreitung und Aktivsonar-Signalverarbeitung.",
+        "Implementierung von akustischem Raytracing, Visualisierung von Schallgeschwindigkeitsprofilen und vereinfachten Übertragungsverlustberechnungen mit konfigurierbaren Umweltparametern.",
+        "Entwicklung eines Aktivsonar-Moduls mit komplexen Basisband-LFM-Signalen (Linear Frequency Modulated), simulierten Zielechos und additivem weißem Gaußschem Rauschen.",
+        "Anwendung von FFT-basierter Matched-Filterung zur Erkennung simulierter Zielechos und zur Schätzung der Zielentfernung aus der akustischen Laufzeitverzögerung.",
+        "Gestaltung einer zweisprachigen grafischen Oberfläche mit interaktiven wissenschaftlichen Diagrammen, Szenariomanagement und einem paketierten Windows-Desktop-Release."
+      ],
+      ru: [
+        "Разработано интерактивное настольное приложение на Python для моделирования подводного распространения звука и обработки сигналов активного сонара.",
+        "Реализованы акустическая трассировка лучей, визуализация профиля скорости звука и упрощённый расчёт потерь при передаче с настраиваемыми параметрами среды.",
+        "Создан модуль активного сонара на основе комплексных ЛЧМ-сигналов (LFM), моделируемых эхо-сигналов цели и аддитивного белого гауссовского шума.",
+        "Применена согласованная фильтрация на базе БПФ (FFT) для обнаружения эхо-сигналов цели и оценки дальности по времени распространения импульса.",
+        "Спроектирован двуязычный графический интерфейс с интерактивными научными графиками, управлением сценариями и собранным дистрибутивом для Windows."
+      ],
+      sv: [
+        "Utvecklade en interaktiv skrivbordsapplikation i Python för simulering av undervattensakustik och signalbehandling för aktiv sonar.",
+        "Implementerade akustisk strålspårning, visualisering av ljudhastighetsprofiler och förenklade beräkningar av transmissionsförlust med konfigurerbara miljöparametrar.",
+        "Utvecklade en modul för aktiv sonar med komplexa basbands-LFM-signaler (Linear Frequency Modulated), simulerade målekon och additivt vitt gaussiskt brus.",
+        "Tillämpade FFT-baserad matchad filtrering för att detektera simulerade målekon och uppskatta målavstånd från akustisk tur-och-retur-fördröjning.",
+        "Designade ett tvåspråkigt grafiskt gränssnitt med interaktiva vetenskapliga grafer, scenariohantering och en paketerad Windows-version."
+      ],
+      zh: [
+        "基于 Python 开发交互式桌面应用，用于水下声学传播建模与主动声纳信号处理仿真。",
+        "实现了可配置海洋环境参数的声线追踪、声速剖面可视化及简化传播损失 (TL) 计算模型。",
+        "构建主动声纳仿真模块，支持复基带线性调频 (LFM) 信号生成、目标回波建模及加性高斯白噪声 (AWGN) 注入。",
+        "应用基于 FFT 的匹配滤波算法检测目标回波，并根据声波往返时延精准反演估算目标距离。",
+        "设计了包含交互式科研绘图、多场景保存加载以及 PyInstaller 独立 Windows 可执行文件打包的双语图形界面。"
+      ],
+      fr: [
+        "Développement d'une application de bureau interactive en Python pour la simulation de la propagation acoustique sous-marine et du traitement de signal sonar actif.",
+        "Implémentation du lancer de rayons acoustiques, visualisation du profil de célérité du son et calculs simplifiés de perte de transmission avec paramètres environnementaux configurables.",
+        "Développement d'un module sonar actif utilisant des signaux modulés linéairement en fréquence (LFM) en bande de base complexe, échos simulés et bruit blanc gaussien additif.",
+        "Application d'un filtrage adapté par FFT pour détecter les échos cibles simulés et estimer la distance à partir du délai aller-retour acoustique.",
+        "Conception d'une interface graphique bilingue dotée de tracés scientifiques interactifs, gestion de scénarios et d'un exécutable Windows packagé."
+      ],
+      it: [
+        "Sviluppata un'applicazione desktop interattiva in Python per la simulazione della propagazione acustica subacquea e l'elaborazione dei segnali sonar attivi.",
+        "Implementati ray tracing acustico, visualizzazione del profilo della velocità del suono e calcoli semplificati delle perdite di trasmissione con parametri ambientali configurabili.",
+        "Realizzato un modulo sonar attivo basato su segnali LFM (Linear Frequency Modulated) in banda base complessa, echi simulati e rumore gaussiano bianco additivo.",
+        "Applicato filtraggio adattato basato su FFT per rilevare gli echi target simulati e stimare la distanza dal ritardo acustico di andata e ritorno.",
+        "Progettata un'interfaccia grafica bilingue con grafici scientifici interattivi, gestione degli scenari e rilascio desktop Windows pacchettizzato."
+      ],
+      bg: [
+        "Разработено е интерактивно настолно приложение на Python за симулиране на подводно акустично разпространение и обработка на сигнали на активен сонар.",
+        "Реализирано е акустично проследяване на лъчи, визуализация на профила на скоростта на звука и опростени изчисления на загубите при предаване с конфигурируеми параметри на средата.",
+        "Създаден е модул за активен сонар с комплексни LFM сигнали в основна честотна лента, симулирани ехо сигнали и адитивен бял гаусов шум.",
+        "Приложено е FFT-базирано съгласувано филтриране за откриване на симулирани ехо сигнали и оценка на разстоянието до целта от акустичното закъснение.",
+        "Проектиран е двуезичен графичен интерфейс с интерактивни научни графики, управление на сценарии и пакетирана настолна версия за Windows."
+      ],
+      cs: [
+        "Vyvinuta interaktivní desktopová aplikace v Pythonu pro simulaci šíření podvodního zvuku a zpracování signálu aktivního sonaru.",
+        "Implementováno akustické sledování paprsků, vizualizace profilu rychlosti zvuku a zjednodušené výpočty ztrát přenosu s nastavitelnými parametry prostředí.",
+        "Vytvořen modul aktivního sonaru využívající komplexní LFM signály v základním pásmu, simulované odrazy cílů a aditivní bílý gaussovský šum.",
+        "Aplikováno párové filtrování založené na FFT pro detekci simulovaných odrazů a odhad vzdálenosti cíle z akustického zpoždění tam a zpět.",
+        "Navrženo dvojjazyčné grafické rozhraní s interaktivními vědeckými grafy, správou scénářů a zabalenou desktopovou verzí pro Windows."
+      ],
+      pl: [
+        "Opracowano interaktywną aplikację desktopową w języku Python do symulacji propagacji akustycznej pod wodą i przetwarzania sygnałów sonaru aktywnego.",
+        "Zaimplementowano akustyczne śledzenie promieni, wizualizację profilu prędkości dźwięku oraz uproszczone obliczenia strat transmisji z konfigurowalnymi parametrami środowiskowymi.",
+        "Stworzono moduł sonaru aktywnego wykorzystujący zespolone sygnały LFM w paśmie podstawowym, symulowane echa celu oraz addytywny biały szum gaussowski.",
+        "Zastosowano dopasowane filtrowanie oparte na FFT do wykrywania symulowanych ech i estymacji odległości celu na podstawie czasu powrotu fali akustycznej.",
+        "Zaprojektowano dwujęzyczny interfejs graficzny z interaktywnymi wykresami naukowymi, zarządzaniem scenariuszami oraz spakowanym wydaniem dla systemu Windows."
+      ]
+    },
+    specs: [
+      {
+        label: {
+          en: "Programming Language", tr: "Programlama Dili", de: "Programmiersprache",
+          ru: "Язык программирования", sv: "Programspråk", zh: "编程语言",
+          fr: "Langage", it: "Linguaggio", bg: "Език за програмиране", cs: "Programovací jazyk", pl: "Język programowania"
+        },
+        value: "Python 3.9+"
+      },
+      {
+        label: {
+          en: "Desktop Framework", tr: "Masaüstü Çerçevesi", de: "Desktop-Framework",
+          ru: "Десктоп-фреймворк", sv: "Skrivbordsramverk", zh: "桌面框架",
+          fr: "Framework Bureau", it: "Framework Desktop", bg: "Десктоп рамка", cs: "Desktopový framework", pl: "Framework desktopowy"
+        },
+        value: "PySide6 / Qt"
+      },
+      {
+        label: {
+          en: "Numerical Computing", tr: "Sayısal Hesaplama", de: "Numerische Berechnung",
+          ru: "Численные вычисления", sv: "Numerisk beräkning", zh: "数值计算",
+          fr: "Calcul Numérique", it: "Calcolo Numerico", bg: "Числени изчисления", cs: "Numerické výpočty", pl: "Obliczenia numeryczne"
+        },
+        value: "NumPy"
+      },
+      {
+        label: {
+          en: "Visualization", tr: "Görselleştirme", de: "Visualisierung",
+          ru: "Визуализация", sv: "Visualisering", zh: "科学可视化",
+          fr: "Visualisation", it: "Visualizzazione", bg: "Визуализация", cs: "Vizualizace", pl: "Wizualizacja"
+        },
+        value: "Matplotlib"
+      },
+      {
+        label: {
+          en: "Signal Processing", tr: "Sinyal İşleme", de: "Signalverarbeitung",
+          ru: "Обработка сигналов", sv: "Signalbehandling", zh: "信号处理",
+          fr: "Traitement du Signal", it: "Elaborazione Segnali", bg: "Обработка на сигнали", cs: "Zpracování signálu", pl: "Przetwarzanie sygnałów"
+        },
+        value: "LFM Chirp & FFT Matched Filter"
+      },
+      {
+        label: {
+          en: "Acoustic Models", tr: "Akustik Modeller", de: "Akustische Modelle",
+          ru: "Акустические модели", sv: "Akustiska modeller", zh: "声学模型",
+          fr: "Modèles Acoustiques", it: "Modelli Acustici", bg: "Акустични модели", cs: "Akustické modely", pl: "Modele akustyczne"
+        },
+        value: "Ray Tracing & Baseline TL"
+      },
+      {
+        label: {
+          en: "User Interface", tr: "Kullanıcı Arayüzü", de: "Benutzeroberfläche",
+          ru: "Пользовательский интерфейс", sv: "Användargränssnitt", zh: "用户界面",
+          fr: "Interface Utilisateur", it: "Interfaccia Utente", bg: "Потребителски интерфейс", cs: "Uživatelské rozhraní", pl: "Interfejs użytkownika"
+        },
+        value: "English / Turkish"
+      },
+      {
+        label: {
+          en: "Distribution", tr: "Dağıtım", de: "Distribution",
+          ru: "Дистрибутив", sv: "Distribution", zh: "打包发布",
+          fr: "Distribution", it: "Distribuzione", bg: "Дистрибуция", cs: "Distribuce", pl: "Dystrybucja"
+        },
+        value: "Windows EXE · PyInstaller"
+      }
+    ],
+    images: [
+      {
+        src: "assets/aistudio/image_d5114f94.png",
+        fallbackName: "image_d5114f94.png",
+        title: {
+          en: "Acoustic Ray Tracing Plot",
+          tr: "Akustik Işın İzleme Grafiği",
+          de: "Akustisches Raytracing-Diagramm",
+          ru: "График трассировки акустических лучей",
+          sv: "Diagram för akustisk strålspårning",
+          zh: "水下声线追踪轨迹图",
+          fr: "Tracé des rayons acoustiques",
+          it: "Grafico Ray Tracing Acustico",
+          bg: "Графика на проследяване на акустични лъчи",
+          cs: "Graf sledování akustických paprsků",
+          pl: "Wykres akustycznego śledzenia promieni"
+        },
+        description: {
+          en: "Interactive ray-path simulation across a 30 km range and 1000 m depth profile with configurable source depth, frequency, and beam width.",
+          tr: "Ayarlanabilir kaynak derinliği, frekans ve ışın genişliği parametreleriyle 30 km menzil ve 1000 m derinlik boyunca etkileşimli ışın yolu simülasyonu.",
+          de: "Interaktive Schallstrahlsimulation über 30 km Reichweite und 1000 m Tiefe mit konfigurierbaren Quellenparametern.",
+          ru: "Интерактивное моделирование траекторий лучей на дистанции до 30 км и глубине 1000 м с настройкой параметров источника.",
+          sv: "Interaktiv strålbanessimulering över 30 km räckvidd och 1000 m djup med konfigurerbara källparametrar.",
+          zh: "支持自定义声源深度、频率和波束宽度的 30 km 水平距离与 1000 m 水深交互式声线轨迹仿真。",
+          fr: "Simulation interactive des trajets de rayons sur 30 km de portée et 1000 m de profondeur.",
+          it: "Simulazione interattiva dei percorsi acustici su 30 km di portata e 1000 m di profondità.",
+          bg: "Интерактивна симулация на траекторията на лъчите в обхват 30 км и дълбочина 1000 м.",
+          cs: "Interaktivní simulace drah paprsků v rozsahu 30 km a hloubce 1000 m s nastavitelnými parametry zdroje.",
+          pl: "Interaktywna symulacja trajektorii promieni na dystansie 30 km i głębokości 1000 m z konfiguracją parametrów źródła."
+        }
+      },
+      {
+        src: "assets/aistudio/image_f040d442.png",
+        fallbackName: "image_f040d442.png",
+        title: {
+          en: "Sound Speed Profile (Mackenzie Model)",
+          tr: "Ses Hızı Profili (Mackenzie Modeli)",
+          de: "Schallgeschwindigkeitsprofil",
+          ru: "Профиль скорости звука",
+          sv: "Ljudhastighetsprofil",
+          zh: "深海声速剖面可视化",
+          fr: "Profil de célérité du son",
+          it: "Profilo della velocità del suono",
+          bg: "Профил на скоростта на звука",
+          cs: "Profil rychlosti zvuku",
+          pl: "Profil prędkości dźwięku"
+        },
+        description: {
+          en: "Depth-interpolated sound speed visualization derived from temperature and salinity layers alongside propagation controls.",
+          tr: "Sıcaklık ve tuzluluk katmanlarından türetilen derinliğe göre enterpole edilmiş ses hızı profili ve yayılım ayarları.",
+          de: "Tiefeninterpolierte Darstellung der Schallgeschwindigkeit basierend auf Temperatur- und Salzgehaltsdaten.",
+          ru: "Визуализация скорости звука по глубине на основе профилей температуры и солёности воды.",
+          sv: "Djupinterpolerad ljudhastighetsprofil härledd från temperatur- och salthaltslager.",
+          zh: "基于水温与盐度分层的深度插值声速剖面曲线及传播参数控制面板。",
+          fr: "Visualisation de la célérité du son interpolée en profondeur à partir de la température et de la salinité.",
+          it: "Visualizzazione della velocità del suono interpolata per profondità a partire da temperatura e salinità.",
+          bg: "Визуализация на скоростта на звука по дълбочина, извлечена от температура и соленост.",
+          cs: "Vizualizace rychlosti zvuku interpolovaná podle hloubky na základě teploty a salinity.",
+          pl: "Wizualizacja prędkości dźwięku interpolowana według głębokości na podstawie temperatury i zasolenia."
+        }
+      },
+      {
+        src: "assets/aistudio/image_47e32999.png",
+        fallbackName: "image_47e32999.png",
+        title: {
+          en: "Transmission Loss & Water Profile Editor",
+          tr: "İletim Kaybı ve Su Profili Düzenleyicisi",
+          de: "Übertragungsverlust & Wasserprofil-Editor",
+          ru: "Потери при передаче и редактор профиля воды",
+          sv: "Transmissionsförlust och vattenprofilredigerare",
+          zh: "传播损失曲线与水文剖面编辑器",
+          fr: "Perte de transmission & Éditeur de profil d'eau",
+          it: "Perdita di trasmissione ed editor profilo idrico",
+          bg: "Загуби при предаване и редактор на водния профил",
+          cs: "Ztráty přenosu a editor vodního profilu",
+          pl: "Strata transmisji i edytor profilu wody"
+        },
+        description: {
+          en: "Interactive water column table for depth, temperature, and salinity paired with direct-path spherical spreading + Thorp absorption curve.",
+          tr: "Doğrudan yol küresel yayılım + Thorp soğurma eğrisiyle eşleştirilmiş etkileşimli derinlik, sıcaklık ve tuzluluk tablosu.",
+          de: "Interaktive Tabelle für Tiefe, Temperatur und Salzgehalt kombiniert mit Dämpfungskurve.",
+          ru: "Интерактивная таблица глубины, температуры и солёности с графиком сферического расхождения и поглощения.",
+          sv: "Interaktiv tabell för djup, temperatur och salthalt tillsammans med dämpningskurva.",
+          zh: "支持深度、温度与盐度行编辑的水柱数据表，联动展示球面扩展与吸收传播损失曲线。",
+          fr: "Tableau interactif profondeur/température/salinité couplé à la courbe de perte par divergence sphérique et absorption.",
+          it: "Tabella interattiva di profondità, temperatura e salinità abbinata alla curva di attenuazione e assorbimento.",
+          bg: "Интерактивна таблица за дълбочина, температура и соленост с крива на затихване и абсорбция.",
+          cs: "Interaktivní tabulka hloubky, teploty a salinity propojená s křivkou přenosové ztráty.",
+          pl: "Interaktywna tabela głębokości, temperatury i zasolenia powiązana z krzywą strat transmisji."
+        }
+      },
+      {
+        src: "assets/aistudio/image_5ff0c811.png",
+        fallbackName: "image_5ff0c811.png",
+        title: {
+          en: "2D Transmission Loss Map",
+          tr: "2B İletim Kaybı Haritası",
+          de: "2D-Übertragungsverlustkarte",
+          ru: "2D-карта потерь при передаче",
+          sv: "2D-karta över transmissionsförlust",
+          zh: "二维传播损失分布热力图",
+          fr: "Carte 2D des pertes de transmission",
+          it: "Mappa 2D delle perdite di trasmissione",
+          bg: "2D карта на загубите при предаване",
+          cs: "2D mapa ztrát přenosu",
+          pl: "Mapa 2D strat transmisji"
+        },
+        description: {
+          en: "Direct-path baseline 2D transmission loss visualization mapping dB re 1 m attenuation across horizontal range and ocean depth.",
+          tr: "Yatay menzil ve okyanus derinliği boyunca dB re 1 m cinsinden zayıflamayı gösteren 2B iletim kaybı haritası.",
+          de: "2D-Visualisierung des Übertragungsverlusts (dB re 1 m) über horizontale Reichweite und Meerestiefe.",
+          ru: "Двумерная карта затухания (дБ отн. 1 м) по горизонтальной дальности и глубине океана.",
+          sv: "2D-visualisering av transmissionsförlust (dB re 1 m) över horisontellt avstånd och djup.",
+          zh: "展示水平距离与海洋深度平面内 dB re 1 m 声学衰减分布的二维基线热力图。",
+          fr: "Carte 2D de référence visualisant l'atténuation (dB re 1 m) selon la portée et la profondeur.",
+          it: "Mappa 2D dell'attenuazione (dB re 1 m) in funzione della portata orizzontale e della profondità.",
+          bg: "2D визуализация на затихването (dB re 1 m) по хоризонтален обхват и дълбочина.",
+          cs: "2D vizualizace útlumu přenosu (dB re 1 m) napříč horizontálním dosahem a hloubkou.",
+          pl: "Dwuwymiarowa mapa tłumienia (dB re 1 m) w funkcji zasięgu poziomego i głębokości."
+        }
+      },
+      {
+        src: "assets/aistudio/image_54c351e5.png",
+        fallbackName: "image_54c351e5.png",
+        title: {
+          en: "Active Sonar LFM & Matched Filter Output",
+          tr: "Aktif Sonar LFM ve Eşleşmiş Filtre Çıktısı",
+          de: "Aktivsonar LFM & Matched-Filter-Ausgabe",
+          ru: "Активный сонар: ЛЧМ и выход согласованного фильтра",
+          sv: "Aktiv sonar LFM och utsignal från matchat filter",
+          zh: "主动声纳 LFM 波形与匹配滤波测距输出",
+          fr: "Sonar actif LFM & sortie du filtre adapté",
+          it: "Sonar attivo LFM e uscita filtro adattato",
+          bg: "Активен сонар LFM и изход на съгласувания филтър",
+          cs: "Aktivní sonar LFM a výstup párového filtru",
+          pl: "Sonar aktywny LFM i wynik filtru dopasowanego"
+        },
+        description: {
+          en: "Complex-baseband received I/Q echo signal with AWGN and FFT matched-filter peak detecting a target at 1200.0 m range (0.75 m resolution).",
+          tr: "AWGN içeren karmaşık temel bant I/Q yankı sinyali ve 1200,0 m hedef mesafesini (0,75 m çözünürlükle) tespit eden FFT eşleşmiş filtre tepesi.",
+          de: "Empfangenes komplexes I/Q-Echosignal mit AWGN sowie FFT-Matched-Filter-Peak zur präzisen Zielerkennung bei 1200,0 m.",
+          ru: "Принятый комплексный I/Q эхо-сигнал с шумом и пик БПФ-согласованного фильтра, определяющий цель на дальности 1200,0 м.",
+          sv: "Mottagen I/Q-ekosignal med brus samt FFT-matchat filter som exakt detekterar ett mål på 1200,0 m avstånd.",
+          zh: "包含高斯白噪声的复基带 I/Q 接收回波与 FFT 匹配滤波峰值响应，精准测得 1200.0 m 处目标（0.75 m 距离分辨率）。",
+          fr: "Signal écho I/Q en bande de base complexe avec bruit AWGN et pic du filtre adapté FFT détectant une cible à 1200,0 m.",
+          it: "Segnale eco I/Q ricevuto in banda base complessa con rumore AWGN e picco FFT a 1200,0 m.",
+          bg: "Приет комплексен I/Q ехо сигнал с шум и пик на FFT филтъра, откриващ цел на 1200,0 м.",
+          cs: "Přijatý komplexní I/Q signál ozvěny s šumem AWGN a vrchol párového filtru FFT detekující cíl ve vzdálenosti 1200,0 m.",
+          pl: "Odebrany zespolony sygnał echa I/Q z szumem AWGN oraz pik filtru dopasowanego FFT wykrywający cel na dystansie 1200,0 m."
+        }
+      },
+      {
+        src: "assets/aistudio/image_2da4d112.png",
+        fallbackName: "image_2da4d112.png",
+        title: {
+          en: "Simulation Summary & Model Assumptions",
+          tr: "Simülasyon Özeti ve Model Varsayımları",
+          de: "Simulationszusammenfassung & Modellannahmen",
+          ru: "Сводка моделирования и допущения модели",
+          sv: "Simuleringssammanfattning och modellantaganden",
+          zh: "仿真统计摘要与物理模型说明",
+          fr: "Résumé de simulation et hypothèses physiques",
+          it: "Riepilogo simulazione e ipotesi del modello",
+          bg: "Обобщение на симулацията и допускания на модела",
+          cs: "Souhrn simulace a předpoklady modelu",
+          pl: "Podsumowanie symulacji i założenia modelu"
+        },
+        description: {
+          en: "Results console summarizing traced ray count, sound speed bounds, absorption (dB/km), direct-path TL, and underlying physical model notes.",
+          tr: "İzlenen ışın sayısını, ses hızı sınırlarını, soğurma katsayısını (dB/km), doğrudan yol TL değerini ve fiziksel model notlarını özetleyen sonuç ekranı.",
+          de: "Ergebnisübersicht mit Strahlenanzahl, Schallgeschwindigkeitsgrenzen, Absorption und physikalischen Modellhinweisen.",
+          ru: "Сводная панель результатов: число лучей, границы скорости звука, поглощение (дБ/км), общие потери и физические допущения.",
+          sv: "Resultatvy som sammanfattar antal strålar, ljudhastighetsintervall, absorption (dB/km) och fysikaliska modellantaganden.",
+          zh: "结果汇总面板：统计追踪声线数、声速极值、吸收系数 (dB/km)、直达径传播损失与物理建模假设说明。",
+          fr: "Console de résultats récapitulant les rayons tracés, bornes de célérité, absorption (dB/km) et hypothèses physiques.",
+          it: "Riepilogo dei risultati con numero di raggi, limiti di velocità del suono, assorbimento (dB/km) e note sul modello.",
+          bg: "Обобщен екран с брой лъчи, граници на скоростта на звука, абсорбция (dB/km) и бележки за физичния модел.",
+          cs: "Přehled výsledků shrnující počet paprsků, meze rychlosti zvuku, absorpci (dB/km) a poznámky k modelu.",
+          pl: "Ekran podsumowujący liczbę promieni, zakres prędkości dźwięku, tłumienie (dB/km) oraz założenia modelu fizycznego."
+        }
+      }
+    ]
+  } as AquaTraceData,
 
   certifications: [
     {
