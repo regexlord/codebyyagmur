@@ -1,14 +1,15 @@
 import React from 'react';
 import { cvData } from '../data/cvData';
 import { SupportedLang, uiText } from '../data/translations';
-import { ArrowUp, Mail, Linkedin, ExternalLink } from 'lucide-react';
+import { ArrowUp, Mail, Linkedin, ExternalLink, BarChart3 } from 'lucide-react';
 
 interface FooterProps {
   lang: SupportedLang;
   onOpenContact: () => void;
+  onOpenAnalytics?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ lang, onOpenContact }) => {
+export const Footer: React.FC<FooterProps> = ({ lang, onOpenContact, onOpenAnalytics }) => {
   const t = uiText[lang] || uiText.en;
 
   const scrollToTop = () => {
@@ -85,8 +86,20 @@ export const Footer: React.FC<FooterProps> = ({ lang, onOpenContact }) => {
           <div>
             © {new Date().getFullYear()} Yağmur Kahraman. {t.footer.allRights}
           </div>
-          <div className="font-mono">
-            {cvData.personal.location} · {cvData.personal.email}
+          <div className="font-mono flex items-center gap-2">
+            <span>
+              {cvData.personal.location} · {cvData.personal.email}
+            </span>
+            {onOpenAnalytics && (
+              <button
+                type="button"
+                onClick={onOpenAnalytics}
+                className="p-1 rounded text-slate-300/60 dark:text-slate-700 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                aria-label="Owner analytics"
+              >
+                <BarChart3 className="w-3.5 h-3.5" />
+              </button>
+            )}
           </div>
         </div>
 

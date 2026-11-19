@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { cvData, CertificationItem } from '../data/cvData';
 import { SupportedLang, uiText } from '../data/translations';
 import { ProtectedCertificateCanvas } from './ProtectedCertificateCanvas';
+import { recordSectionClick } from '../services/analytics';
 import { 
   Award, 
   Calendar, 
@@ -203,6 +204,7 @@ export const Certifications: React.FC<CertificationsProps> = ({ lang, navSelecti
                 onClick={() => {
                   setEnlargedIndex(null);
                   setSelectedCert(cert);
+                  void recordSectionClick('certification_detail', cert.title, lang);
                 }}
                 className={`relative p-5 rounded-2xl bg-white dark:bg-slate-900/90 backdrop-blur-sm border transition-all duration-200 cursor-pointer flex flex-col justify-between space-y-3 group ${
                   isHovered || selectedCert?.title === cert.title

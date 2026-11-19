@@ -1,0 +1,106 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Core helper primitives
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn()
+        && request.auth.token.email_verified == true
+        && (
+          request.auth.token.email == 'kahramanyagmur178@gmail.com'
+          || exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+        );
+    }
+
+    function isValidDayKey(dayKey) {
+      return dayKey is string
+        && dayKey.size() == 10
+        && dayKey.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$');
+    }
+
+    function isValidCountry(country) {
+      return country is string
+        && country.size() >= 2
+        && country.size() <= 7
+        && country.matches('^([A-Z]{2}|UNKNOWN)$');
+    }
+
+    function isValidLang(lang) {
+      return lang is string
+        && lang.size() == 2
+        && lang.matches('^(bg|cs|de|en|fr|it|pl|ru|sv|tr|zh)$');
+    }
+
+    function isValidVisitEvent(data) {
+      return data.keys().hasAll(['dayKey', 'country', 'deviceType', 'lang', 'referrerHost', 'createdAt'])
+        && data.keys().hasOnly(['dayKey', 'country', 'deviceType', 'lang', 'referrerHost', 'createdAt'])
+        && isValidDayKey(data.dayKey)
+        && isValidCountry(data.country)
+        && data.deviceType is string
+        && data.deviceType.size() >= 5
+        && data.deviceType.size() <= 10
+        && data.deviceType in ['desktop', 'mobile', 'tablet']
+        && isValidLang(data.lang)
+        && data.referrerHost is string
+        && data.referrerHost.size() >= 1
+        && data.referrerHost.size() <= 80
+        && data.referrerHost.matches('^[a-zA-Z0-9._\\-]{1,80}$')
+        && data.createdAt is timestamp
+        && data.createdAt == request.time;
+    }
+
+    function isValidSectionClick(data) {
+      return data.keys().hasAll(['section', 'detail', 'dayKey', 'country', 'lang', 'createdAt'])
+        && data.keys().hasOnly(['section', 'detail', 'dayKey', 'country', 'lang', 'createdAt'])
+        && data.section is string
+        && data.section.size() >= 1
+        && data.section.size() <= 48
+        && data.section.matches('^[a-z0-9_\\-]{1,48}$')
+        && data.detail is string
+        && data.detail.size() <= 80
+        && isValidDayKey(data.dayKey)
+        && isValidCountry(data.country)
+        && isValidLang(data.lang)
+        && data.createdAt is timestamp
+        && data.createdAt == request.time;
+    }
+
+    match /visitEvents/{eventId} {
+      allow get: if isValidId(eventId) && isAdmin();
+      allow list: if isAdmin();
+      allow create: if isValidId(eventId) && isValidVisitEvent(incoming());
+      allow update: if false;
+      allow delete: if isValidId(eventId) && isAdmin();
+    }
+
+    match /sectionClicks/{clickId} {
+      allow get: if isValidId(clickId) && isAdmin();
+      allow list: if isAdmin();
+      allow create: if isValidId(clickId) && isValidSectionClick(incoming());
+      allow update: if false;
+      allow delete: if isValidId(clickId) && isAdmin();
+    }
+
+    match /admins/{adminId} {
+      allow get: if isValidId(adminId) && isSignedIn() && request.auth.uid == adminId;
+      allow list: if false;
+      allow create, update, delete: if false;
+    }
+  }
+}
