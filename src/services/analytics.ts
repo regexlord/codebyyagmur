@@ -236,7 +236,7 @@ async function resolveVisitorCountry(): Promise<string> {
 }
 
 export async function recordPageVisit(lang: SupportedLang): Promise<void> {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || !db) return;
   const dayKey = getUtcDayKey();
   const storageKey = `yk_visit_logged_${dayKey}`;
 
@@ -278,7 +278,7 @@ export async function recordSectionClick(
   detailRaw: string = '',
   lang: SupportedLang = 'en'
 ): Promise<void> {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || !db) return;
 
   const section = sectionRaw
     .toLowerCase()
@@ -342,6 +342,9 @@ function buildBreakdown(
 }
 
 export async function fetchOwnerAnalytics(): Promise<AnalyticsSummary> {
+  if (!db) {
+    throw new Error('Firebase configuration is not present in this build.');
+  }
   let visitDocs: VisitEventDoc[] = [];
   let clickDocs: SectionClickDoc[] = [];
 

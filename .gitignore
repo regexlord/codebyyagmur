@@ -6,3 +6,9 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Firebase config, security rules & schema (kept out of public repositories)
+firebase-applet-config.json
+firestore.rules
+firebase-blueprint.json
+security_spec.md

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { onAuthStateChanged, signInWithPopup, signOut, User } from 'firebase/auth';
-import { auth, FIREBASE_CONSOLE_DATA_URL, googleProvider, OWNER_EMAIL } from '../firebase';
+import { auth, FIREBASE_CONSOLE_DATA_URL, googleProvider, isFirebaseConfigured, OWNER_EMAIL } from '../firebase';
 import {
   AnalyticsSummary,
   fetchOwnerAnalytics,
@@ -27,8 +27,8 @@ interface AnalyticsModalProps {
 }
 
 export const AnalyticsModal: React.FC<AnalyticsModalProps> = ({ isOpen, onClose }) => {
-  const [user, setUser] = useState<User | null>(auth.currentUser);
-  const [authReady, setAuthReady] = useState(false);
+  const [user, setUser] = useState<User | null>(auth?.currentUser ?? null);
+  const [authReady, setAuthReady] = useState(!auth);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [summary, setSummary] = useState<AnalyticsSummary | null>(null);
@@ -39,6 +39,10 @@ export const AnalyticsModal: React.FC<AnalyticsModalProps> = ({ isOpen, onClose 
     user?.emailVerified === true;
 
   useEffect(() => {
+    if (!auth) {
+      setAuthReady(true);
+      return;
+    }
     const unsub = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setAuthReady(true);
@@ -80,6 +84,7 @@ export const AnalyticsModal: React.FC<AnalyticsModalProps> = ({ isOpen, onClose 
   if (!isOpen) return null;
 
   const handleGoogleSignIn = async () => {
+    if (!auth) return;
     setErrorMsg(null);
     try {
       await signInWithPopup(auth, googleProvider);
@@ -89,6 +94,7 @@ export const AnalyticsModal: React.FC<AnalyticsModalProps> = ({ isOpen, onClose 
   };
 
   const handleSignOut = async () => {
+    if (!auth) return;
     await signOut(auth);
     setSummary(null);
     setErrorMsg(null);
@@ -135,7 +141,20 @@ export const AnalyticsModal: React.FC<AnalyticsModalProps> = ({ isOpen, onClose 
         </div>
 
         {/* Auth Gate */}
-        {!user ? (
+        {!isFirebaseConfigured || !auth ? (
+          <div className="py-10 px-4 text-center space-y-3">
+            <div className="w-14 h-14 mx-auto rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500">
+              <Lock className="w-6 h-6" />
+            </div>
+            <h4 className="text-base font-bold text-slate-900 dark:text-white">
+              Firebase Yapılandırması Bulunamadı
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto leading-relaxed">
+              Güvenlik gereği Firebase yapılandırma dosyası public depoda tutulmaz. GitHub Pages yayını için{' '}
+              <span className="font-mono">FIREBASE_APPLET_CONFIG</span> GitHub Secret değerini ekleyebilirsin.
+            </p>
+          </div>
+        ) : !user ? (
           <div className="py-10 px-4 text-center space-y-4">
             <div className="w-14 h-14 mx-auto rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-cyan-600 dark:text-cyan-400">
               <Lock className="w-6 h-6" />

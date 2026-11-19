@@ -37,6 +37,14 @@ jobs:
           mkdir -p public/assets/aistudio
           find . -maxdepth 2 -type f \( -name "*Profesyonel*" -o -name "*dogduino*" \) -not -path "*/public/*" -not -path "*/dist/*" -exec cp -v {} public/assets/aistudio/ \; || true
 
+      - name: Configure Firebase (Optional Secret)
+        env:
+          FIREBASE_APPLET_CONFIG: ${{ secrets.FIREBASE_APPLET_CONFIG }}
+        run: |
+          if [ -n "$FIREBASE_APPLET_CONFIG" ]; then
+            printf '%s' "$FIREBASE_APPLET_CONFIG" > firebase-applet-config.json
+          fi
+
       - name: Build
         run: npm run build
 
