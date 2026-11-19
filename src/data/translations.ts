@@ -30,6 +30,7 @@ export const uiText: Record<SupportedLang, {
     experience: string;
     education: string;
     certifications: string;
+    viewAllCertifications: string;
     references: string;
     contact: string;
   };
@@ -101,6 +102,12 @@ export const uiText: Record<SupportedLang, {
     popupPrompt: string;
     clickToView: string;
     closePopup: string;
+    syllabusHeading: string;
+    certificatePreviewTitle: string;
+    clickToEnlarge: string;
+    protectedBadge: string;
+    protectedNotice: string;
+    privacyCurtain: string;
   };
   references: {
     kicker: string;
@@ -151,6 +158,7 @@ export const uiText: Record<SupportedLang, {
       experience: 'Experience',
       education: 'Education & Skills',
       certifications: 'Certifications',
+      viewAllCertifications: 'View All',
       references: 'References',
       contact: 'Contact'
     },
@@ -221,7 +229,13 @@ export const uiText: Record<SupportedLang, {
       completed: 'Completed',
       popupPrompt: 'Hover or tap card to read details',
       clickToView: 'View description',
-      closePopup: 'Close'
+      closePopup: 'Close',
+      syllabusHeading: 'Course Syllabus & Technical Relevance',
+      certificatePreviewTitle: 'Verified Certificate Preview',
+      clickToEnlarge: 'Click to enlarge',
+      protectedBadge: 'Protected View',
+      protectedNotice: 'Protected view — downloading, opening in a new tab, printing, and screen capture are restricted.',
+      privacyCurtain: 'Protected View · Focus window to display certificate'
     },
     references: {
       kicker: 'ACADEMIC & INDUSTRIAL TESTIMONIALS',
@@ -273,6 +287,7 @@ export const uiText: Record<SupportedLang, {
       experience: 'İş Deneyimi',
       education: 'Eğitim & Yetkinlikler',
       certifications: 'Sertifikalar',
+      viewAllCertifications: 'Tümünü gör',
       references: 'Referanslar',
       contact: 'İletişim'
     },
@@ -343,7 +358,13 @@ export const uiText: Record<SupportedLang, {
       completed: 'Tamamlandı',
       popupPrompt: 'Açıklama için kartın üzerine gelin veya tıklayın',
       clickToView: 'Açıklamayı incele',
-      closePopup: 'Kapat'
+      closePopup: 'Kapat',
+      syllabusHeading: 'Eğitim & Kurs Kapsamı',
+      certificatePreviewTitle: 'Doğrulanmış Sertifika Önizlemesi',
+      clickToEnlarge: 'Büyütmek için tıklayın',
+      protectedBadge: 'Korumalı Görünüm',
+      protectedNotice: 'Korumalı görünüm — indirme, yeni sekmede açma, yazdırma ve ekran görüntüsü alma kısıtlanmıştır.',
+      privacyCurtain: 'Korumalı Görünüm · Sertifikayı görüntülemek için pencereye odaklanın'
     },
     references: {
       kicker: 'AKADEMİK & ENDÜSTRİYEL REFERANSLAR',
@@ -395,6 +416,7 @@ export const uiText: Record<SupportedLang, {
       experience: 'Erfahrung',
       education: 'Ausbildung & Skills',
       certifications: 'Zertifikate',
+      viewAllCertifications: 'Alle ansehen',
       references: 'Referenzen',
       contact: 'Kontakt'
     },
@@ -465,7 +487,13 @@ export const uiText: Record<SupportedLang, {
       completed: 'Abgeschlossen',
       popupPrompt: 'Mit der Maus über die Karte fahren für Details',
       clickToView: 'Beschreibung ansehen',
-      closePopup: 'Schließen'
+      closePopup: 'Schließen',
+      syllabusHeading: 'Kursinhalte & Technische Relevanz',
+      certificatePreviewTitle: 'Verifizierte Zertifikatsvorschau',
+      clickToEnlarge: 'Zum Vergrößern klicken',
+      protectedBadge: 'Geschützte Ansicht',
+      protectedNotice: 'Geschützte Ansicht — Herunterladen, Öffnen in neuem Tab, Drucken und Screenshots sind eingeschränkt.',
+      privacyCurtain: 'Geschützte Ansicht · Fenster fokussieren, um das Zertifikat anzuzeigen'
     },
     references: {
       kicker: 'REFERENZEN & GUTACHTEN',
@@ -517,6 +545,7 @@ export const uiText: Record<SupportedLang, {
       experience: 'Опыт работы',
       education: 'Образование и навыки',
       certifications: 'Сертификаты',
+      viewAllCertifications: 'Смотреть все',
       references: 'Рекомендации',
       contact: 'Контакты'
     },
@@ -587,7 +616,13 @@ export const uiText: Record<SupportedLang, {
       completed: 'Завершено',
       popupPrompt: 'Наведите курсор или нажмите на карточку для описания',
       clickToView: 'Подробнее о курсе',
-      closePopup: 'Закрыть'
+      closePopup: 'Закрыть',
+      syllabusHeading: 'Программа курса и техническая ценность',
+      certificatePreviewTitle: 'Подтвержденный сертификат',
+      clickToEnlarge: 'Нажмите, чтобы увеличить',
+      protectedBadge: 'Защищенный просмотр',
+      protectedNotice: 'Защищенный просмотр — скачивание, открытие в новой вкладке, печать и снимки экрана ограничены.',
+      privacyCurtain: 'Защищенный просмотр · Верните фокус на окно для отображения'
     },
     references: {
       kicker: 'РЕКОМЕНДАТЕЛЬНЫЕ ПИСЬМА',
@@ -639,6 +674,7 @@ export const uiText: Record<SupportedLang, {
       experience: 'Erfarenhet',
       education: 'Utbildning & Kompetens',
       certifications: 'Certifieringar',
+      viewAllCertifications: 'Visa alla',
       references: 'Referenser',
       contact: 'Kontakt'
     },
@@ -709,7 +745,13 @@ export const uiText: Record<SupportedLang, {
       completed: 'Slutförd',
       popupPrompt: 'Håll muspekaren över kortet för beskrivning',
       clickToView: 'Visa kursbeskrivning',
-      closePopup: 'Stäng'
+      closePopup: 'Stäng',
+      syllabusHeading: 'Kursinnehåll & Teknisk Relevans',
+      certificatePreviewTitle: 'Verifierat Certifikat',
+      clickToEnlarge: 'Klicka för att förstora',
+      protectedBadge: 'Skyddad vy',
+      protectedNotice: 'Skyddad vy — nedladdning, öppning i ny flik, utskrift och skärmdumpar är begränsade.',
+      privacyCurtain: 'Skyddad vy · Fokusera fönstret för att visa certifikatet'
     },
     references: {
       kicker: 'AKADEMISKA & INDUSTRIELLA REFERENSER',
@@ -761,6 +803,7 @@ export const uiText: Record<SupportedLang, {
       experience: '工作经历',
       education: '教育与技能',
       certifications: '专业证书',
+      viewAllCertifications: '查看全部',
       references: '专业推荐人',
       contact: '联系方式'
     },
@@ -831,7 +874,13 @@ export const uiText: Record<SupportedLang, {
       completed: '已获得',
       popupPrompt: '鼠标悬停或点击卡片查看详细内容',
       clickToView: '查看课程简介',
-      closePopup: '关闭'
+      closePopup: '关闭',
+      syllabusHeading: '课程大纲与技术相关性',
+      certificatePreviewTitle: '官方证书预览',
+      clickToEnlarge: '点击放大查看',
+      protectedBadge: '受保护视图',
+      protectedNotice: '受保护视图 — 已限制下载、在新标签页打开、打印及屏幕截图。',
+      privacyCurtain: '受保护视图 · 请保持当前窗口聚焦以查看证书'
     },
     references: {
       kicker: '学术导师与工业界推荐',
@@ -883,6 +932,7 @@ export const uiText: Record<SupportedLang, {
       experience: 'Expérience',
       education: 'Formation & Compétences',
       certifications: 'Certifications',
+      viewAllCertifications: 'Tout voir',
       references: 'Références',
       contact: 'Contact'
     },
@@ -953,7 +1003,13 @@ export const uiText: Record<SupportedLang, {
       completed: 'Obtenu',
       popupPrompt: 'Survolez ou appuyez pour afficher la description',
       clickToView: 'Voir la description',
-      closePopup: 'Fermer'
+      closePopup: 'Fermer',
+      syllabusHeading: 'Programme du cours & Pertinence technique',
+      certificatePreviewTitle: 'Aperçu du certificat vérifié',
+      clickToEnlarge: 'Cliquer pour agrandir',
+      protectedBadge: 'Vue protégée',
+      protectedNotice: 'Vue protégée — le téléchargement, l’ouverture dans un nouvel onglet, l’impression et les captures d’écran sont restreints.',
+      privacyCurtain: 'Vue protégée · Gardez la fenêtre active pour afficher le certificat'
     },
     references: {
       kicker: 'RÉFÉRENCES PROFESSIONNELLES',
@@ -1005,6 +1061,7 @@ export const uiText: Record<SupportedLang, {
       experience: 'Esperienza',
       education: 'Formazione & Competenze',
       certifications: 'Certificazioni',
+      viewAllCertifications: 'Vedi tutti',
       references: 'Referenze',
       contact: 'Contatto'
     },
@@ -1075,7 +1132,13 @@ export const uiText: Record<SupportedLang, {
       completed: 'Completato',
       popupPrompt: 'Passa il cursore o tocca per visualizzare la descrizione',
       clickToView: 'Visualizza descrizione',
-      closePopup: 'Chiudi'
+      closePopup: 'Chiudi',
+      syllabusHeading: 'Programma del corso e Rilevanza tecnica',
+      certificatePreviewTitle: 'Anteprima Certificato Verificato',
+      clickToEnlarge: 'Clicca per ingrandire',
+      protectedBadge: 'Vista protetta',
+      protectedNotice: 'Vista protetta — download, apertura in nuova scheda, stampa e screenshot sono limitati.',
+      privacyCurtain: 'Vista protetta · Attiva la finestra per visualizzare il certificato'
     },
     references: {
       kicker: 'REFERENZE PROFESSIONALI',
@@ -1126,6 +1189,7 @@ export const uiText: Record<SupportedLang, {
       experience: 'Опит',
       education: 'Образование и умения',
       certifications: 'Сертификати',
+      viewAllCertifications: 'Виж всички',
       references: 'Препоръки',
       contact: 'Контакти'
     },
@@ -1196,7 +1260,13 @@ export const uiText: Record<SupportedLang, {
       completed: 'Завършен',
       popupPrompt: 'Задръжте или кликнете за детайли',
       clickToView: 'Преглед на съдържанието',
-      closePopup: 'Затвори'
+      closePopup: 'Затвори',
+      syllabusHeading: 'Учебна програма и техническа насоченост',
+      certificatePreviewTitle: 'Потвърден сертификат',
+      clickToEnlarge: 'Кликнете за уголемяване',
+      protectedBadge: 'Защитен изглед',
+      protectedNotice: 'Защитен изглед — изтеглянето, отварянето в нов раздел, печатът и екранните снимки са ограничени.',
+      privacyCurtain: 'Защитен изглед · Фокусирайте прозореца, за да видите сертификата'
     },
     references: {
       kicker: 'ПРОФЕСИОНАЛНИ ПРЕПОРЪКИ',
@@ -1247,6 +1317,7 @@ export const uiText: Record<SupportedLang, {
       experience: 'Zkušenosti',
       education: 'Vzdělání a dovednosti',
       certifications: 'Certifikáty',
+      viewAllCertifications: 'Zobrazit vše',
       references: 'Reference',
       contact: 'Kontakt'
     },
@@ -1317,7 +1388,13 @@ export const uiText: Record<SupportedLang, {
       completed: 'Dokončeno',
       popupPrompt: 'Najeďte myší nebo klepněte pro detail',
       clickToView: 'Zobrazit popis',
-      closePopup: 'Zavřít'
+      closePopup: 'Zavřít',
+      syllabusHeading: 'Osnova kurzu a technický přínos',
+      certificatePreviewTitle: 'Náhled ověřeného certifikátu',
+      clickToEnlarge: 'Kliknutím zvětšíte',
+      protectedBadge: 'Chráněné zobrazení',
+      protectedNotice: 'Chráněné zobrazení — stahování, otevírání na nové kartě, tisk a snímání obrazovky jsou omezeny.',
+      privacyCurtain: 'Chráněné zobrazení · Pro zobrazení certifikátu ponechte okno aktivní'
     },
     references: {
       kicker: 'AKADEMICKÉ A PRŮMYSLOVÉ REFERENCE',
@@ -1368,6 +1445,7 @@ export const uiText: Record<SupportedLang, {
       experience: 'Doświadczenie',
       education: 'Edukacja i umiejętności',
       certifications: 'Certyfikaty',
+      viewAllCertifications: 'Zobacz wszystkie',
       references: 'Referencje',
       contact: 'Kontakt'
     },
@@ -1438,7 +1516,13 @@ export const uiText: Record<SupportedLang, {
       completed: 'Ukończono',
       popupPrompt: 'Najedź kursorem lub kliknij, aby przeczytać opis',
       clickToView: 'Zobacz opis',
-      closePopup: 'Zamknij'
+      closePopup: 'Zamknij',
+      syllabusHeading: 'Program kursu i znaczenie techniczne',
+      certificatePreviewTitle: 'Podgląd zweryfikowanego certyfikatu',
+      clickToEnlarge: 'Kliknij, aby powiększyć',
+      protectedBadge: 'Widok chroniony',
+      protectedNotice: 'Widok chroniony — pobieranie, otwieranie w nowej karcie, drukowanie i zrzuty ekranu są ograniczone.',
+      privacyCurtain: 'Widok chroniony · Aktywuj okno, aby wyświetlić certyfikat'
     },
     references: {
       kicker: 'REFERENCJE AKADEMICKIE I PRZEMYSŁOWE',

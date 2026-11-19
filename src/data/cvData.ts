@@ -1,4 +1,5 @@
 import { SupportedLang } from './translations';
+import { CertAssetKey } from '../components/ProtectedCertificateCanvas';
 
 export type LocalizedString = Partial<Record<SupportedLang, string>> & { en: string };
 export type LocalizedStringList = Partial<Record<SupportedLang, string[]>> & { en: string[] };
@@ -20,12 +21,18 @@ export interface EducationItem {
   focus: LocalizedString;
 }
 
+export interface CertificateAttachment {
+  key: CertAssetKey;
+  label: string;
+}
+
 export interface CertificationItem {
   title: string;
   issuer: string;
   date: string;
   category: string;
   description: LocalizedString;
+  certificates?: CertificateAttachment[];
 }
 
 export interface ReferenceItem {
@@ -647,7 +654,10 @@ export const cvData = {
         bg: "Комплексна програма за обучение по авиационни двигатели и газови турбини, проведена от TEI. Разглежда механиката на реактивната тяга, термичната динамика и архитектурата на електронните блокове за управление (FADEC).",
         cs: "Komplexní školicí program v oblasti leteckých pohonů a plynových turbín pořádaný TEI. Zahrnuje mechaniku leteckého pohonu, tepelnou dynamiku a architekturu elektronických řídicích jednotek (FADEC).",
         pl: "Kompleksowy program szkoleniowy z zakresu lotniczych układów napędowych i turbin gazowych prowadzony przez TEI. Obejmuje mechanikę napędu lotniczego, dynamikę termiczną i architekturę sterowników FADEC."
-      }
+      },
+      certificates: [
+        { key: 'tei', label: 'TEI Havacılık Motorları Okulu — Başarı Belgesi' }
+      ]
     },
     {
       title: "Control Design Onramp",
@@ -666,7 +676,10 @@ export const cvData = {
         bg: "Интерактивно обучение по синтез на контури с обратна връзка, анализ на коренови траектории и настройка на PID регулатори в MATLAB с фокус върху динамичната стабилност.",
         cs: "Interaktivní školení zaměřené na syntézu zpětnovazebních smyček, analýzu geometrického místa kořenů a ladění PID regulátorů v prostředí MATLAB.",
         pl: "Interaktywne szkolenie z zakresu syntezy pętli sprzężenia zwrotnego, analizy linii pierwiastkowych oraz strojenia regulatorów PID w środowisku MATLAB."
-      }
+      },
+      certificates: [
+        { key: 'control_design', label: 'MathWorks Control Design Onramp with Simulink Certificate' }
+      ]
     },
     {
       title: "Simulink Onramp",
@@ -685,7 +698,10 @@ export const cvData = {
         bg: "Практическа учебна програма по моделно-базирано системно инженерство, обхващаща блокови диаграми, симулации във времевата област и бързо прототипиране Hardware-in-the-Loop (HIL).",
         cs: "Praktické modelově orientované systémové inženýrství zahrnující bloková schémata, simulace v časové oblasti a rychlé prototypování Hardware-in-the-Loop (HIL).",
         pl: "Praktyczny kurs inżynierii systemów opartej na modelach, obejmujący architekturę schematów blokowych, symulacje w dziedzinie czasu i szybkie prototypowanie HIL."
-      }
+      },
+      certificates: [
+        { key: 'simulink', label: 'MathWorks Simulink Onramp Certificate' }
+      ]
     },
     {
       title: "Python & Software Development (Pandas, NumPy, OOP)",
@@ -723,7 +739,11 @@ export const cvData = {
         bg: "Разширена учебна програма по Python с фокус върху структури от данни, алгоритмичен дизайн и автоматизирани тестови процедури за хардуер.",
         cs: "Pokročilé programování v jazyce Python zaměřené na datové struktury, návrh algoritmů a zpracování dat pomocí NumPy a Pandas pro automatizované testování hardwaru.",
         pl: "Zaawansowany kurs języka Python poświęcony strukturom danych, algorytmice oraz przetwarzaniu danych z NumPy i Pandas do automatyzacji testów sprzętowych."
-      }
+      },
+      certificates: [
+        { key: 'python1', label: 'Bilgeiş — Python Programlama 1' },
+        { key: 'python2', label: 'Bilgeiş — Python Programlama 2' }
+      ]
     },
     {
       title: "Preliminary Accounting in Microsoft Excel",
@@ -742,7 +762,10 @@ export const cvData = {
         bg: "Аналитично моделиране в електронни таблици за проследяване на оперативни разходи, финансово прогнозиране и управление на бюджета за индустриални R&D прототипи.",
         cs: "Analytické modelování v tabulkách Excelu zahrnující kontrolu provozních nákladů, finanční prognózy a evidenci zdrojů pro průmyslové prototypy VaV.",
         pl: "Analityczne modelowanie w programie Excel obejmujące uzgadnianie kosztów operacyjnych, prognozowanie finansowe i planowanie budżetu prototypów B+R."
-      }
+      },
+      certificates: [
+        { key: 'excel', label: "Bilgeiş — Microsoft Excel'de Ön Muhasebe" }
+      ]
     },
     {
       title: "Artificial Intelligence for Everyone 1 & 2",
@@ -761,7 +784,11 @@ export const cvData = {
         bg: "Основи на машинното обучение и невронните мрежи, включително обучение с учител, класификация и оценка на ограниченията за вградени микроконтролери (Edge AI).",
         cs: "Základy strojového učení a neuronových sítí včetně učení s učitelem, klasifikace a posouzení omezení pro nasazení na vestavěných mikrokontrolérech (Edge AI).",
         pl: "Podstawy uczenia maszynowego i sieci neuronowych, w tym uczenie nadzorowane, klasyfikacja oraz ocena ograniczeń wdrażania na mikrokontrolerach (Edge AI)."
-      }
+      },
+      certificates: [
+        { key: 'ai1', label: 'Bilgeiş — Herkes için Yapay Zeka I' },
+        { key: 'ai2', label: 'Bilgeiş — Herkes için Yapay Zeka II' }
+      ]
     },
     {
       title: "SAP - Fundamental Systems Understanding",

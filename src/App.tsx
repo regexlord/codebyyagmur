@@ -28,6 +28,7 @@ export default function App() {
   });
   
   const [contactModalOpen, setContactModalOpen] = useState(false);
+  const [certSelection, setCertSelection] = useState<{ index: number; nonce: number } | null>(null);
 
   useEffect(() => {
     if (isDark) {
@@ -43,6 +44,14 @@ export default function App() {
       el.scrollIntoView({ behavior: 'smooth' });
     } else {
       setContactModalOpen(true);
+    }
+  };
+
+  const handleSelectCertification = (index: number) => {
+    setCertSelection({ index, nonce: Date.now() });
+    const el = document.getElementById(`cert-${index}`) || document.getElementById('certifications');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   };
 
@@ -66,6 +75,7 @@ export default function App() {
         isDark={isDark}
         setIsDark={setIsDark}
         onOpenContact={handleOpenContact}
+        onSelectCertification={handleSelectCertification}
       />
 
       {/* Main Content Flow */}
@@ -86,7 +96,7 @@ export default function App() {
         <EducationAndSkills lang={lang} />
 
         {/* Courses & Certifications with Interactive Hover/Click Descriptions */}
-        <Certifications lang={lang} />
+        <Certifications lang={lang} navSelection={certSelection} />
 
         {/* Verified References (Strictly email correspondence only, no phone numbers) */}
         <References lang={lang} />

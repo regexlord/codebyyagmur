@@ -44,6 +44,7 @@ jobs:
         run: |
           mkdir -p dist/assets/aistudio
           cp -rf public/assets/* dist/assets/ 2>/dev/null || true
+          rm -f dist/assets/aistudio/*Sertifika*.pdf dist/assets/aistudio/*onramp*.pdf dist/assets/aistudio/*Onramp*.pdf dist/assets/aistudio/TEI_*.pdf dist/assets/aistudio/*control_design*.pdf
           find . -maxdepth 2 -type f \( -name "*Profesyonel*" -o -name "*dogduino*" \) -not -path "*/dist/*" -exec cp -f {} dist/assets/aistudio/ \; 2>/dev/null || true
           find . -maxdepth 2 -type f \( -name "*Profesyonel*" -o -name "*dogduino*" \) -not -path "*/dist/*" -exec cp -f {} dist/ \; 2>/dev/null || true
 
