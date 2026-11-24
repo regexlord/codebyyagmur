@@ -226,7 +226,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
 
           <div className="space-y-1">
             <div className="text-2xl sm:text-3xl font-extrabold font-mono text-slate-900 dark:text-white tabular-nums">
-              B2 / A1
+              C1 / A2
             </div>
             <div className="text-xs font-semibold text-slate-700 dark:text-slate-200">
               {t.hero.kpis.languages}

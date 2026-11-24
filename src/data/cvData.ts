@@ -1384,20 +1384,21 @@ export const cvData = {
       name: { 
         en: "English", tr: "İngilizce", de: "Englisch", ru: "Английский", 
         sv: "Engelska", zh: "英语", fr: "Anglais", it: "Inglese",
-        cs: "Angličtina", pl: "Angielski"
+        bg: "Английски", cs: "Angličtina", pl: "Angielski"
       },
-      level: "B2",
+      level: "C1",
       badge: { 
-        en: "Upper-Intermediate / Technical Proficiency", 
-        tr: "Üst-Orta Seviye / Mesleki Yetkinlik",
-        de: "Gute Mittelstufe / Technische Fachkompetenz",
-        ru: "Выше среднего / Профессиональный уровень",
-        sv: "Övre medelnivå / Teknisk kompetens",
-        zh: "中高级 / 技术专业工作语言",
-        fr: "Intermédiaire supérieur / Compétence technique",
-        it: "Intermedio superiore / Competenza tecnica",
-        cs: "Vyšší středně pokročilá / Technická způsobilost",
-        pl: "Wyższy średniozaawansowany / Biegłość techniczna"
+        en: "Advanced / Technical Proficiency", 
+        tr: "İleri Seviye / Mesleki Yetkinlik",
+        de: "Fortgeschrittene Kenntnisse / Technische Fachkompetenz",
+        ru: "Продвинутый уровень / Профессиональная компетенция",
+        sv: "Avancerad nivå / Teknisk kompetens",
+        zh: "高级 / 技术专业工作语言",
+        fr: "Niveau avancé / Compétence technique",
+        it: "Livello avanzato / Competenza tecnica",
+        bg: "Напреднало ниво / Техническа компетентност",
+        cs: "Pokročilá úroveň / Technická způsobilost",
+        pl: "Poziom zaawansowany / Biegłość techniczna"
       },
       details: {
         en: "Full technical literacy in English engineering literature, documentation, and international teams.",
@@ -1408,6 +1409,7 @@ export const cvData = {
         zh: "能流畅阅读英文航空航天及嵌入式学术文献，自主编写技术白皮书并适应全英文跨国工程协作。",
         fr: "Maîtrise technique complète de la documentation en anglais et des échanges internationaux.",
         it: "Piena competenza nella letteratura ingegneristica in inglese, documentazione e team internazionali.",
+        bg: "Пълна техническа грамотност в английската инженерна литература, документация и международни екипи.",
         cs: "Plná technická orientace v anglické inženýrské literatuře, dokumentaci a mezinárodních týmech.",
         pl: "Pełna biegłość techniczna w angielskiej literaturze inżynierskiej, dokumentacji i zespołach międzynarodowych."
       }
@@ -1416,20 +1418,21 @@ export const cvData = {
       name: { 
         en: "Russian", tr: "Rusça", de: "Russisch", ru: "Русский", 
         sv: "Ryska", zh: "俄语", fr: "Russe", it: "Russo",
-        cs: "Ruština", pl: "Rosyjski"
+        bg: "Руски", cs: "Ruština", pl: "Rosyjski"
       },
-      level: "A1",
+      level: "A2",
       badge: { 
-        en: "Elementary", 
-        tr: "Başlangıç Seviyesi",
-        de: "Grundkenntnisse",
-        ru: "Начальный уровень",
-        sv: "Nybörjarnivå",
-        zh: "基础入门",
-        fr: "Niveau élémentaire",
-        it: "Elementare",
-        cs: "Základní úroveň",
-        pl: "Poziom podstawowy"
+        en: "Pre-Intermediate", 
+        tr: "Temel-Orta Seviye",
+        de: "Erweiterte Grundkenntnisse",
+        ru: "Базовый уровень",
+        sv: "Grundläggande nivå",
+        zh: "初级进阶",
+        fr: "Niveau pré-intermédiaire",
+        it: "Pre-intermedio",
+        bg: "Основно ниво",
+        cs: "Mírně pokročilá úroveň",
+        pl: "Podstawowy wyższy"
       },
       details: {
         en: "Basic conversational and foundational language understanding.",
@@ -1440,6 +1443,7 @@ export const cvData = {
         zh: "掌握常用日常短语与基础语法架构认知。",
         fr: "Compréhension élémentaire et conversations simples.",
         it: "Competenze di conversazione di base e comprensione elementare.",
+        bg: "Основни разговорни умения и разбиране на базовия език.",
         cs: "Základní konverzační dovednosti a porozumění základům jazyka.",
         pl: "Podstawowa znajomość języka w mowie oraz rozumienie podstaw gramatyki."
       }
