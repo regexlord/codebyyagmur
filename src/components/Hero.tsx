@@ -11,7 +11,8 @@ import {
   Copy, 
   Check, 
   Send,
-  Globe
+  Globe,
+  ShieldCheck
 } from 'lucide-react';
 
 interface HeroProps {
@@ -62,6 +63,12 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
               <p className="text-base sm:text-lg md:text-xl font-semibold text-cyan-800 dark:text-cyan-300 leading-snug max-w-3xl">
                 {cvData.personal.title[lang] || cvData.personal.title.en}
               </p>
+
+              {/* EU Work Authorization */}
+              <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                <span>{cvData.personal.workAuthorization[lang] || cvData.personal.workAuthorization.en}</span>
+              </div>
             </div>
 
             {/* Right: Tasteful, Elegant Portrait positioned right next to the title lockup */}

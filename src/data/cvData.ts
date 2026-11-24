@@ -116,6 +116,19 @@ export const cvData = {
       cs: "Inženýrka vestavěných systémů",
       pl: "Inżynier Systemów Wbudowanych"
     } as LocalizedString,
+    workAuthorization: {
+      en: "EU work authorization (Bulgarian citizen)",
+      tr: "AB çalışma izni (Bulgaristan vatandaşı)",
+      de: "Arbeitsberechtigung in der EU (bulgarische Staatsangehörigkeit)",
+      ru: "Право на работу в ЕС (гражданство Болгарии)",
+      sv: "Rätt att arbeta inom EU (bulgarisk medborgare)",
+      zh: "欧盟工作许可（保加利亚公民）",
+      fr: "Autorisation de travail dans l'UE (citoyenne bulgare)",
+      it: "Autorizzazione al lavoro nell'UE (cittadina bulgara)",
+      bg: "Право на работа в ЕС (българско гражданство)",
+      cs: "Oprávnění k práci v EU (bulharské občanství)",
+      pl: "Uprawnienie do pracy w UE (obywatelstwo bułgarskie)"
+    } as LocalizedString,
     location: "İzmir, Turkey",
     email: "kahramanyagmur178@gmail.com",
     linkedin: "linkedin.com/in/yagmur-kahraman",
