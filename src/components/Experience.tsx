@@ -65,7 +65,7 @@ export const Experience: React.FC<ExperienceProps> = ({ lang, navSelection }) =>
     });
 
   return (
-    <section id="experience" className="py-16 md:py-24">
+    <section id="experience" className="py-16 md:py-24 bg-slate-100/70 dark:bg-[#0c1322]/70 backdrop-blur-sm border-y border-slate-200/80 dark:border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading & Filter */}
@@ -84,7 +84,7 @@ export const Experience: React.FC<ExperienceProps> = ({ lang, navSelection }) =>
           </div>
 
           {/* Interactive Filter Tabs */}
-          <div className="flex items-center gap-1 p-1 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-x-auto max-w-full">
+          <div className="flex items-center gap-1 p-1 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-x-auto max-w-full shadow-sm">
             {filterCategories.map((cat) => (
               <button
                 key={cat.id}

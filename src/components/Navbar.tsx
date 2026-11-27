@@ -112,6 +112,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             {t.nav.about}
           </a>
 
+          <a
+            href="#education"
+            className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors whitespace-nowrap shrink-0"
+          >
+            {t.nav.education}
+          </a>
+
           {/* Projects Dropdown Menu */}
           <div className="relative" ref={projectsDropdownRef}>
             <button
@@ -262,13 +269,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
             )}
           </div>
-
-          <a
-            href="#education"
-            className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors whitespace-nowrap shrink-0"
-          >
-            {t.nav.education}
-          </a>
 
           {/* Certifications Dropdown Menu */}
           <div className="relative" ref={certsDropdownRef}>
@@ -446,6 +446,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             {t.nav.about}
           </a>
 
+          <a
+            href="#education"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+          >
+            {t.nav.education}
+          </a>
+
           {/* Mobile Projects Expandable Submenu */}
           <div className="space-y-1">
             <button
@@ -556,14 +564,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
             )}
           </div>
-
-          <a
-            href="#education"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
-          >
-            {t.nav.education}
-          </a>
 
           {/* Mobile Certifications Expandable Submenu */}
           <div className="space-y-1">

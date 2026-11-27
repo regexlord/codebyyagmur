@@ -187,14 +187,14 @@ export default function App() {
             onOpenContact={handleOpenContact}
           />
 
+          {/* Education, Technical Skills, Professional Qualities & Languages */}
+          <EducationAndSkills lang={lang} />
+
           {/* Projects Section: Overview + Dogduino + AquaTrace */}
           <DogduinoProject lang={lang} />
 
           {/* Full Work Experience (All roles from CV) */}
           <Experience lang={lang} navSelection={expSelection} />
-
-          {/* Education, Technical Skills, Professional Qualities & Languages */}
-          <EducationAndSkills lang={lang} />
 
           {/* Courses & Certifications with Interactive Hover/Click Descriptions */}
           <Certifications lang={lang} navSelection={certSelection} />

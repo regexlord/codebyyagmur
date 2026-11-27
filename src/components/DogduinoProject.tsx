@@ -103,6 +103,8 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
   const projectType = cvData.project.type[lang] || cvData.project.type.en;
   const projectSummary = cvData.project.summary[lang] || cvData.project.summary.en;
   const projectPoints = cvData.project.points[lang] || cvData.project.points.en;
+  const graduationLabel =
+    cvData.project.graduationLabel[lang] || cvData.project.graduationLabel.en;
 
   const aquaType = cvData.aquaTrace.type[lang] || cvData.aquaTrace.type.en;
   const aquaCardSummary = cvData.aquaTrace.cardSummary[lang] || cvData.aquaTrace.cardSummary.en;
@@ -111,7 +113,7 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
   const aquaInstitution = cvData.aquaTrace.institution[lang] || cvData.aquaTrace.institution.en;
 
   return (
-    <section id="projects" className="scroll-mt-16 py-16 md:py-24 bg-slate-100/70 dark:bg-[#0c1322]/70 backdrop-blur-sm border-y border-slate-200/80 dark:border-slate-800/80 relative">
+    <section id="projects" className="scroll-mt-16 py-16 md:py-24 relative">
       {/* Background ambient accent */}
       <div className="absolute top-1/3 left-10 w-96 h-96 bg-cyan-500/10 dark:bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -151,7 +153,7 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
                 </div>
                 <div className="min-w-0">
                   <div className="text-[11px] font-mono text-cyan-600 dark:text-cyan-400 font-semibold">
-                    {cvData.project.period}
+                    {cvData.project.period} · {graduationLabel}
                   </div>
                   <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
                     {cvData.project.title}
@@ -231,8 +233,10 @@ export const DogduinoProject: React.FC<DogduinoProjectProps> = ({ lang }) => {
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
               {cvData.project.title}: {projectType}
             </h3>
-            <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 mt-2 font-mono">
+            <div className="flex flex-wrap items-center gap-2.5 text-xs text-slate-500 dark:text-slate-400 mt-2 font-mono">
               <span>{cvData.project.institution}</span>
+              <span aria-hidden="true">·</span>
+              <span>{graduationLabel}</span>
               <span aria-hidden="true">·</span>
               <span>{cvData.project.period}</span>
               <span aria-hidden="true">·</span>

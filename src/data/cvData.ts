@@ -46,6 +46,7 @@ export interface ProjectData {
   title: string;
   institution: string;
   period: string;
+  graduationLabel: LocalizedString;
   type: LocalizedString;
   summary: LocalizedString;
   points: LocalizedStringList;
@@ -420,6 +421,19 @@ export const cvData = {
     title: "Dogduino",
     institution: "Ostim Technical University",
     period: "Oct 2025 – May 2026",
+    graduationLabel: {
+      en: "Graduation Project",
+      tr: "Mezuniyet Projesi",
+      de: "Abschlussprojekt",
+      ru: "Выпускной проект",
+      sv: "Examensarbete",
+      zh: "毕业设计项目",
+      fr: "Projet de Fin d'Études",
+      it: "Progetto di Laurea",
+      bg: "Дипломен проект",
+      cs: "Bakalářský projekt",
+      pl: "Projekt dyplomowy"
+    },
     type: {
       en: "Low-Cost Educational Quadruped Robot",
       tr: "Düşük Maliyetli Eğitici Dört Bacaklı Robot",
@@ -429,6 +443,7 @@ export const cvData = {
       zh: "低成本教育级仿生四足机器人",
       fr: "Robot Quadrupède Éducatif à Faible Coût",
       it: "Robot Quadrupede Educativo a Basso Costo",
+      bg: "Нискобюджетен образователен четирикрак робот",
       cs: "Nízkonákladový vzdělávací čtyřnohý robot",
       pl: "Niskokosztowy edukacyjny robot czworonożny"
     },
